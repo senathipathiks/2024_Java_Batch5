@@ -1,4 +1,5 @@
 File 3 Created
+New line from Branch1
 
 
 This is My File 3
