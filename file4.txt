@@ -1,4 +1,0 @@
-This is file4
-This is feature line1
-This is feature line 2
-Thsi is feature line 3
