@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family:cursive;
+    display: none;
+}
+
+th{
+    font-family: cursive;
+    color: white;
+}
+
+table{
+    backdrop-filter: blur(8px);
+    margin-top:100px;
+    margin-right: 10px;
+    border-radius: 25px;
+    box-shadow: 0 5px 5px 5px ;
+}
+
+#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9,#b0,#ac,#plus,#minus,#div,#mul,#eq{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+#ac
+{
+    background-color: red
+}
+#plus,#minus,#div,#mul,#eq{
+    background-color: orange;
+}
+
+td{
+    border-radius: 5px;
+}
+
+#result{
+    width: 450px;
+    height: 25px;
+    font-size: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 10px;
+}
+
+body{
+    background-image: url('bg.avif');
+}
