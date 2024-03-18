@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking</title>
+    <style>
+        body{
+            background-image: url('9.jpg');
+            background-repeat: no-repeat;
+            background-size: 950px 650px;
+            padding: 1px;
+        }
+        table{
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body align="center" style="background-color: rgb(164, 164, 164);">
+    <h1> Room Booking Details</h1>
+    <h5>---------------------------------------------------------------------------------------------------------------------------------------</h5>
+    <table align="center" style="border: 2px solid black;width: 500px;height: 500px;">
+        <tr>
+            <td>Name</td>
+            <td> <input type="text" placeholder="Enter your name"></td>
+        </tr>
+        <tr>
+            <td> Address </td>
+            <td> <input type="text" placeholder="Enter your address"></td>
+        </tr>
+        <tr>
+            <td> Pincode </td>
+            <td> <input type="text" placeholder="Enter your Pincode"></td>
+        </tr>
+        <tr>
+            <td> No. of req. rooms </td>
+            <td> <input type="text" placeholder="How many rooms you want?"></td>
+        </tr>
+        <tr align="left">
+            <td align="center"> Rooms </td>
+            <td> <input type="radio" name="rooms"> Luxury <br> <input type="radio" name="rooms"> First Class <br> <input type="radio" name="rooms"> Second Class <br> <input type="radio" name="rooms"> Third Class</td>
+        </tr>
+        <tr>
+            <td> No. of days </td>
+            <td> <input type="text" placeholder="No. of staying days ?"></td>
+        </tr>
+        <tr>
+            <td> From </td>
+            <td> <input type="date"></td>
+        </tr>
+        <tr>
+            <td> To </td>
+            <td> <input type="date"></td>
+        </tr>
+        <tr>
+            <td> No. of persons </td>
+            <td> <input type="text" placeholder="How many members ?"></td>
+        </tr>
+        <tr align="right" style="color: chartreuse;">
+            <td> <input type="button" value="Submit" style="background-color: chartreuse;"></td>
+        </tr>
+    </table>
+</body>
+</html>
