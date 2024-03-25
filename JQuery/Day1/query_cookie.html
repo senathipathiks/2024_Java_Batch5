@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function(){
+            console.log(document.cookie);
+            colorsele = document.cookie.split("=");
+            document.bgColor = colorsele[1];
+            document.querySelector("#color").value = colorsele[1];
+        }
+
+        function display(){
+            if(document.querySelector("#color").value!="Select"){
+                colorsele = document.querySelector("#color").value;
+                document.bgColor = colorsele;
+                document.cookie="color = "+colorsele;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <select id="color" onchange="display()">
+        <option value="select">Select</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+    </select>
+    
+</body>
+</html>

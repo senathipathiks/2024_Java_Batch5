@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+        
+        <script>
+
+            $(document).ready(function(){
+                $("p").css({"color":"blue","font-size":"20px","background-color":"red"});
+                $("#show").click(function(){
+                    $("#para").hide();
+                })
+                
+            })
+
+        </script>
+    </head>
+    <body>
+        <p id="para"> This is para 1</p>
+        <input type="submit" id="show" value="Show">
+
+    </body>
+</html>
