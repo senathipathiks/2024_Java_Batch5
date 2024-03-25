@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function msg(){
+        //     var name = document.getElementById("uname");
+        //     alert("Hello "+ name.value);
+        // }
+        // function msg(){
+        //     var name = document.getElementsByName("uname");
+        //     alert("Hello "+name[0].value+" "+name[1].value);
+        // }
+        // function msg(){
+        //     var name = document.getElementsByClassName("vicky");
+        //     alert("Hello "+name[0].value);
+        // }
+        function msg(){
+            var name = document.getElementsByTagName("p");
+            document.getElementById("para").innerHTML=name[0].innerHTML;
+            document.getElementById("para").style.color="red";
+        }
+    </script>
+</head>
+<body>
+    <!-- First Name: <input type="text"class="vicky" name="uname"><br>
+    Last Name: <input type="text" class="vicky" name="uname"><br>
+    <input type="submit" name="button" onclick="msg()"> -->
+    <p>Hello Para 1</p>
+    <p>Hello Para 2</p>
+    <input type="submit" onclick="msg()">
+    <div id="para"></div>
+</body>
+</html>

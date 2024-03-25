@@ -1,0 +1,72 @@
+z<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg(){
+            var name = document.getElementById("uname").value;
+            if(name==""){
+                document.getElementById("namevalid").innerHTML="Enter the username";
+                document.getElementById("namevalid").style.color="red";
+                document.getElementById("uname").focus;
+            }
+        }
+        function emailval(){
+            var emailreg = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+            var email = document.getElementById("uname1").value;
+            if(email==""){
+                document.getElementById("emailvalid").innerHTML="Enter the Email ID";
+                document.getElementById("emailvalid").style.color="red";
+                document.getElementById("uname1").focus;
+            }
+            else if(email.match(emailreg)){
+                document.getElementById("emailvalid").innerHTML="Valid Email ID";
+                document.getElementById("emailvalid").style.color="blue";
+                document.getElementById("uname1").focus;
+            }
+            else{
+                document.getElementById("emailvalid").innerHTML="Email ID is not Valid";
+                document.getElementById("emailvalid").style.color="blue";
+                document.getElementById("uname1").focus;
+            }
+            }
+
+        // function emailverify(){
+        //     var em = document.getElementById("uname1").value;
+        //     console.log(em);
+        //     if(!em.match(emailreg)){
+        //         document.getElementById("emailvalid").innerHTML="Enter valid Email";
+        //         document.getElementById("emailvalid").style.color="red";
+        //         document.getElementById("uname1").value;
+        //         document.getElementById("uname1").focus;
+        //     }
+        // }
+        function confirmate(){
+            var name = document.getElementById("uname");
+            var email = document.getElementById("uname1");
+            if(name.value==""){
+                alert("Enter the name");
+            }
+            else if(email.value==""){
+                alert("Enter the Email ID");
+            }
+        else{
+           var val = confirm("Are you sure to submit");
+           if(val==true){
+            document.getElementById("display").innerHTML="Successfully submitted";
+           }
+        }
+        }
+    </script>
+</head>
+<body>
+    Enter your name: <input type="text" id="uname" onblur="msg()"><br>
+    <div id="namevalid"></div>
+    Enter your Email: <input type="text" id="uname1" onblur="emailval()"><br>
+    <div id="emailvalid"></div>
+    <input type="submit" id="button" onclick="confirmate()">
+    <div id="display"></div>
+</body>
+</html>

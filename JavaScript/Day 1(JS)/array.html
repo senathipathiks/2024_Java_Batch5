@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr = ["Velan","Vicky","Aravind"];
+        // document.writeln(arr[1]);
+        function verify(){
+            var a = document.getElementById("uname").value;
+            if(a=="")
+            alert("required");
+        }
+        function msg(){
+            var a = document.getElementById("uname").value;
+            alert("hello "+a);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="uname" onblur="verify()">
+        <input type="submit" name="submit" onclick="msg()">
+    </form>
+</body>
+</html>

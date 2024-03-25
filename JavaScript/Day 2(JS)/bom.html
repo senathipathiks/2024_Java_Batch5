@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name;
+        window.onload=function(){
+        name=prompt("Enter your name");
+        }
+        function validate(){
+            alert("Hello"+name+"Check the Email ID");
+        }
+        function msg(){
+            var conf = confirm("Are u sure to submit");
+            if(conf==true){
+                open("https://www.google.com/")
+            }
+            else{
+                open("https://mail.gmail.com")
+            }
+        }
+        fun
+    </script>
+</head>
+<body>
+    <input type="text" name="email" onblur="validate()">
+    <input type="submit" name="button" onclick="msg()">
+</body>
+</html>
