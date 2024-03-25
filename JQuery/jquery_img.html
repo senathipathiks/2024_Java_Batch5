@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Image</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("#image").fadeToggle(5000);
+            })
+        })
+    </script>
+</head>
+<body>
+    <img src="ass1.png" style="display: none;" id="image" width="200px">
+    <input type="button" name="" id="show" value="click">
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+    <script>
+        var name;
+        window.onload = function(){
+            name = prompt("Enter your name");
+        }
+        function validate(){
+            alert("Hello "+ name +" check the email id");
+        }
+        function meg(){
+            var conf = confirm("Are you sure to submit?");
+            if(conf == true){
+                open("http://www.gmail.com");
+            }
+            else{
+                open("http://www.google.com");
+            }
+        }
+        function showClock(){
+            var date = new Date();
+            document.getElementById("timer").innerText = date;
+            setTimeout(showClock, 1000);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="email" onblur="validate()">
+    <input type="button" value="Submit" name="submit" onclick="meg()">
+    <br><input type="submit" name="" id="" onclick="showClock()">
+    <input type="text" id="timer">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <script>
+        function meg(){
+            var a = document.getElementsByName("name");
+            alert(a[1].value);
+        }
+
+        function msg1(){
+            var b = document.getElementsByTagName("p");
+            document.getElementById("para").innerHTML = b[0].innerHTML;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="name" id=""><br>
+    <input type="text" name="name" id=""><br>
+    <input type="submit" name="" id="" onclick="meg()">
+    <br><br><br>
+    <p>para 1</p>
+    <p>para 2</p>
+    <input type="submit" name="" id="" onclick="msg1()">
+    <div id="para"></div>
+
+</body>
+</html>

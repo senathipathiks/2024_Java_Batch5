@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function verify(){
+            var a = document.getElementById("uname").value;
+            if(a == ""){
+                alert("Required");
+            }
+        }
+        function sayHello(){
+            var a = document.getElementById("uname").value;
+            alert("Hello "+ a);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="uname" onblur="verify()">
+    <input type="button" value="submit" onclick="sayHello()">
+</body>
+</html>
