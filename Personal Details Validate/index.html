@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <center> <h1> User Details </h1> </center>
+        <form id="fm">
+            <input type="text"  id="name" placeholder="Enter Username" required>
+            <p id="display1"></p>
+            <input type="text"  id="ad" placeholder="Enter Aadhar No" required>
+            <p id="display2"></p>
+            <input type="text"  id="dl" placeholder="Enter Driving Licence No" required>
+            <p id="display3"></p>
+            <input type="text"  id="pc" placeholder="Enter PanCard No" required>
+            <p id="display4"></p>
+
+            <button type="submit" class="btn" onclick="valid()">submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        document.getElementById('fm').addEventListener('submit', function(event){
+            event.preventDefault();
+        });
+
+        function valid(){
+
+            var name = document.getElementById("name").value;
+            var Aadhar = document.getElementById("ad").value;
+            var drive = document.getElementById("dl").value;
+            var pancard = document.getElementById("pc").value;
+
+            var Aadharexp = /^([0-9]{4}[0-9]{4}[0-9]{4}$)|([0-9]{4}\s[0-9]{4}\s[0-9]{4}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
+            var dlexp = /^(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$/;
+            var pancardexp = /^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/;
+
+
+            if(name=="") {
+                console.log("Incorrect!");
+                document.getElementById("display1").innerHTML="Enter your name!";
+            }
+            else{
+
+                if(!Aadharexp.test(Aadhar)){
+                    console.log("Incorrect!");
+                    document.getElementById("display2").innerHTML="Check Details!";
+                } 
+                else{
+                    if(!dlexp.test(drive)){
+                        console.log("Incorrect");
+                        document.getElementById("display3").innerHTML="Check Details!";
+                    } 
+                    else{
+                        if(!pancardexp.test(pancard))
+                        {
+                            console.log("Incorrect!");
+                            document.getElementById("display4").innerHTML="Check Details!";
+                        } 
+                        else{
+                            confirm("Are you sure?");
+                        }
+                    }
+                }  
+               
+            
+            }
+        }
+    </script>
+</body>
+</html>
