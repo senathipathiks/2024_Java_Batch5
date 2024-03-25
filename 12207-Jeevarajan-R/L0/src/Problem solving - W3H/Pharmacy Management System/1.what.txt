@@ -1,0 +1,10 @@
+What are the modules required?
+    Admin,Customer.
+What are the functionality required for Admin?
+    CRUD - med & Customer, login
+what are the functionality required for Customer?
+    Register, login, search, Order, view Order, payment, History
+what are the attribute required for Admin?
+    AdminID, AdminName, Email, password
+what are the attribute required for Customer?
+    CustomerId, CustomerName, contactNumber, contactAddress, mailId

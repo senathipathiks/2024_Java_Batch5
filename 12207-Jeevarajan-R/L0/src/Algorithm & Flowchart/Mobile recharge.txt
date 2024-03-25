@@ -1,0 +1,12 @@
+Step 1 : Start
+Step 2 : open Gpay/payTM/PhonePay
+Step 3 : Enter Gpay Pin
+Step 4 : Search for Bills & recharge section
+Step 5 : Click [See all]
+Step 6 : select Mobile recharge in payment categories
+Step 7 : Enter [Mobile number] or Select [contact]
+Step 8 : select vendor/service provider
+Step 9 : Select recharge plan
+Step 10 : click [pay]
+Step 11 : Enter [UPI Pin]
+Step 12 : Stop

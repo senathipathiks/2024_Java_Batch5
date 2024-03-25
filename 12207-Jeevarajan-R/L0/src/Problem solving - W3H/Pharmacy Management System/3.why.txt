@@ -1,0 +1,16 @@
+Register/login: 
+    using google mailId
+        it help us to verify the authorizred user by using multi-factor authentication
+search: 
+    using api for search
+        it is very fast and efficient compared to other
+payment:
+    using using UPI, netbanking, cards
+        it helps payment sure for owner and avoid fraud activity
+order: 
+    using medID, description, amount, shipping address
+        it gives mroe details and explaination about meds and price to the Customer
+History:
+    using NoSQL DB
+        it records all kind of data, it has no barriers for data format.
+        it can store numbers(mobileNumber), text(name, address, mailId), image(Meds image, presciption), audio(customers review in audio format)

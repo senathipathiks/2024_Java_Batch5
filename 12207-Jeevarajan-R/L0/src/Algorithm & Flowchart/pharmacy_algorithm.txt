@@ -1,0 +1,13 @@
+Step 1 : Start
+Step 2 : Enter into pharmacy portal -p
+Step 3 : Enter login credentials -i/o
+Step 4 : Click [login] -p
+Step 5 : if correct continue, else go to Step 3 (condition)
+Step 6 : search medicine in search bar -i/o
+Step 7 : Select medicine -p
+Step 8 : click [order] -p
+Step 9 : click [payment] -p
+Step 10 : Select [card/upi] -p
+Step 11 : Enter card/upi details -i/o
+Step 12 : click [checkOut]
+Step 13 : Stop

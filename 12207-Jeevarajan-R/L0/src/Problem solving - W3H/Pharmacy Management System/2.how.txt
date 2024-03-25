@@ -1,0 +1,16 @@
+Register/login: 
+    using mobile number,
+    using email ID and password,
+    using google mailId
+search: 
+    using linear search algorithm for meds search
+    using api for search
+payment:
+    using CoD
+    using using UPI, netbanking, cards
+order: 
+    using med ID, amount
+    using medID, description, amount, shipping address
+History:
+    using NoSQL DB
+    using sql DB

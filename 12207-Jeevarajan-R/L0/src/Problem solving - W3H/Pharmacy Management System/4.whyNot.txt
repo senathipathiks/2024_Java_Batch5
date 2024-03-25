@@ -1,0 +1,17 @@
+Register/login: 
+    using mobile number,
+        can easily scam
+    using email ID and password,
+        can attack and it is very vulnerable
+search: 
+    using linear search algorithm for meds search
+        can take more time is searching
+payment:
+    using CoD
+        can happen fraud by keeping the money or amount of the customers
+order: 
+    using med ID, amount
+        can confuse customers by only displaying meds ID and amount
+History:
+    using sql DB
+        cannot support image format or video format

@@ -1,0 +1,9 @@
+Step 1 : Start
+Step 2 : Insert card in Deposit machine
+Step 3 : Select [Cash Deposit]
+Step 4 : Enter the amount to Deposit
+Step 5 : Click [Continue]
+Step 6 : Insert cash in the Depositor vent
+Step 7 : Enter [pin]
+Step 8 : Click [Enter]
+Step 9 : Stop
