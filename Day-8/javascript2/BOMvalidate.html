@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>BOM</title>
+    <script>
+        window.onload = function(){
+            name=prompt("ENter your name");
+        }
+        function validate(){
+            alert("Check email id");
+        }
+        function msg(){
+            var a = document.getElementsByName("email").value;
+            if(a==""){
+                alert("INVALID EMAILID");
+            }
+            else{
+                var conf = confirm("Are you want to submit it?");
+                if(conf==true){
+                    open("http://www.relevantz.com");
+                }
+                else{
+                    open("https://www.google.com");
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="text" name="email" onblur="validate()">
+    <input type="submit" name="button" onclick="msg()">
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function alt(){
+            var a=document.getElementById("uname").value;
+            if(a==""){
+                alert("Required11");
+            }
+        }
+        function sum(){
+            var a=document.getElementById("uname").value;
+            if(a==""){
+                alert("Required");
+            }
+            else if(a!=""){
+                alert("sumbited");
+            }
+        }
+    </script>
+    <title>loop</title>
+</head>
+<body>
+    <input type="text" id="uname" onblur="alt()">
+    <button onblur="sum()">Submit</button>
+</body>
+</html>

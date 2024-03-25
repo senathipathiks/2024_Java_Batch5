@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#but").click(function () {
+                var x = $("#uname").val();
+                var y = $("#password").val();
+                if (x == "") {
+                    $("#a").show();
+                }
+                if (y == "") {
+                    $("#b").show();
+                }
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <center>
+
+        <div id="log">
+            <center>
+            <h1>Login</h1>
+            </center>
+            <center><img src="user.png" width="30" height="30"></center>
+            <h3 style="font-size: large;">User Name:</h3>
+            <input type="text" name="name" id="uname">
+            <p id="a" style="display: none;">Enter the valid user name</p>
+            <h3 style="font-size: large;">Password:</h3>
+            <input type="password" name="password" id="password">
+            <p id="b" style="display: none;">Enter the valid password</p>
+            <center><button id="but">Login</button></center>
+
+            <div id="frpass">
+                <center><a href="forgot.html">Forgot password</a></center>
+             </div>
+
+            <div id="frpass">
+                <center><a href="registration.html">New user?</a></center>
+            </div>
+
+        </div>
+    </center>
+</body>
+
+</html>

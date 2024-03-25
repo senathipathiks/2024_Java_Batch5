@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#register").click(function () {
+                var x = $("#fname").val();
+                var y = $("#lname").val();
+                var regemail = '/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/';
+                var email = $("#email").val();
+                var uname = $("#uname").val();
+                if (x == "") {
+                    $("#a").show();
+                }
+                else {
+                    $("#a").hide();
+                }
+                if (y == "") {
+                    $("#b").show();
+                }
+                else{
+                    $("#b").hide();
+                }
+                if (!email.match(regemail)) {
+                    $("#c").show();
+                }
+                else{
+                    $("#c").hide();
+                }
+                if (uname == "") {
+                    $("#d").show();
+                }
+                else{
+                    $("#d").hide();
+                }
+
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <center>
+        <div id="reg">
+
+            <h1>Registration</h1>
+            <img src="register.png" width="40" height="40"><br>
+            <div class="con">
+                Name:<br>
+                <input type="text" id="fname" name="firstname" placeholder="First">
+                <p id="a" style="display: none; font-size: smaller; color: red;">enter the first name</p>
+
+                <input type="text" name="lastname" placeholder="Last" id="lname">
+                <p id="b" style="display: none; font-size: smaller; color: red;">enter the last name</p><br>
+
+                Email Id:<br>
+                <input type="text" name="emailid" id="email">
+                <p id="c" style="display: none; font-size: smaller; color: red;">Enter the correct email id</p><br>
+
+                User Name:<br>
+                <input type="text" name="username" id="uname" ">
+                <p id="d" style="display: none; font-size: smaller; color: red;">enter the user name</p><br>
+
+                Address:<br>
+                <textarea name="address" cols="20" rows="5"></textarea><br>
+
+                Password:<br>
+                <input type="password" name="password" id=""><br>
+
+                Confirm Password:<br>
+                <input type="password" name="confirmpassword" id=""><br>
+
+                Gender:<br>
+                <input type="radio" name="gender" id="gender">Male
+                <input type="radio" name="gender" id="gender">Female
+                <input type="radio" name="gender" id="gender">Transgender<br>
+            </div>
+            <button style="width: 30%;" id="register">Register</button><br>
+            <a href="login.html">Login</a>
+        </div>
+</body>
+
+</html>
