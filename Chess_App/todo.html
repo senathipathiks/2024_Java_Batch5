@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 110%;
+        }
+        input{
+            height: 40px;
+            width: 105%;
+        }
+        #box{
+            margin-left: 25%;
+            border: 3px solid yellow;
+            width: 50%;
+            height: 60px;
+            text-align: center;
+            background-image: url(image4.jfif);
+        }
+        #box1{
+            border: 3px solid yellow;
+            margin-left: 15%;
+            width: 70%;
+            height: 100px;
+            background-image: url(image4.jfif);
+        }
+        body{
+            background-image: url(bg.jfif);
+        }
+        span:hover{
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <h1 style="text-align: center;">TO DO LIST</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="box1">
+    <br>
+    <table align="center">
+        <tr>
+            <td style="font-size: x-large;">Enter the things you want to do:</td>
+            <td><input type="text" placeholder="Enter the TO DO" style="font-size: large;"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td><button style="width: 105%;">Submit</button></td>
+        </tr>
+    </table>
+    </div>
+    <div>
+    <table align="center">
+    <tr> 
+    <td><input style="width: 20px;" type="checkbox"></td>
+    <td><input style="width: 100%; height: 40%;" type="text"></td>
+    <td><span class="glyphicon glyphicon-trash"></span></td>
+    </tr>
+    <tr> 
+        <td><input style="width: 20px;" type="checkbox"></td>
+        <td><input style="width: 100%; height: 40%;" type="text"></td>
+        <td><span class="glyphicon glyphicon-trash"></span></td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
