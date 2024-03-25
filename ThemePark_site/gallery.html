@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+    </style>
+</head>
+<body>
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Gallery.jpg">
+            <img src="Gallery.jpg" alt="Cinque Terre">
+          </a>
+          <div class="desc" style="color: black; font-size: x-large;">Roller Coaster</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Gallery1.jpg">
+            <img src="Gallery1.jpg" alt="Forest">
+          </a>
+          <div class="desc" style="font-size: x-large;">Turbo Roller Coaster</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Gallery3.jpg">
+            <img src="Gallery3.jpg" alt="Mountains">
+          </a>
+          <div class="desc" style="font-size: x-large;">High Dropper</div>
+        </div>
+      </div>
+      
+      <div class="clearfix"></div>
+</body>
+</html>
