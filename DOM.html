@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function msg(){
+                var name=document.getElementsByName("uname");
+                alert("Hello "+name[0].value)
+                var name=document.getElementsByName("name");
+                alert("Hello "+name[0].value+" "+name[1].value)
+                var p=document.getElementsByTagName("p")
+                document.getElementById("para").innerHTML=p[0].innerHTML
+                document.getElementById("para").style.color="blue";
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="text" name="uname"><br>
+        <input type="text" name="name"><br>
+        <input type="text" name="name">
+        <p>This is my para</p>
+        <input type="submit" name="button" onclick="msg()">
+        <div id="para"></div>
+    </body>
+</html>

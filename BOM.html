@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            var name;
+            window.onload=function(){
+                name=prompt("Enter Your Name :")
+            }
+            function validate(){
+                alert("Hello "+name+" Check the E-mail ID")
+            }
+            // function msg(){
+            //     window.alert("Hello");  
+            // }
+            function msg1(){
+                var conf=confirm("Are you sure to submit !!!!??? ");  
+                if(conf==true){
+                    open("http://mail.gmail.com")
+                }
+                else{
+                    open("http://www.google.com")
+                }
+            }
+            function showClock(){
+                var date=new Date()
+                document.getElementById("timer").innerHTML=date
+                setTimeout(showClock,1000);
+                document.ge
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="text" name="email" onblur="validate()">
+        <input type="submit" name="button" onclick="msg1()"> <br> <br>
+        <h2>To show The time</h2>
+        <input type="submit" name="button" onclick="showClock()">
+        <div id="timer"></div>
+    </body>
+</html>
