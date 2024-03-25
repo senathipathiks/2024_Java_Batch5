@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .style1{
+        color: red;
+        background-color: black;
+    }
+    .style2{
+        color: yellow;
+        border-color: black;
+    }
+    .style3{
+        color: blue;
+        background-color: black;
+    }
+</style>
+<script src="jquery-3.7.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#append").click(function(){
+            $("#para").append("I am Vicky");
+        })
+        $("#prepend").click(function(){
+            $("#para").prepend("I am Vignes");
+        })
+        $("#remove").click(function(){
+            $("#para").remove();
+        })
+    })
+</script>
+<body>
+    <p id="para"></p>
+    <input type="submit" id="append" value="append class">
+    <input type="submit" id="prepend" value="prepend class">
+    <input type="submit" id="remove" value="remove class">
+</body>
+</html>

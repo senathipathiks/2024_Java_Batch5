@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="jquery-3.7.1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // $(document).ready(function(){
+        //     document.write("Hello World"); //ensure page is properly loaded
+        // })
+
+        // $(function(){
+        //     document.write("Hello");
+        // })
+
+        // $(document).ready(function(){
+        //     $("p").css({"color":"red","font-size":"20px"});
+        //     // $("p").css("font-size","22px");
+        // })
+        
+        // $(document).ready(function(){
+        //     $("#show").click(function(){
+        //         $("p").show();
+        //     })
+        // })
+
+        // $(document).ready(function(){
+        //     $(".show").click(function(){
+        //         $("p").hide();
+        //     })
+        // })
+
+            $(document).ready(function(){
+                $("#show").click(function(){
+                $("#image").toggle(1000);
+                $("#image").slideToggle(1000);
+                })
+            })
+
+    </script>
+</head>
+<body>
+    <img src="car.jpg" id="image" style="width: 50%;"><br>
+    <input type="submit"  id="show" value="show" style="width: 50%;"><br>
+    <!-- <input type="submit" id="show2" value="show"> -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style1{
+            color: red;
+            background-color: black;
+        }
+        .style2{
+            color: yellow;
+            border-color: black;
+        }
+        .style3{
+            color: blue;
+            background-color: black;
+        }
+    </style>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                $("#para").addClass("style1");
+            })
+            $("#remove").click(function(){
+                $("#para").removeClass("style1 style2 style3");
+            })
+            $("#toggle").click(function(){
+                $("#para").toggleClass("style3");
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="para">This is my paragraph 1</p>
+    <input type="submit" id="add" value="Add class">
+    <input type="submit" id="remove" value="Remove class">
+    <input type="submit" id="toggle" value="Toggle class">
+</body>
+</html>

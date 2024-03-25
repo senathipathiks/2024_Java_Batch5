@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            $("#res").click(function(){
+                var name = $("#uname").val();
+                var pass = $("#passwd").val()
+                var reg ='^[A-Za-z]+$'; //'[a-z0-9]+@[a-z]+\.[a-z]{2,3}$';
+                var reg1 = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+                console.log(name);
+                console.log(pass);
+                if(name=="" && pass==""){
+                    alert("uname and passwd can't be empty");
+                }
+                else if(name.match(reg))
+                {
+                    alert("Valid uname ");
+                }
+                else if(pass.match(reg1))
+                {
+                    alert("Valid password ");
+                }
+                // else if(name.match(reg) && pass.match(reg1)){
+                //     alert("Valid uname and passwd")
+                // }   
+                else{
+                    alert(" Enter Valid uname and passwd");
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+    Enter Username: <input type="text" id="uname"><br>
+    Enter Password: <input type="text" id="passwd"><br>
+    <input type="submit" id="res" value="submit">
+</body>
+</html>
