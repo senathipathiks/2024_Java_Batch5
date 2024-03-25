@@ -1,0 +1,5 @@
+task-1 : design calculator
+task-2 : chess board page 
+task-3 : to-do list web app
+task-4 : personal blog/portfolio
+task-5 : theme park website 

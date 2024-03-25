@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if and switch</title>
+</head>
+<body>
+
+    <script>
+        //conditonal statement
+
+       //if statement
+       var age = Number.parseInt(window.prompt("Enter your age"));
+       if(age=>18){
+            window.alert("Your are eligible for voting");
+       } else {
+        window.alert("Sorry! you\'re not eligible")
+       }
+
+       //switch key
+       var date = new Date();
+       var day = date.getDay();
+       document.write("<h3>Today is : </h3>");
+    //    document.write(day);
+       switch(day){
+        case 0: document.write("Sunday");break;
+        case 1: document.write("Monday");break;
+        case 2: document.write("Tuesday");break;
+        case 3: document.write("Wednsday");break;
+        case 4: document.write("Thursday");break;
+        case 5: document.write("Friday");break;
+        case 6: document.write("Saturday");break;
+        default: document.write("---invalid---");break;
+       }
+    </script>
+    
+</body>
+</html>

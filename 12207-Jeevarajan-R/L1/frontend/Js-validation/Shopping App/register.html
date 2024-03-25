@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 5px;
+            transform: translate(-50%, -50%);
+            background-color: #f3f4f5;
+        }
+        .name{
+            width: 100%;
+            /* padding: 12px; */
+            margin: 2px 0;
+            border: 1px solid ;
+            box-sizing: border-box;
+            border-radius: 3px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            /* padding-left: 6%; */
+            font-size: 13px;
+            padding-top: 1%;
+            text-align: left;
+        }
+
+        #submit{
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+            /* padding: 2% 5% ; */
+            font-size: 13px;
+            background-color: #242024;
+            color: #DDD;
+            border-color: #bf0000;
+        }
+        #submit:hover{
+            opacity: 1;
+            cursor: pointer;
+            background-color: #e30220;
+            border-color: #DDD;
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+         .container{
+            padding: 5px 20%;
+            row-gap: 2px;
+            border: 2px solid #bf0000;
+            box-shadow: 3px 3px 4px 3px rgba(42, 42, 42, 0.607);
+            background-color: #DDD;
+            border-radius: 15px;
+        }
+
+        .in{
+            color: #bf0000;
+            font-size: 14px;
+        }
+        .in1{
+            
+            color: #e30220;
+            /* color: #03045e; */
+        }
+        a {
+            margin-top: 13px;
+            color: #e30220;
+            text-decoration: none;
+        }
+        a:hover {
+            font-size: 17px;
+            color: #bf0000;
+        }  
+        #message {
+        display:none;
+        background: #f1f1f1;
+        color: #000;
+        position: relative;
+        padding: 10px;
+        margin-top: 10px;
+        }
+
+        #message p {
+        padding: 10px 35px;
+        font-size: 13px;
+        }
+
+        /* Add a green text color and a checkmark when the requirements are right */
+        .valid {
+        color: green;
+        }
+
+        .valid:before {
+        position: relative;
+        left: -35px;
+        content: "✔";
+        }
+
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .invalid {
+        color: red;
+        }
+
+        .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "✖";
+        }      
+    </style>
+
+    <script>
+
+        
+        function checkPswd() {
+            document.getElementById("message").style.display = "block";
+            var myInput = document.getElementById("psw");
+            var letter = document.getElementById("letter");
+            var capital = document.getElementById("capital");
+            var number = document.getElementById("number");
+            var length = document.getElementById("length");
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if(myInput.value.match(lowerCaseLetters)) {  
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+            
+            // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if(myInput.value.match(upperCaseLetters)) {  
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }
+            
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if(myInput.value.match(numbers)) {  
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+            
+            // Validate length
+            if(myInput.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        }
+        // function showNone(){
+        //   document.getElementById("message").style.display = "none";
+        // }
+        
+        $(document).ready(function(){
+
+            $("#psw").blur(function(){
+                $("#message").css("display","none");
+            })
+
+
+            $("#cPsd").blur(function(){
+                var pswd = $("#psw").val();
+                var cPsd = $("#cPsd").val();
+                if(pswd == ''){
+                    $("#res").text("Password Shouldn\'t be empty");
+                }
+                else{
+                    if(pswd == cPsd){
+                        $("#res").text("Password matches");
+                    } else{
+                        $("#res").text("Password doesn\'t matches");
+                    }
+                }
+            })
+
+            $("#email").blur(function(){
+                var email = $("#email").val();
+                var emRegX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/;
+                const isValid = emRegX.test(email);
+                 if(isValid){$("#em").text("")}
+                 else{$("#em").text("Please enter a valid email.");}
+            })
+
+            $("#submit").click(function(){
+                var name = $("#name").val();
+                var uname = $("#uname").val();
+                var email = $("#email").val();
+                var mb = $("#mblNum").val();
+                var pass = $("#psw").val();
+            })
+
+           
+        })
+
+
+        function checkMbl(){
+            // Get and trim phone number input
+            const mblNum = document.getElementById('mblNum').value.trim();
+            // Regex pattern for 10-digit phone number
+            const re = /^\d{10}$/g;
+            // Validate phone number and update message
+            const isValid = re.test(mblNum);
+            document.getElementById('mb').textContent = isValid ? '' : 'Please enter a valid 10-digit phone number.';
+        }
+
+        // function checkEmail(){
+        //     var email = document.getElementById('email').value;
+        //     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/;
+        //     const isValid = mailformat.test(email);
+        //     document.getElementById('em').textContent = isValid ? '' : 'Please enter a valid email.';
+        // }
+
+        function comp() {
+            var pswd = document.getElementById('psw').value;
+            var cPswd = document.getElementById('cPsd').value;
+
+            if(pswd == cPswd) {
+                document.getElementById('res').innerHTML = "password matchs";
+            } else {
+                document.getElementById('res').innerHTML = "Password dosn\'t match";
+            }
+        }
+
+
+
+
+    </script>
+</head>
+
+
+<body>
+    <div class="container">
+        <form name="form1" action="">
+            <center><img src="img/marvel-logo.png" width="30%" height="20%" class="out">
+            <h2 class="in1">Register Yourself!</h2></center>
+            <div class="in">Name</div>
+            <input type="text" id="name" name="text" class="name" placeholder="Name" required>
+            <div class="in">User Name</div>
+            <input type="text" id="uname" name="text" class="name" placeholder="User name" required>
+            <div class="in">Email ID:</div>
+            <input type="email"  class="name" id="email" name="text1" placeholder="Email ID" required>
+            <div class="in"><p id="em"></p></div>
+            <div class="in">Phone Number:</div>
+            <input type="tel" id="mblNum" class="name" placeholder="phone number" onblur="checkMbl()" maxlength="10" required >
+            <div class="in"><p id="mb"></p></div>
+            <div class="in">Password:</div>
+            <input type="password" id="psw" class="name" placeholder="Password" required onfocus="checkPswd()" minlength="8">
+            <div class="in" id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+              </div>
+            <div class="in">Confirm Password:</div>
+            <input type="password" id="cPsd" class="name" placeholder="Enter Password again" required>
+            <div class="in"><p id="res"></p></div>
+            <input id="submit" type="submit" value="Register"> 
+            <a href="login-form.html" class="in"><center>Already have an Account?</center></a>
+        </form>
+       </div>    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhar-Validator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f3f4f5;
+        }
+
+        .login-form{
+            margin: 10% auto;
+            border: 2px solid #0000BF;
+            width:40%;
+            background-color: #DDD;
+            border-radius: 15px;
+            /* margin-bottom: 5%; */
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        .logo{
+            width: fit-content;
+            margin: 5px 35%;
+        }
+        input{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            /* padding-left: 6%; */
+            font-size: 20px;
+            padding-top: 1%;
+            text-align: center;
+        }
+        label{
+            color: #0000BF;
+            font-size: 22px;
+        }
+        p{
+            color: #0000BF;
+        }
+        #submit {
+            padding: 1% 5% ;
+            font-size: 15px;
+            background-color: #242024;
+            color: #DDD;
+            border-color: #0000BF;
+        }
+        #submit:hover {
+            cursor: pointer;
+            background-color: #2002ef;
+            border-color: #DDD;
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        a {
+            font-size: 20px;
+            color: #2002ef;
+            text-decoration: none;
+            
+        }
+        a:hover {
+            font-size: 25px;
+            color: #0000BF;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            // var num=0;
+            $("#adh").keyup(function(){
+                var aadhar = $("#adh").val();
+                var len = aadhar.length;
+                if(len == 4 || len==9){
+                    $("#adh").val(aadhar + "-");
+                    // $("#adh").insertAfter("-")
+                }
+                // num = num + 1;
+            })
+            $("#submit").click(function(){
+                var aadhar = $("#adh").val();
+                var regEx = /\d{4}-\d{4}-\d{4}/g;
+                if(aadhar != ""){
+
+                    const isValid = regEx.test(aadhar);
+                    if(!isValid){
+                        $("#ad").text("InValid aadhar Number");
+                        $("#adh").focus();
+                    } else {
+                        $("#ad").text("Your Aadhar Number is Valid one");
+                    }
+                } else {
+                    alert("Please Enter your Aadhar Number")
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="login-form">
+        <div class="input">
+            <center>
+            <label for="name">Enter your Aadhar no : </label>
+            <input type="text" name="name" id="adh" placeholder="xxxx-xxxx-xxxx" required maxlength="14">
+            <p id="ad"></p>
+            <input id="submit" type="submit" value="Validate"><br>
+            <br><a href="index.html">go back</a>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

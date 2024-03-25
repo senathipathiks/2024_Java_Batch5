@@ -1,0 +1,10 @@
+node js
+vs code
+mysql server
+tomcat server v.10
+sts IDE
+jenkins [Genric war]
+Maven 3.5 & above
+postman api framework
+git bash
+SONARCube

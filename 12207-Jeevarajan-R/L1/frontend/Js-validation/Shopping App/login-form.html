@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-form-validation</title>
+    <link rel="shortcut icon" href="img/marvel-logo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f3f4f5;
+        }
+
+        .login-form{
+            margin: 10% auto;
+            border: 2px solid #bf0000;
+            width:40%;
+            background-color: #DDD;
+            border-radius: 15px;
+            /* margin-bottom: 5%; */
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        .logo{
+            width: fit-content;
+            margin: 5px 35%;
+        }
+        input{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            /* padding-left: 6%; */
+            font-size: 15px;
+            padding-top: 1%;
+            text-align: left;
+        }
+        label{
+            color: #bf0000;
+            font-size: 22px;
+        }
+        p{
+            color: #bf0000;
+        }
+        #submit {
+            padding: 2% 5% ;
+            font-size: 15px;
+            background-color: #242024;
+            color: #DDD;
+            border-color: #bf0000;
+        }
+        #submit:hover {
+            cursor: pointer;
+            background-color: #e30220;
+            border-color: #DDD;
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        a {
+            margin-top: 12px;
+            color: #e30220;
+            text-decoration: none;
+        }
+        a:hover {
+            font-size: 17px;
+            color: #bf0000;
+        }
+    </style>
+
+    <script>
+        function verifyName(){
+            var name = document.getElementById('name').value;
+            // var pswd= document.getElementById('pswd').value;
+            if(name == ''){
+                document.getElementById('nm').innerHTML = "Username should not be empty";
+            } else {
+                document.getElementById('nm').innerHTML = "";
+            }
+            
+        } 
+        function verifyPswd(){
+            // var name = document.getElementById('name').value;
+            var pswd= document.getElementById('pswd').value;
+            if(pswd == ''){
+                document.getElementById('ps').innerHTML = "Password should not be empty";
+            } else {
+                document.getElementById('ps').innerHTML = "";
+            }
+            
+        } 
+    </script>
+
+
+</head>
+<body>
+    <div class="login-form">
+        <div class="logo" align="center">
+            <h1 style="width: fit-content; color: #e30220;">Login</h1><br>
+            <img src="img/marvel-logo.png" alt="Logo" width="150px" height="100px">
+        </div>
+        <div class="input">
+
+            <form action="index.html">
+                <center>
+                <label for="name">Username  : </label>
+                <input type="text" name="name" id="name" required onblur="verifyName()">
+                <p id="nm"></p>
+                <label for="password">Password : </label>
+                <input type="password" name="password" id="pswd" required onblur="verifyPswd()" >
+                <p id="ps"></p>
+                <input id="submit" type="submit" value="Login"><br>
+                <a href="forget.html">forget password?</a>
+                <br><a href="register.html">New User?</a>
+                </center>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

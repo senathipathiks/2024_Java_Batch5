@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC-Validator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f3f4f5;
+        }
+
+        .login-form{
+            margin: 10% auto;
+            border: 2px solid #0000BF;
+            padding: 10%;
+            width:40%;
+            background-color: #DDD;
+            border-radius: 15px;
+            /* margin-bottom: 5%; */
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        .logo{
+            width: fit-content;
+            margin: 5px 35%;
+        }
+        input{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            /* padding-left: 6%; */
+            font-size: 15px;
+            padding-top: 1%;
+            text-align: left;
+        }
+        label{
+            color: #0000BF;
+            font-size: 22px;
+        }
+        p{
+            color: #0000BF;
+        }
+        button {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 3% 6% ;
+            font-size: 15px;
+            background-color: #242024;
+            color: #DDD;
+            border-color: #0000BF;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: #2002ef;
+            border-color: #DDD;
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        a {
+            font-size: 20px;
+            color: #2002ef;
+            text-decoration: none;
+            
+        }
+        a:hover {
+            font-size: 25px;
+            color: #0000BF;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="login-form">
+        <div class="input">
+                <center>
+                <h1>KYC-Validator</h1><br><br>
+                <!-- <label for="name">Enter your ATM no : </label> -->
+                <a href="aadhar.html"><button>Aadhar</button></a>
+                <a href="pan.html"><button>Pan</button></a>
+                <a href="atm.html"><button>ATM</button></a><br><br>
+                <a href="licence.html"><button>Driving Licence</button></a>
+                <!-- <input type="text" name="name" id="atm" required> -->
+                <p id="at"></p>
+                <!-- <input id="submit" type="submit" value="Login"><br> -->
+                <!-- <br><a href="index.html">go back</a> -->
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
