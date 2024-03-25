@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Pan card</title>
+        <style>
+            body{
+                background-color: azure;
+                background-image: url(v2.jpg);
+                background-repeat: no-repeat;
+                background-image:cover ;
+                background-position: center;
+            }
+            #ak{
+                width: 30%;
+                height: 35%;
+                background-image:linear-gradient(rgb(86, 165, 183),rgb(101, 114, 101));
+                margin-top: 15%;
+                margin-left: 10%;
+    
+            } 
+            h1{
+                font-size: large;
+                font-style:unset;
+                color:black;                 
+                font-weight: 800;
+                text-align: center;
+            }
+            th{
+                font-size: larger;
+            }
+            #submit{
+                margin-right:60%;
+                background-color: rgb(110, 110, 172);
+            }
+            
+        </style>
+        <script>
+            function check()
+            {
+                var password=document.getElementById('number').value;
+                var exp = /^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/;
+                if(!password.match(exp))
+                {
+                    document.getElementById("res1").innerHTML="Number is not valid";
+                    document.getElementById("res1").style.color="red";
+                }
+            }
+            function confirmation()
+            {
+                alert("Driving Licence verification done");
+            }
+        </script>
+    </head>
+    <body >
+      
+        <div id="ak">
+        <h1>Licence verification</h1>
+        <table cellpadding="10px">
+            <tr>
+                <th>Username:</th>
+                <th><input type="text" id="name" name="name" onblur="verify()"></th>
+                <!-- <div id="res"></div> -->
+            </tr>
+            <tr>
+                <th></th>
+                <th><div id="res"></div></th>
+            </tr>
+            <tr>
+                <th>PAN number:</th>
+                <th><input type="text" id="number" name="number"  onblur="check()"></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th><div id="res1"></div></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th><input type="submit" id="submit" name="submit" onclick="confirmation() "></th>
+            </tr>
+            <!-- confirmation(); -->
+        </table>
+    </div>
+    </body>
+</html>
+

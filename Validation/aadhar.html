@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Aadhaar</title>
+        <style>
+            body{
+                background-color: azure;
+                background-image: url(v2.jpg);
+                background-repeat: no-repeat;
+                background-image:cover ;
+                background-position: center;
+            }
+            #ak{
+                width: 30%;
+                height: 35%;
+                background-image:linear-gradient(rgb(86, 165, 183),rgb(101, 114, 101));
+                margin-top: 15%;
+                margin-left: 10%;
+    
+            } 
+            h1{
+                font-size: large;
+                font-style:unset;
+                color:black;
+                font-weight: 800;
+                text-align: center;
+            }
+            th{
+                font-size: larger;
+            }
+            #submit{
+                margin-right:60%;
+                background-color: rgb(110, 110, 172);
+            }
+            
+        </style>
+        <script>
+            function verify()
+            {
+                var number=document.getElementById("aadhaar").value;
+                // var n=console.count(number);
+                // document.write(n);
+                var exp = /^([0-9]{4}[0-9]{4}[0-9]{4}$)|([0-9]{4}\s[0-9]{4}\s[0-9]{4}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
+                if(number.match(exp))
+                {
+                    document.getElementById("res").innerHTML="valid Aadhaar number";
+                    document.getElementById("res").style.color="red";
+                }
+                else{
+                    document.getElementById("res").innerHTML="Not a valid Aadhaar Number";
+                    document.getElementById("res").style.color="red";
+                }
+                function confirmation()
+                {
+                    alert("User verification done successful");
+                }
+            }
+            function check()
+            {
+                var password=document.getElementById('password').value;
+                var exp = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+                if(!password.match(exp))
+                {
+                    document.getElementById("res1").innerHTML="Password is not valid";
+                    document.getElementById("res1").style.color="red";
+                }
+            }
+            function confirmation()
+            {
+                alert("Aadhaar verification done");
+            }
+        </script>
+    </head>
+    <body >
+      
+        <div id="ak">
+        <h1>Aadhaar verification</h1>
+        <table cellpadding="10px">
+            <tr>
+                <th>Aadhaar Number:</th>
+                <th><input type="text" id="aadhaar" name="aadhaar" onblur="verify()"></th>
+                <!-- <div id="res"></div> -->
+            </tr>
+            <tr>
+                <th></th>
+                <th><div id="res"></div></th>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <th><input type="password" id="password" name="password" placeholder="dd/mm/yyyy" onblur="check()"></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th><div id="res1"></div></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th><input type="submit" id="submit" name="submit" onclick="confirmation() "></th>
+            </tr>
+            <!-- confirmation(); -->
+        </table>
+    </div>
+    </body>
+</html>
