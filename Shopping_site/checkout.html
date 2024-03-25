@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(blackbg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            justify-content: center;
+            position:absolute;
+            align-items: center;
+            top: 25%;
+            left: 40%;
+
+        }
+        .container{
+            background-image: url(white.jpg);
+            background-size: 100% 300%;
+            padding: 20px;
+            width: 100%;
+            height: 300%;
+            font-size: large;
+            border-radius: 40px;
+        }
+        .container h1{
+            text-align: center;
+        }
+        .input{
+            width: 80%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        button{
+            padding: 10px;
+            width: 90%;
+            justify-content: center;
+            cursor: pointer;
+        }
+        button:hover{
+            color: darkgreen;
+            background-color: black;
+        }
+    </style>
+    <script>
+
+        function valcre(){
+            var card = document.getElementById("credit").value;
+            var exp = /^\d{16}$/;
+            if(card==""){
+                document.getElementById("show").innerHTML="Enter the Credit Card Number";
+                document.getElementById("show").style.color="red";
+            }
+            else if(card.match(exp)){
+                document.getElementById("show").innerHTML="Credit Card Number is valid";
+                document.getElementById("show").style.color="red";
+            }
+            else{
+                document.getElementById("show").innerHTML="Credit Card Number is not valid";
+                document.getElementById("show").style.color="red";
+            }
+        }
+
+        function valupi(){
+            var up = document.getElementById("upi").value;
+            var exp1 = "[a-zA-Z0-9\\.\\-]{2,256}\\@[a-zA-Z][a-zA-Z]{2,64}";
+            if(up==""){
+                document.getElementById("disp").innerHTML="Enter the UPI ID Number";
+                document.getElementById("disp").style.color="red";
+            }
+            else if(up.match(exp1)){
+                document.getElementById("disp").innerHTML="UPI ID Number is valid";
+                document.getElementById("disp").style.color="red";
+            }
+            else{
+                document.getElementById("disp").innerHTML="UPI ID Number is not valid";
+                document.getElementById("disp").style.color="red";
+            }
+             
+        }
+
+        function co(){
+            var res = confirm("Do you want to submit?");
+            if(res==true){
+                alert("Success");
+            }
+            else{
+                alert("Failure");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout Page</h1>
+        <div>Credit Card Number</div>
+        <input type="text" id="credit" class="input" placeholder="Enter the credit card number" required onblur="valcre()"><br>
+        <div id="show"></div><br>
+        <div>UPI ID</div>
+        <input type="text" id="upi" class="input" placeholder="Enter the UPI ID" required onblur="valupi()"><br>
+        <div id="disp"></div><br>
+        <button onclick="co()">Submit</button>
+    </div>
+</body>
+</html>

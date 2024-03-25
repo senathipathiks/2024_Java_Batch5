@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            left: 30%;
+            top: 10%;
+            align-items: center;
+            background-image: url(blackbg.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+
+        }
+        .container{
+            padding: 20px;
+            width: 200%;
+            height: 200%;
+            font-size: large;
+            /* background-color: green; */
+            background-image: url(white.jpg);
+            background-size: 200% 200%;
+            border-radius: 40px;
+        }
+        button{
+            font-size: large;
+            width: 50%;
+            cursor: pointer;
+        }
+        .input{
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            
+        }
+        button:hover{
+            color: darkgreen;
+            background-color: black;
+        }
+    </style>
+
+    <script>
+
+        function user(){
+            var username = document.getElementById("uname").value;
+            if(username==""){
+                document.getElementById("dis").innerHTML="Enter your username";
+                document.getElementById("dis").style.color="darkgreen";
+            }
+        }
+
+        function pass(){
+            var pw = document.getElementById("pwd").value;
+            if(pw==""){
+                document.getElementById("ps").innerHTML="Enter your password";
+                document.getElementById("ps").style.color="darkgreen";
+            }
+        }
+
+        function reppass(){
+            var rep = document.getElementById("repw").value;
+            if(rep==""){
+                document.getElementById("repeat").innerHTML="Enter your password";
+                document.getElementById("repeat").style.color="darkgreen";
+            }
+        }
+
+        function conf(){
+            var result = confirm("Do you want to confirm");
+            if(result==true){
+                document.getElementById("display").innerHTML="Successfully Submitted";
+                document.getElementById("display").style.color="green";
+            }
+            else{
+                document.getElementById("display").innerHTML="Failed to submit";
+                document.getElementById("display").style.color="red";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>LOGIN</h1>
+        <div>Username:</div>
+        <input type="text" class="input" placeholder="Enter the Username" required id="uname" onblur="user()"><br>
+        <div id="dis"></div><br>
+        <div>Password:</div>
+        <input type="text" class="input" placeholder="Enter the Password" required id="pwd" onblur="pass()"><br>
+        <div id="ps"></div><br>
+        <div>Repeat Password:</div>
+        <input type="text" class="input" placeholder="Repeat Password" required id="repw" onblur="reppass()"><br>
+        <div id="repeat"></div><br>
+        <button onclick="conf()">Submit</button><br><br>
+        <div id="display"></div>
+    </div>
+</body>
+</html>
