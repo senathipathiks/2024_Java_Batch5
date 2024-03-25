@@ -1,0 +1,261 @@
+body {
+  background: linear-gradient(black, cyan);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#main {
+  width: 1300px;
+  height: 600px;
+  background-color: #20242d;
+  border-radius: 30px;
+  box-shadow: 0 2px 30px 10px black;
+  border: none;
+  margin-left: 80px;
+}
+
+.navbar {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+}
+.navbar span {
+  margin-top: 10px;
+  padding-left: 120px;
+  font-size: larger;
+}
+.links {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 550px;
+  gap: 40px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+#link1 a {
+  color: cyan;
+}
+#link:hover {
+  transform: scale3d(1.3);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  background-color: transparent;
+  width: 650px;
+  height: 400px;
+  margin-left: 140px;
+  color: white;
+  margin-top: 70px;
+}
+
+#mans {
+  background-color: transparent;
+  width: 400px;
+  float: right;
+  margin-right: 90px;
+  margin-top: -400px;
+  border-radius: 50px;
+  border: 10px double cyan;
+  box-shadow: 0 1px 10px 5px cyan;
+}
+
+#man {
+  width: 400px;
+}
+
+h3 span {
+  color: cyan;
+}
+p {
+  font-size: 14px;
+}
+.logos {
+  display: flex;
+  font-size: 20px;
+  gap: 30px;
+  padding-bottom: 40px;
+  text-align: center;
+  padding-top: 20px;
+  cursor: pointer;
+}
+.logo {
+  border: 2px solid cyan;
+  width: 40px;
+  height: 30px;
+  padding-top: 7px;
+  border-radius: 100%;
+  color: cyan;
+  box-shadow: 0 1px 10px 1px cyan;
+  cursor: pointer;
+}
+
+.logo a {
+  color: cyan;
+}
+
+button {
+  background-color: cyan;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 1px 10px 1px cyan;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+#but {
+  color: black;
+  font-weight: 600;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+
+.about {
+  margin-left: 140px;
+  margin-top: 80px;
+  width: 600px;
+}
+
+.about h3 {
+  color: white;
+}
+
+.about p {
+  color: white;
+}
+
+.about_img {
+  width: 250px;
+  height: 250px;
+  background-color: transparent;
+  float: right;
+  margin-right: 120px;
+  margin-top: -340px;
+  padding: 40px;
+  border-radius: 50px;
+  border: 10px double cyan;
+  box-shadow: 0 1px 10px 5px cyan;
+}
+#about_img {
+  width: 250px;
+  height: 250px;
+}
+
+.skill h3 {
+  color: white;
+}
+
+.skill {
+  margin-left: 150px;
+  margin-top: 80px;
+  width: 600px;
+}
+
+.skill_but {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.skill_img {
+  float: right;
+  margin-right: 80px;
+  background-color: transparent;
+  border-radius: 50px;
+  margin-top: -230px;
+  border: 10px double cyan;
+  box-shadow: 0 1px 10px 5px cyan;
+}
+
+#skill_img {
+  width: 400px;
+  height: 250px;
+}
+
+.skills {
+  font-weight: 600;
+}
+
+.education {
+  margin-left: 150px;
+  margin-top: 30px;
+  width: 600px;
+}
+
+.education h3,
+P {
+  color: white;
+}
+
+.edu_img {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  float: right;
+  margin-right: 80px;
+  margin-top: -410px;
+  border-radius: 50px;
+  border: 10px double cyan;
+  box-shadow: 0 1px 10px 5px cyan;
+}
+
+#edu_img {
+  width: 400px;
+  height: 400px;
+}
+
+.edu {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.contact {
+  margin-left: 150px;
+  margin-top: 100px;
+  width: 600px;
+}
+
+.contact_img {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  float: right;
+  margin-right: 80px;
+  margin-top: -300px;
+  border-radius: 50px;
+  border: 10px double cyan;
+  box-shadow: 0 1px 10px 5px cyan;
+  padding: 20px;
+}
+#contact_img {
+  width: 350px;
+  height: 350px;
+}
+
+.contact h3 {
+  color: white;
+  font-weight: 600;
+}

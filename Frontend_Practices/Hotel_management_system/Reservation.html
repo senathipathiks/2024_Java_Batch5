@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <style>
+      body {
+        background: url("bg.png");
+        background-size: cover;
+        background-position: 100% -20%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+      }
+      form {
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        width: 600px;
+        margin-left: 220px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+        padding-top: 10px;
+        box-shadow: 0 5px 10px 5px black;
+      }
+      #name {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      #lname,
+      #fname {
+        width: 230px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+      }
+      textarea {
+        resize: none;
+        margin-left: 25px;
+        border-radius: 10px;
+        border: none;
+      }
+      #details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      #num,
+      #email {
+        width: 230px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+      p {
+        margin-left: 25px;
+        color: white;
+      }
+      #address {
+        padding-left: 20px;
+        padding-top: 20px;
+        width: 520px;
+      }
+      #time {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+      }
+      #arrival,
+      #checkout {
+        padding-left: 10px;
+        width: 230px;
+        margin-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+      #checkoutspan {
+        margin-left: 300px;
+        margin-top: -92px;
+      }
+      #adults,
+      #kids {
+        width: 230px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        margin-left: 25px;
+        border-radius: 10px;
+        border: none;
+      }
+      #kidscount {
+        margin-left: 300px;
+        margin-top: -100px;
+      }
+      h1,
+      hr {
+        color: white;
+      }
+      #room,
+      #bed {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+        color: black;
+        background-color: aliceblue;
+        margin-left: 25px;
+        margin-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      #submit {
+        border-radius: 10px;
+        border: none;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: rgb(73, 10, 133);
+        color: white;
+        margin-top: 10px;
+      }
+      #submit:hover {
+        background-color: rgb(21, 13, 69);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <center><h1>Book Your Rooms</h1></center>
+        <div id="name">
+          <input
+            type="text"
+            name="fname"
+            placeholder="Nandha"
+            id="fname"
+            required
+          />
+          <input
+            type="text"
+            name="lname"
+            placeholder="Kumaran"
+            id="lname"
+            required
+          />
+        </div>
+        <div id="details">
+          <input
+            type="text"
+            name="num"
+            placeholder="000-000-0000"
+            id="num"
+            required
+          />
+          <input
+            type="email "
+            name="email"
+            placeholder="aaaaaa@gmail.com"
+            id="email"
+            required
+          />
+        </div>
+        <p>Address</p>
+        <textarea
+          name="address"
+          id="address"
+          cols="65"
+          rows="5"
+          required
+        ></textarea>
+
+        <p>Arrival-Date and Time</p>
+        <input type="datetime-local" id="arrival" required />
+        <div id="checkoutspan">
+          <p>CheckOut-Date and Time</p>
+          <input type="datetime-local" id="checkout" required />
+        </div>
+
+        <p>Number of Adults</p>
+        <input
+          type="text"
+          name="adults"
+          id="adults"
+          placeholder="eg: 6"
+          required
+        />
+        <div id="kidscount">
+          <p>Number of Kids</p>
+          <input
+            type="text"
+            name="kids"
+            id="kids"
+            placeholder="eg: 6"
+            required
+          />
+        </div>
+
+        <p>Select Room Type</p>
+
+        <div id="room">
+          AC Room <input type="radio" name="ac" id="ac" /> Non-AC Room
+          <input type="radio" name="non-ac" id="non-ac" />
+        </div>
+        <div id="bed">
+          Family Room <input type="radio" name="family" id="family" /> Single
+          Room <input type="radio" name="single" id="single" />
+        </div>
+
+        <p>Do you have any Special Request?</p>
+        <textarea name="request" id="request" cols="72" rows="6"></textarea>
+        <hr />
+
+        <center><input type="submit" value="Submit" id="submit" /></center>
+      </form>
+    </div>
+  </body>
+</html>
