@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <center>
+           <h1>Reservation</h1>
+        </center>
+        <style>
+            body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("photographer.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(56, 97, 163, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+        </style>
+       
+    </head>
+    <body style="background-color:white;">
+   
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <center>
+            <table >
+                    <tr>
+                        <th>Enter Total members:<th><input type="number" name="username"></th></th>
+                    </tr>
+                    <tr>
+                        <th>From date:<th><input type="date" name="password" style="width: 170px;"></th>
+                        </th></tr>
+                     <tr>
+                        <tr>
+                            <th>To date:<th><input type="date" name="password" style="width: 170px;"></th>
+                            </th></tr>
+                         <tr>
+                        <th>Enter the number of rooms:<th><input type="number" name="password"></th></th>
+                    </tr>
+                        <tr >
+                            <th>Enter type of room:<th> <select name="cars" id="cars" style="width: 170px;">
+                                <option value="volvo">Single room</option>
+                                <option value="saab">Double room</option>
+                                <option value="opel">Deluxe room</option>
+                                <option value="audi">Triple room</option>
+                              </select></th></th>
+                        </tr>
+                        <tr>
+                            <th>Bed size:<th>
+                                <select name="cars" id="cars" style="width: 170px;">
+                                  <option value="volvo">King size</option>
+                                  <option value="saab">Queen size</option>
+                                  <option value="opel">Full size</option>
+                                  <option value="audi">Double size</option>
+                                </select></th></th>
+                        </tr>
+                         <tr><th>ac/non-ac:<th><input type="radio" name="password">AC </th>
+                            <th><input type="radio" name="password">Non-AC </th></th></th>
+                        </tr>
+                   <th colspan="2"><input type="submit" name="submit"></th> 
+            </table>
+        </center>
+    <h1 style="font-size:50px">Book the Room now</h1>
+    <p>And have a peaceful sleep</p>
+    </div>
+
+        
+        
+    </body>
+</html>

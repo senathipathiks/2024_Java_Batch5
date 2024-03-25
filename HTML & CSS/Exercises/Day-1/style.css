@@ -1,0 +1,23 @@
+#para1{
+    color:brown;
+    font-size:xx-large; 
+    font-weight:'Courier New',Courier,monospace;
+}
+.header{
+    text-align:center;
+    text-decoration:underline;
+    color:burlywood;
+    font-size:xx-large;
+    background-color:aqua;
+}
+*{
+    text-align:center;
+}
+/* Font family */
+p{
+    font-family:verdna,geneva,Tahoma,sans-serif;
+    font-style:italic;
+    font-weight:lighter;
+    font-size:100px;
+    text-decoration:double;
+}
