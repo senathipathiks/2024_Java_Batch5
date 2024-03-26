@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <!--window object = setTimeout()-->
+        <script>
+            function msg(){
+                var n = document.getElementsByName("username");
+                alert("hello "+ n[0].value);
+            }
+        </script>
+
+    </head>
+    <body>
+        First name: <input  type="text" name="username"><br>
+        Last name: <input  type="text" name="username"><br>
+
+        
+        <input type="submit" name="button" onclick="msg()">
+        
+
+    </body>
+</html>

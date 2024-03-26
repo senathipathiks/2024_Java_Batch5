@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <!--window object = setTimeout()-->
+        <script>
+            function msg(){
+                var n = document.getElementsByTagName("p");
+                document.getElementById("para").innerHTML=n[0].innerHTML;
+            }
+        </script>
+    </head>
+    <body>
+       <p>this is para 1</p>
+       <p>this is para 2</p>    
+       <input type="submit"  onclick="msg()">
+       <div id="para"></div>
+        
+
+    </body>
+</html>

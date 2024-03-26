@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <!--window object = prompt() -->
+        <script>
+            var name;
+            window.onload=function(){
+                name = prompt("Enter your name");
+                
+            }
+            function validate(){
+                alert("hello " +name+ " check the email");
+            }
+            function msg(){
+                var con=confirm("sure to submit??")
+                if(con==true){
+                    open("https://mail.google.com/mail/")
+                }
+                else{
+                    open("https://www.google.co.uk/")
+                }
+                
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="text" name="email" onblur="validate()">
+        <input type="submit" name="button" onclick="msg()">
+
+    </body>
+</html>
