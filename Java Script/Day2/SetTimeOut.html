@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function showClock(){
+               var date = new Date();
+               document.getElementById("timer").innerHTML = date;
+               setInterval(showClock,1000)//handler,1000ms or we can use settimeout
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="submit" name="b1" onclick="showClock()">
+        <div id="timer"></div>
+    </body>
+</html>
