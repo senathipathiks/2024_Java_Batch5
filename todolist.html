@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Todolist</title>
+    </head>
+    <style>
+        body{
+            background-color:beige;
+            margin-top: 200px;
+        }
+        h1{
+            color:gray;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px;
+            
+        }
+        table{
+            border-radius: 10px;
+            background-color: azure;
+            padding: 26px;
+            border-color:gold;
+            border-width: 10px;
+            border-spacing: 7px;
+        }
+        input:hover{
+            background-color:beige;
+        }
+        label:hover{
+            background-color: ivory;
+        }
+        .one{
+            height: 40px;
+            width: 50px;
+            padding: 5px;
+        }
+        input[type=text]{
+            height:30px;
+            width:300;
+            text-align: center;
+        }
+        </style>
+    <body>
+        <h1 align="center"><i>My Todolist<i></h1>
+        <table border="2px" align="center">
+            <tr>
+                <td><input type="text" placeholder="Add the title.." ></td>
+                <td><input type="button" value="Add"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="one"><input type="checkbox" name="Task1"   value="milk">
+                    <label for="Task1" >Buying a Milk</label><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="one"> <input type="checkbox" name="Task2"  value="milk">
+                    <label for="Task2" >Completing a assignment</label><br></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="one">
+                    <input type="checkbox" name="Task3"  value="milk">
+                    <label for="Task3" >Going for a walking</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="one"><input type="checkbox" name="Task4"  value="milk">
+                    <label for="Task4" >Attending a meeting on teams</label><br></td>
+            </tr> 
+            <tr>
+                <td colspan="2" class="one"><input type="checkbox" name="Task5"  value="milk">
+                    <label for="Task5" >Preparing a food for lunch</label><br></td>
+            </tr> 
+           
+    
+            
+        </table>
+      
+</body>
+</html>
