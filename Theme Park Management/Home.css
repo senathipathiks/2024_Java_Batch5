@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.nav{
+    display: flex;
+    background-color: #67CFF2;
+    height: 10vh;
+}
+.nav img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.nav h2{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.nav ul{
+    display: flex;
+    margin: 6px;
+    gap: 2rem;
+    margin-left: 50rem;
+    margin-top: 23px;
+    list-style: none;
+    color: black;
+} 
+ul a{
+    text-decoration: none;
+}
+ul a  li:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+    color: chartreuse;
+}
+.section1 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 100%;
+    height: auto;
+} 
+.section2 h1{
+    margin-top: 8rem;
+    margin-left: 21rem;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+.section2 h4{
+    margin-top: 1rem;
+    margin-left: 23rem;
+    font-size: 20px;
+}
+.section2 button{
+    background-color:chartreuse;
+    width: 10rem;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 3rem;
+    margin-left: 44rem;
+    cursor: pointer;
+}
+.icon{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.icon #img1{
+   width: 200px;
+   height: 200px;
+}
+.text{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 1rem;
+}
+#text2{
+    margin-right: 60px;
+} 
+.section4{
+    margin-top: 5rem;
+    display: flex;
+}
+.img img{
+    border-radius: 15px;
+    height: 25rem;
+    width: 35rem;
+    margin-left: 10rem;
+}
+.content{
+    margin-left: 5rem;
+}
+.content h2{
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+.content p{
+    margin-top: 20px;
+}
+.section4 button{
+    background-color:chartreuse;
+    width: 10rem;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.section5{
+    margin-top: 2rem;
+    display: flex;
+}
+.dry img{
+    border-radius: 15px;
+    height: 25rem;
+    width: 35rem;
+    margin-left: 25rem;
+}
+.cont{
+    display: grid;
+    width: 30rem;
+    margin-left: -9rem;
+}
+.cont h2{
+    margin-top: 7rem;
+    margin-left: 20rem;
+}
+.cont button{
+    background-color:chartreuse;
+    width: 10rem;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-left: 20rem;
+    cursor: pointer;
+}
+.cont p{
+    margin-top: 20px;
+    margin-left: 20rem;
+    width: 30rem;
+}
+.dry{
+    margin-left: 5rem;
+}
+.section6{
+    margin-top: 50px;
+    /* width: 100%; */
+}
+.section6 img{
+    width: 100%;    
+    position: absolute;
+    /* border: red solid 2px; */
+}
+.section6 h1{
+    position: relative;
+    width: 45rem;
+    letter-spacing: 2px;
+    /* border: solid red 1px; */
+    left: 45rem;
+    font-size: 5rem;
+    top: 13rem;
+}
