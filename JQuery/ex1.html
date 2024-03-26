@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style>
+            img{
+                height:500px;
+                width: 500px;
+
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- /<script src="jquery.js"></script> -->
+        <script>
+            /*
+            $(document).ready(function(){
+                document.write("Hello World");
+            })
+            */
+
+           /*
+            $(function(){
+                document.write("Hello World");
+            })
+            */
+
+            /*
+            $(document).ready(function(){
+                $("p").css({"color":"blue","background-color":"yellow"});
+            })
+            */
+
+            /*
+            $(document).ready(function(){
+                $("#Show").click(function(){
+                    $("#para1").hide();
+                })
+            })
+            */ 
+
+            /*
+            $(document).ready(function(){
+                $("#Show").click(function(){
+                    $("#para1").fadeIn();
+                    $("#img1").fadeOut();
+                    $("#Show").fadeOut();
+                    $("#TurnBack").fadeIn();
+                    $("#TurnBack").click(function(){
+                        $("#TurnBack").fadeOut();
+                        $("#para1").fadeOut();
+                        $("#img2").fadeIn();
+                    })
+                })
+                
+            })
+            */
+
+            $(document).ready(function(){
+                $("#add").click(function(){
+                    var x=parseInt($("#num1").val());
+                    var y=parseInt($("#num2").val());
+                    var z=x+y;
+                    $("#result").val(z);
+                })
+            })
+
+        </script>
+    </head>
+    <body align="center">
+        <!-- <p id="para1">This is my paragraph 1</p> -->
+        <!-- <img src="sanemi.jpg" id="img1" ><br> -->
+        <!-- <p id="para1" style="display: none;">Wondering where Sanemi:The Wind Hashira disappeared?</p><br> -->
+        <!-- <input type="submit" id="Show" value="Show"> -->
+        <!-- <img src="sanemi2.jpg" id="img2" style="display: none;"> -->
+        <!-- <input type="submit" id="TurnBack" value="TurnBack" style="display: none;"> -->
+
+        Enter Number 1: <input type="text" id="num1"><br>
+        Enter Number 2: <input type="text" id="num2"><br>
+
+        <input type="submit" id="add" value="add"><br>
+        Result: <input type="text" id="result"><br>
+
+    </body>
+</html>

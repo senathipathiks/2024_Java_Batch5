@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#append").click(function(){
+                    $("#para").append(" Since 1987");
+                })
+
+                $("#prepend").click(function(){
+                    $("#para").prepend("The Goat ");
+                })
+
+                $("#remove").click(function(){
+                    $("#para").remove();
+                })
+
+                $("#color").click(function(){
+                    $("#para").css({"color":"white","background-color":"orange","font-style":"bold","font-family":"verdana","font-size":"20px"});
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <p id="para">Lionel Messi</p><br>
+        <input type="submit" id="append" value="append">
+        <input type="submit" id="prepend" value="prepend">
+        <input type="submit" id="remove" value="remove">
+        <input type="submit" id="color" value="color">
+
+    </body>
+</html>
