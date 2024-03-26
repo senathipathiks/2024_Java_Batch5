@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-image: url('e-comm_bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        i{
+            margin-right: 0.5rem;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        #search{
+            margin-top: 20px;
+            width:600px;
+            height: 25px;
+        }
+
+        /* ---Body CSS--- */
+
+.but{
+    margin-left: 800px;
+    margin-top: -15px; 
+    background-color: transparent;    
+}
+
+#login,#signup,#home,#about{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+
+#login:hover,#signup:hover,#home:hover,#about:hover{
+    transform: scale(1.1);
+}
+
+body{
+    opacity: 0;
+    animation: fadeIn 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {  
+    from {  
+        opacity:0;  
+    }  
+ 
+    to {  
+        opacity:1;  
+    }  
+ }
+
+h1,h2{
+  font-family: "Caveat", cursive;
+  font-style: normal;
+  font-size: 30px;
+}
+
+#prod1{
+    width: 1350px;
+    height: 450px;
+    backdrop-filter: blur(8px);
+}
+
+.groc{
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image:linear-gradient(180deg,rgba(255, 192, 203, 0.87),white);
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    justify-content: space-evenly;
+    margin-top: -250px;
+    margin-left: 200px;
+    text-decoration: none;   
+}
+
+.groc:hover,.elec:hover{
+    transform: scale(1.1);
+}
+
+.elec{
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    background-image:linear-gradient(180deg,rgba(255, 192, 203, 0.87),white);
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    justify-content: space-evenly;
+    margin-top: -250px;
+    margin-left: 700px;
+}
+
+#groc{
+    width: 150px;
+    height: 150px;
+    margin-top: 70px;
+}
+
+#elec{
+    width: 200px;
+    height: 100px;
+    background-size: cover;
+    /* margin-left: 100px; */
+    margin-top: 75px;
+}
+
+#groct,#elect{
+    position: absolute;
+    font-size: 22px;
+    margin-top: 250px ;
+    text-decoration: none;
+    color:black
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <nav>
+                <input type="text" id="search" placeholder="Search Groceries,Shirts, etc...">
+                <i class="fa fa-search"></i>
+                <div class="but">
+                    <a href="home.html"><button id="home">Home</button></a>
+                    <a href="about.html"><button id="about">About Us</button></a>
+                    <a href="login.html"><button id="login">Login</button></a>
+                    <a href="signup.html"><button id="signup">Sign Up</button></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="products">
+        <marquee behavior="slide" scrollamount="60" direction="left">
+        <img src="prod1.jpg" id="prod1">
+        </marquee>
+    </div>
+
+        <div class="groc">
+            <a href="grocdet.html"><img id="groc" src="grocery.png" alt="Grocery Image"></a>
+            <a href="grocdet.html" id="groct">Groceries</a>
+
+        </div>
+
+        <div class="elec">
+            <a href="elec.html"><img id="elec" src="elec.png"></a>
+            <a href="elec.html" id="elect">Electronics</a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="signup.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        function validate(){
+            let name = document.getElementById("fname").value;
+            let uname = document.getElementById("uname").value;
+            let em = document.getElementById("email").value;
+            let no = document.getElementById("mno").value;
+            let m = document.getElementById("m").value;
+            let f = document.getElementById("f").value;
+            let pass = document.getElementById("pass").value;
+            let cpass = document.getElementById("cpass").value;
+
+            if(name=="" || name == null){
+                document.getElementById("ft").innerHTML="Fullname cannot be empty";
+            }
+
+            if(uname=="" || uname == null){
+                document.getElementById("ut").innerHTML="Username cannot be empty";
+            }
+
+            if(em=="" || em == null){
+                document.getElementById("et").innerHTML="Email cannot be empty";
+            }
+
+            if(no=="" || no == null){
+                document.getElementById("mt").innerHTML="Mobile no cannot be empty";
+            }
+
+            if(terms.checked== false){
+                document.getElementById("checkt").innerHTML="Agree to terms and conditions";
+            }
+
+            if(pass=="" || pass == null){
+                document.getElementById("pt").innerHTML="Password cannot be empty";
+            }
+
+            if(cpass != pass){
+                document.getElementById("cpt").innerHTML="Passwords are not matching";
+            }
+
+            if(name=="" || name == null){
+                document.getElementById("ft").innerHTML="Fullname cannot be empty";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="but">
+        <div id="hb"><a href="landing.html">Home</a></div>
+        <div id="ab"><a href="about.html">About Us</a></div>
+        <div id="logb"><a href="login.html">Login</a></div>
+        <div id="signb"><a href="signup.html">Sign Up</a></div>
+    </div>
+
+    <div class="login">
+        <h2 id="logtit">Sign Up</h2>
+        <table>
+            <tr>
+                <td>Fullname<br><input type="text" id="fname" placeholder="Fullname" required><br></td>
+            </tr>
+
+            <tr>
+                <td id="ft"></td>
+            </tr>
+
+            <tr>
+                <td>Username<br><input type="text" id="uname" placeholder="Username" required><br></td>
+            </tr>
+            
+            <tr>
+                <td id="ut"></td>
+            </tr>
+
+            <tr>
+                <td>E-mail Address<br><input type="email" id="email" placeholder="E-mail Address" required><br></td>
+            </tr>
+            
+            <tr>
+                <td id="et"></td>
+            </tr>
+
+            <tr>
+                <td>Mobile no<br><input type="tel" id="mno" placeholder="Mobile number" required><br></td>
+            </tr>
+            
+            <tr>
+                <td id="mt"></td>
+            </tr>
+
+            <tr>
+                <td>Gender<br><input type="radio" id="m" name="gender" value="Male" required>Male<input type="radio" id="f" name="gender" value="female" required>Female
+            </tr>
+
+            <tr>
+                <td id="gt"></td>
+            </tr>
+
+            <tr>
+                <td>Password<br><input  id="pass" type="password" placeholder="Password" required><br></td>
+            </tr>
+
+            <tr>
+                <td id="pt"></td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password<br><input id="cpass" type="password" placeholder="Confirm Password" required><br></td>
+            </tr>
+            
+            <tr>
+                <td id="cpt"></td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" id="terms" name="chbox" required>I agree to the <a target="_blank" id="terms" href="https://www.ekartlogistics.in/terms-and-conditions#:~:text=The%20Ekart%20Website%20will%20in,including%20without%20limitation%2C%20damage%20for">Terms and Conditions</a></td>
+            </tr>
+            
+            <tr>
+                <td id="checkt"></td>
+            </tr>
+
+            <tr>
+                <td><br><input type="button" id="sub" onclick="validate()" value="Submit"></td>
+            </tr>
+        </form>
+    </div>
+
+    
+</body>
+</html>
