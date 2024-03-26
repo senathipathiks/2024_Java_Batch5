@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+       
+        $("#button").click(function(){
+            var fname = $("#nam").val();
+            var num = $("#nm").val();
+            var pass = $("#name").val();
+            var n = num.length;
+            if(fname == ""){
+                alert ("name should not be empty");
+            } else if(num == ""){
+                alert("number should not be empty");
+            } else if(n> 10){
+                alert("number should be less than 10");
+            } else if(pass.length<8){
+                alert("password should be greater than 8 characters");
+            } else if(!pass.includes("@")){
+                alert("invalid");
+
+            } 
+            else {
+                var c = confirm("are you sure ?");
+                if(c==true){
+                    open("https://outlook.office.com/mail/");
+                }else{
+                    open("https://www.google.com");
+                }
+            }
+
+        })
+    })
+        
+    </script>
+
+</head>
+
+<body>
+    Name : <input type="text" id="nam"><br>
+    Number : <input type="number" id="nm"><br>
+    Password : <input type="text" id="name"><br>
+    
+   
+    <button id="button">Validate</button>
+
+
+</body>
+
+</html>

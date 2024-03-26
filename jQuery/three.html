@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("#img1").fadeIn(100000);
+            })
+        })
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("#img2").fadeOut(10000);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <img src="double1.jpg" id="img1" style="display: none;">
+    <img src="double2.jpg" id="img2">
+    <input type="submit" id="show">
+
+</body>
+
+</html>

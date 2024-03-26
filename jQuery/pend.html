@@ -1,0 +1,45 @@
+<html lang>
+<head>
+    <style>
+        .style1 {
+            color: gold;
+            background-color: black;
+            border: 2px dotted red;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: xx-large;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#app").click(function () {
+                $("#para").append(" Since 2002");
+            })
+            $("#pp").click(function () {
+                $("#para").prepend("Legend ");
+            })
+                 $("#rm").click(function () {
+                $("#para").remove();
+                var c = confirm("who is the angel...wanna see ?");
+                if (c == true) {
+                    $(".para1").fadeIn(10000);
+                    $(".para1").show();
+
+                }
+
+            })
+
+        })
+
+</script>
+</head>
+<body>
+    <p id="para">Shakeel ahmed</p>
+    <input type="submit" value="append" id="app">
+    <input type="submit" value="prepend" id="pp">
+    <input type="submit" value="remove" id="rm">
+    <p class=para1 style="display: none;"> sahaaaaa the angel! </p>
+    <img src="sahana.jpg" class="para1" style="display: none;">
+</body>
+
+</html>

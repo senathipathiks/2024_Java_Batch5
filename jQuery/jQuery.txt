@@ -1,0 +1,11 @@
+javaScript libraries
+simple lightweight
+used for css manipulation 
+DOM manipulation
+Adding effects and animation
+Handling events
+
+syntax-
+${selector.action}
+
+content delivery network - CDN
