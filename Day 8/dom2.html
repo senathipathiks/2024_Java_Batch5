@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function msg(){
+                var name = document.getElementsByTagName("p");
+                document.getElementById("para").innerHTML=name[0].innerHTML;
+                document.getElementById("para").style.color="blue";
+            }
+        </script>
+    </head>
+    <body>
+        <p>ganapathy</p>
+        <p>raman</p>
+        <input type = "submit" onclick = "msg()">
+        <div id = "para"></div>
+    </body>
+</html>

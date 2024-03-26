@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            var emailformat = '^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$';
+            function nameValidate(){
+                var fname = document.getElementById("uname").value;
+                if(fname==""){
+                    document.getElementById("namevalidmsg").innerHTML="Name should not be empty";
+                    document.getElementById("namevalidmsg").style.color="red";
+                    document.getElementById("uname").focus();
+                }
+            }
+            function emailValidate(){
+                var email = document.getElementById("email").value;
+                console.log(email);
+                if(!email.match(emailformat)){
+                    document.getElementById("emailvalidmsg").innerHTML="Enter valid Email Id";
+                    document.getElementById("emailvalidmsg").style.color="red";
+                    document.getElementById("email").value="";
+                    document.getElementById("email").focus();
+                }
+            }
+            function confirmation(){
+                
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

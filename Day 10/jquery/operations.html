@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#append1").click(function(){
+                    $("#para1").append("ganapathy raman");
+                })
+                $("#prepend1").click(function(){
+                    $("#para1").prepend("gugjb");
+                }) 
+                $("#remove1").click(function(){
+                    $("#para1").remove();
+                })
+            })
+            </script> 
+    </head>
+    <body>
+        <p id = "para1">This is ganapathy</p>
+        <input type = "submit" id = "append1" value = "append">
+        <input type = "submit" id = "prepend1" value = "prepend">
+        <input type = "submit" id = "remove1" value = "remove">
+    </body>
+</html>

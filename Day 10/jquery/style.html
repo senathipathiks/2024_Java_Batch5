@@ -1,0 +1,40 @@
+<html>
+    <head>
+        
+        <style>
+            .style1{
+                color :aquamarine;
+                background-color: beige;
+            }
+            .style2{
+                color :salmon;
+                background-color: hotpink;
+            }
+            .style3{
+                color : black;
+                background-color: gainsboro;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#add").click(function(){
+                    $("#para1").addClass("style1");
+                })
+                $("#remove").click(function(){
+                    $("#para1").remove();
+                })
+                $("#toggle").click(function(){
+                    $("#para1").toggleClass("style2");
+                })
+
+            })
+        </script>
+    </head>
+    <body>
+        <p id = "para1">This is ganapathy</p>
+        <input type = "submit" id = "add" value = "Add">
+        <input type = "submit" id = "remove" value = "Remove">
+        <input type = "submit" id = "toggle" value = "Toggle">
+    </body>
+</html>

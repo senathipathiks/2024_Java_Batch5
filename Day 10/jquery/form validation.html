@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var emailRegEx = '^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$';
+
+                var fname = $("#fname").val();
+                var lname = $('#lname').val();
+                var email = $('#email').val();
+                var password = $('#pwd').val();
+                if (fname == "") {
+                    alert("First name can not be empty");
+                }
+                else if (lname == "") {
+                    alert("last name can not be empty");
+                }
+                else if (email == "") {
+                    alert("email can not be empty");
+                }
+                else if (!email.match(emailRegEx)) {
+                    alert("Enter valid email id");
+                }
+                else if (password = "") {
+                    alert("password is must");
+                }
+                
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form>
+        Enter the First Name : <input type="Text" id="fname"><br>
+        Enter the last Name : <input type="Text" id="lname"><br>
+        Enter the Email Id : <input type="Text" id="email"><br>
+        Enter the password: <input type="password" id="pwd"><br>
+        <input type="Button" id="btn" value="Register" /><br>
+    </form>
+</body>
+
+</html>
