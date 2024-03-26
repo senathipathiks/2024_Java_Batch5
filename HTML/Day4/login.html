@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title> Login Page </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            #text1,#text2
+            {
+                border-radius: 20px;
+                width: 250px;
+                height: 30px;
+                outline: none;
+                border: none;
+                
+            }
+            #button1
+            {
+                border-radius: 20px;
+                width: 250px;
+                height: 35px;
+                margin-top: 5px;
+                background-color: greenyellow;
+                font-size: large;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                outline: none;
+                border: none;
+            }
+            body
+            {
+                font-size: xx-large; 
+                background-image: url("2.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 200px;
+                margin-left: 200px;
+            }
+            td,th {
+                font-family: "Josefin Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: x-large;
+            }
+            #bt2
+            {
+                margin-left: -200px;
+            }
+            #bt3
+            {
+                margin-left: 50px;
+            }
+            #a1
+            {
+                text-decoration: none;
+            }
+           span 
+            {
+                margin-top: 20px;
+                text-decoration: none;
+            }
+            #logo2
+            {
+                margin-left: -180px;
+            }
+            #logo3
+            {
+                margin-left: -110px;
+            }
+            #logo4
+            {
+                margin-left: -35px;
+            }
+
+            #logo1:hover, #logo2:hover, #logo3:hover, #logo4:hover
+            {
+                transform: scale(2);
+            }
+            h3
+            {
+                margin-left: 50px;
+            }
+            #con
+            {
+                font-weight: bold;
+                color: darkblue;
+            }
+        </style>
+        <script>
+            function msg1(){
+            var a=document.getElementById("text1").value;
+            if(a=="")
+            {
+                alert("Required");
+            }
+            }
+            function msg3(){
+                var con=confirm("Are you sure to submit ?");
+                if(con==true)
+                {
+                    document.getElementById("con").innerHTML="Submitted Successfully!!!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3 id="th"> LOGIN </h3>
+        <table>
+            <tr>
+                <td id="name1"> Username </td>
+            </tr>
+            <tr>
+                <td> <input type="text" id="text1" onblur="msg1()"></td>
+            </tr>
+            <tr>
+                <td id="name2"> Password </td>
+            </tr>
+            <tr>
+                <td> <input type="password" id="text2"></td>
+            </tr>
+            <tr>
+                <td style="line-height: 60px;"><a href="forget.html" id="a1"><span>Forget Password ?</span>  </a> </td>
+            </tr>
+            <tr>
+                <td > <input type="button" value="Submit" id="button1" onclick="msg3()"></td>
+            </tr>
+            <tr>
+                <td> ----------------------------------</td>
+            </tr>
+            <tr> 
+                <td align="center"> Or Login with </td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-instagram" aria-hidden="true" id="logo1"></i></td>
+                <td><i style="font-size:24px" class="fa" id="logo2">&#xf09a;</i></td>
+                <td><i class="material-icons" id="logo3">&#xe158;</i></td>
+                <td><i style="font-size:24px" class="fa" id="logo4">&#xf099;</i>
+                </td>
+            </tr>
+        </table>
+        <div id="con">
+
+        </div>
+    </body>
+</html>

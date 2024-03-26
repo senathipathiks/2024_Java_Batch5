@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> </title>
+        <script src="jquery-3.7.1.js"> </script>
+        <script>
+            // $(document).ready(function()
+            // {
+            //     $("p").css({"color":"blue","background-color":"yellow"})
+            // })
+
+            // $(document).ready(function()
+            // {
+            //     $("#show").click(function()
+            //     {
+            //         $("#para").show();
+            //     })
+            // })
+
+            // $(document).ready(function()
+            // {
+            //     $("#show").click(function()
+            //     {
+            //         $("#para").fadeIn(1000);
+            //     })
+            // })
+
+            $(document).ready(function()
+            {
+                $("#add").click(function()
+                {
+                   var a=parseInt($("#num1").val()); 
+                   var b=parseInt($("#num2").val()); 
+                   var c=a+b;
+                   $("#num").val(c);
+
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+
+        <!-- <p id="para" style="display: none;"> This is my Paragraph</p>
+        <input type="submit" id="show" value="Show"> -->
+
+        Enter Number 1 : <input type="text" id="num1"> <br>
+        Enter Number 2 : <input type="text" id="num2"> <br>
+        <input type="Submit" id="add" value="Submit"> <br>
+        Result : <input type="text" id="num">
+
+    </body>
+</html>

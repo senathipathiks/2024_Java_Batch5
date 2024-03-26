@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function showclock()
+            {
+                var date=new Date();
+                document.getElementById("timer").innerHTML=date;
+                setTimeout(showclock, 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="Submit" name="button" onclick="showclock()">
+        <div id="timer"> </div>
+    </body>
+</html>

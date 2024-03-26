@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Aadhar Page </title>
+        <script>
+            function validateAadhar()
+            {
+                var expr = /^([0-9]{4}[0-9]{4}[0-9]{4}$)|([0-9]{4}\s[0-9]{4}\s[0-9]{4}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
+                var aadharnumber=document.getElementById("aadhar").value;
+                if(!expr.test(aadharnumber))
+                {
+                    alert("Aadhar number is wrong !");
+                }
+                else
+                {
+                    alert("Okay Done !");
+                }
+            }
+        </script>
+        <style>
+            body
+            {
+                margin-top: 200px;
+                background-image: linear-gradient(yellowgreen, beige);
+            }
+            #aadhar
+            {
+                border-radius: 10px;
+                height: 30px;
+            }
+            #btn
+            {
+                height: 30px;
+                width: 100px;
+                border-radius: 10px;
+                background-color: lightcyan;
+            }
+        </style>
+    </head>
+    <body align="center">
+        <b>Aadhar Number : </b><input type="text" id="aadhar"> <br><br>
+
+        <input type="submit" value="Verify" id="btn" onclick="validateAadhar()">
+
+        <p id="pip"></p>
+    </body>
+</html>
