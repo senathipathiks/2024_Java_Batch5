@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            var name;
+            window.onload=function(){ //annonymous functions
+                name=prompt("Enter ur name:");//prompt getting user input
+            }
+            function msg(){
+                window.alert("Hello "+name);
+
+            }
+            function validate(){
+                alert("check the email id "+name );
+            }
+            function msg1(){
+                var c = confirm("Are you sure to submit "+name );
+                if(c==true){
+                    open("https://www.gmail.com");
+                }
+                else{
+                    open("https://www.google.com");
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="text" name="email" onblur="validate()">
+        <input type="submit" name="b" onclick="msg1()">
+        <input type="Submit" name="b" onclick="msg()">
+    </body>
+</html>

@@ -1,0 +1,30 @@
+table{
+    background-color:violet;
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+    font-style: oblique;
+    color:red;
+    font-weight:1000;
+    border-radius: 10px;
+    padding: 20px;
+    height: 80%;
+}
+tr{
+    color:black;
+}
+td{
+    width:auto;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: blue;
+}
+.link:active{
+    color:green;
+}
+.link:hover{
+    color:yellow;
+}
+*{
+    color:rgb(40, 33, 20);
+}

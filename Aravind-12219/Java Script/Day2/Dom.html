@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function msg(){
+                var name = document.getElementById("name");
+                alert("Hello "+name.value);  
+            }
+            function msg1(){
+                var name = document.getElementsByName("n");
+                alert("Welcome "+name[0].value);
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="text" name="n" id="name">
+        <input type="Submit" name="button" onclick="msg()">
+        <input type="Submit" name="button" onclick="msg1()">
+
+    </body>
+</html>
