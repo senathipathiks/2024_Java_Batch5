@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            document.write("<h1><font color=blue>Hello World</h1>");
+            console.log("Hello World");
+            var a="Welcome All";
+            document.writeln(a);
+            var b=10;//global scope
+            {
+                let b=20;//block scope
+                document.writeln(b);//20
+            }
+            document.writeln(b);//10
+            var c=20;
+            if(c>20)
+            {
+                document.write("c is greater than 20");
+            }
+            else if(c<20)
+            {
+                document.write("c is lesser than 20");
+            }
+            else if(c==20)
+            {
+                document.write("c is 20");
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

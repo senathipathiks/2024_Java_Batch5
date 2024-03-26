@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <script>
+            var b=10;//global scope
+            {
+                let b=20;//block scope
+                document.writeln(b);//20
+            }
+            document.writeln(b);//10
+        </script>
+    </head>
+</html>

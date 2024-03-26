@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>To Do List</title>
+        <style>
+            body{
+                background-color:crimson;
+            }
+            table{
+                background-color:blanchedalmond;
+                border-radius: 10px;
+                padding: 20px;
+                border-color: black;
+                border-width: 10px;
+            }
+            h2{
+                margin-top: 180;
+                color: aliceblue;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                font-style: italic;
+            }
+            
+            label:hover{
+                background-color:darkseagreen;
+            }
+            input[type=text]{
+                height: 30px;
+                width: 300;
+                text-align: center;
+            }
+            input[type=button]{
+                height: 30px;
+                width: 50px;
+                text-align: center;
+            }
+            .one{
+                height: 40px;
+                width: 50px;
+            }
+                            
+        </style>
+    </head>
+    <body>
+    <h2 align="center">My To Do List</h2>
+    <table border="1px" align="center">
+        <tr>
+            <td><input type="text" class="one" placeholder="Add Activity"></td>
+            <td><input type="button" id="b1" value="Add"></td>
+        </tr>
+        <tr>
+            <td class="one" colspan="2"><input type="radio" value="task1">
+                <label for="task1">Buy Groceries for BreakFast</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="one" colspan="2"><input type="radio" value="task2">
+            <label for="task2">Have Breakfast early and leave for Work</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="one" colspan="2"><input type="radio" value="task3">
+                <label for="task3">Complete tasks Assigned by Team Lead</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="one" colspan="2"><input type="radio" value="task4">
+                <label for="task4">Attend meeting by 11:45 with Team</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="one" colspan="2"><input type="radio" value="task5">
+                <label for="task5">Buy milk while leaving from Work</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="one" colspan="2"><input type="radio" value="task6">
+                <label for="task6">Leave for dinner with family</label>
+            </td>
+        </tr>
+    </table>
+    
+    </body>
+</html>
