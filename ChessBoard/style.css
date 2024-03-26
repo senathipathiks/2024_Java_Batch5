@@ -1,0 +1,25 @@
+*{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #634816
+}
+.top{
+    display: flex;
+    margin-left: 33rem;
+    gap: 3.5rem;
+}
+table{
+    width: 50vh;
+    height: 40vh;
+    border: 1000rem;
+}
+.B{
+    background-color: black;
+}
+.w{
+    background-color: white;
+}
+.down{
+    display: flex;
+    margin-left: 33rem;
+    gap: 3.5rem;
+}
