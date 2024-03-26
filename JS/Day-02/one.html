@@ -1,0 +1,30 @@
+<html>
+<!--Browser object model-->
+<head>
+    <script>
+        var name;
+        window.onload=function(){
+            name=prompt("enter your name")
+        }
+        function msg() {
+            alert('check the email....')
+
+        }
+        function a(){
+            var c = confirm('confirm?')
+            if(c==true){
+                open("https://outlook.office.com/mail/")
+            }else{
+                open("https://www.google.co.in/")
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="tex" onblur="msg()">
+    <input type="submit" name="user" onclick="a()">
+</body>
+
+</html>

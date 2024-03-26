@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script>
+        function check(){
+            var name = document.getElementById('name').value;
+            var name1 = name.length;
+            if(name1>10){
+                document.getElementById('nme').innerHTML="Enter name less than 10 characters";
+                
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+Name : <input type="text" id="name" onblur="check()"><br>
+<div id="nme"></div>
+Email : <input type="text" id="mail"><br>
+<input type="submit" id="button" onclick="">
+</body>
+
+</html>

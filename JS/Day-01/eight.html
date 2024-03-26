@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // var a = ["sahana","shalini","rini","sekar"];
+        // document.writeln(a[1])
+        function verify(){
+            var a = document.getElementById("user").value;
+            if(a==""){
+                alert("required");
+            }
+        }
+        function msg(){
+            alert("Hello");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="user" onblur="verify()">
+        <input type="submit" name="submit" onclick="msg()">
+    </form>
+    
+</body>
+</html>

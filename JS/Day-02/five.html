@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Digital clock</title>
+    <style>
+        #watch{
+            border: 2px black dashed;
+           
+            text-align: center;
+            font-size: xx-large;
+            margin-top: 250px;
+            margin-left: 600px;
+            width: 250px;
+        }
+    </style>
+    <script>
+        var time;
+        var seconds = 0;
+        var minutes = 0;
+        var hours = 0;
+
+        function start(){
+            time = setInterval(function() {
+                seconds += 1;
+                if(seconds > 59) {
+                    minutes += 1;
+                    seconds = 0;
+                }
+                if(minutes>59){
+                    hours += 1;
+                    minutes = 0;
+                    
+
+                }
+                document.getElementById("clock").innerText=hours+ " : "+minutes + " : " + seconds;
+            }, 1000);
+        }
+
+        function stop(){
+            clearInterval(time);
+        }
+
+        function Reset(){
+            seconds = 0;
+            minutes = 0;
+            document.getElementById("clock").innerText=hours +" : "+ minutes + " : " + seconds;
+        }
+    </script>
+</head>
+
+<body>
+    <div id ="watch">
+    <div id="clock">00: 00 : 00</div>
+    <button id="one" onclick="start()">Start</button>
+    <button id="two" onclick="stop()">Stop</button> 
+    <button id="three" onclick="Reset()">Reset</button> 
+</div>
+</body>
+</html>

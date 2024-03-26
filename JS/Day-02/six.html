@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script>
+        function colorChange(){
+            document.getElementById('uname').style.background="blue";
+
+        }function msg(){
+            var name = document.getElementById('uname').value;
+            alert('Hello '+name)
+        }function changeButtonColor(){
+            document.getElementById('button').style.background="purple";
+            document.getElementById('button').style.color="white";
+        }
+        function def(){
+            document.getElementById('button').style.background="white";
+            document.getElementById('button').style.color="black";
+
+
+        }
+        function confirm1(){
+            confirm("Are you sure ???")
+
+        }
+        function changeButtonText(){
+            document.getElementById('button1').value="click me"
+        }function changeSubmit(){
+            document.getElementById('button1').value="specs"
+        }
+        function msg2(){
+            document.getElementById('confirmm').innerHTML="successfully submitted"
+        }
+    </script>
+
+</head>
+
+<body>
+<input tupe="text" id="uname" onfocus="colorChange()" onblur="msg()"><br>
+<input type="submit" id="button" onmouseover="changeButtonColor()" onmouseout="def()" onclick="confirm1()"><br>
+<input type="submit" id="button1" value="specs" onmouseover="changeButtonText()" onmouseout="changeSubmit()" ondblclick="msg2()">
+<div id="confirmm"></div>
+</body>
+
+</html>

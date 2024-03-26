@@ -1,0 +1,18 @@
+<html>
+<!--Browser object model-->
+<head>
+    <script>
+        function showTime() {
+            var date = new Date()
+            document.getElementById('submit').innerHTML=date
+            setTimeout(showTime,1000)
+        }
+    </script>
+</head>
+
+<body>
+<input type="submit" name="sub" onclick="showTime()">
+<div id="submit"></div>
+</body>
+
+</html>
