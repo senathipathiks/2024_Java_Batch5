@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Edu+SA+Beginner:wght@400..700&family=Italianno&family=Madimi+One&family=My+Soul&family=Patua+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(to top left,  rgb(122, 31, 155), cyan);
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-family: "Patua One", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      #main {
+        width: 1300px;
+        height: 600px;
+        background-color: #49045e;
+        border-radius: 30px;
+        box-shadow: 0 2px 30px 10px rgb(1, 242, 254);
+        border: none;
+        margin-left: 80px;
+      }
+      .navbar {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+        color: white;
+      }
+      
+      .navbar span {
+        margin-top: 10px;
+        padding-left: 120px;
+        font-size: larger;
+      }
+      .links {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        border-radius: 10px;
+        margin-left: 500px;
+        gap: 40px;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      #link1 {
+        color: cyan;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .image {
+        position: absolute;
+      }
+      #hex {
+        width: 700px;
+        height: 500px;
+        margin-left: 650px;
+        margin-top: -450px;
+      }
+ 
+      #man {
+        width: 260px;
+        height: 260px;
+        margin-left: 60px;
+        margin-bottom: 5px;      
+      }
+      .content {
+        background-color: transparent;
+        width: 700px;
+        height: 400px;
+        margin-left: 140px;
+        color: white;
+        margin-top: 100px;
+      }
+      #hex1 {
+        margin-left: -130px;
+      }
+      #mans {
+        margin-left: 55%;
+        width: 50%;
+         margin-top: -440px; 
+      }
+      h3 span {
+        color: cyan;
+      }
+      p {
+        font-size: 14px;
+      }
+      .logos {
+        display: flex;
+        font-size: 20px;
+        gap: 30px;
+        padding-bottom: 40px;
+        text-align: center;
+        padding-top: 20px;
+        
+      }
+      .logo {
+        border: 3px solid cyan;
+        width: 40px;
+        height: 30px;
+        padding-top: 7px;
+        border-radius: 100%;
+        color: cyan;
+        box-shadow: 0px 1px 10px 2px cyan;
+        
+      }
+      .logo:hover{
+        background-color: cyan;
+        color: rgb(122, 31, 155);
+        transform: scale(1.2);
+      }
+      button{
+        background-color: cyan;
+        width: 150px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 1px 10px 1px cyan;
+      }
+      #but{
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="navbar">
+        <span>PORTFOLIO.</span>
+        <div class="links">
+          <div class="link" id="link1">HOME</div>
+          <div class="link" id="link2">ABOUT</div>
+          <div class="link" id="link3">EDUCATION</div>
+          <div class="link" id="link4">SKILLS</div>
+          <div class="link" id="link5">CONTACT</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="sentence">
+          <h3>Hello, It's Me</h3>
+          <h1>Vashanth </h1>
+          <h3>And I'm a <span> Frontend Developer</span></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            officia atque quasi eos earum deserunt accusamus quod molestiae!
+            Similique accusantium maxime voluptatem, quo vero cupiditate.
+          </p>
+          
+          <div class="logos">
+            <div class="logo" ><i class="fa fa-twitter"></i></div>
+            <div class="logo" ><i class="fa fa-instagram"></i></div>
+            <div class="logo" ><i class="fa fa-facebook"></i></div>
+            <div class="logo" ><i class="fa fa-linkedin"></i></div>
+          </div>
+          <button>
+            <a href="" type="download" download="profile-Photoroom.png" id="but">Download CV</a>
+          </button>
+        </div>
+        <div class="image">
+          <div id="hex1"><img src="hex_prev_ui.png" alt="" id="hex" /></div>
+          <div id="mans"><img src="profile-Photoroom.png-Photoroom.png" alt="" id="man" /></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+ 
