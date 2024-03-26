@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function msg(){
+
+                var name= document.getElementsByTagName("p");
+                document.getElementById("para").innerHTML=name[0].innerHTML;
+            }
+
+        </script>
+    </head>
+    <body>
+        
+         <p>
+            this is para1
+         </p>
+         <p>
+            this is para2
+         </p>
+         <input type="submit" onclick="msg()">
+         <div class="para"></div>
+    </body>
+</html>

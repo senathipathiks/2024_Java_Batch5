@@ -1,0 +1,30 @@
+<html>
+
+<head>
+        <script>
+            // function msg(){         ///// m1
+            //     var name = document.getElementById("uname");
+            //     alert("Hello " + name.value);
+            // }
+            // function msg(){           /////m2
+            //     var name = document.getElementsByName("uname");
+            //     alert("Hello " + name[0].value);
+            // }
+
+                        function msg(){           /////m3
+                var name = document.getElementsByName("name");  ////////m3
+                alert("Hello " + name[0].value+name[1].value);      ////only last name means use index1 and onlyu first name means use 0 if both means give like this
+            }
+
+        </script>
+</head>
+<body>
+    <!-- <input type="text" id="uname"> -->     <!-- m1 -->
+            <!-- <input type="text" name="uname"> m2 -->
+            First Name: <input type="text" name="name"> <br>     <!-- //////m3 -->
+            Last Name: <input type="text" name="name"> <br>
+    <input type="submit" name="button" onclick="msg()">
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            function colorchange() {
+                document.getElementById("uname").style.background="grey";
+            }
+            function msg() {
+                var name = document.getElementById("uname");
+                alert("hi"+name.value);
+            }
+            function confirmation()
+             {
+                confirm("Are you sure to confirm.....")
+
+            }
+            function changebuttoncolor() {
+                document.getElementById("button").style.background="yellow";
+                document.getElementById("button1").style.background="yellow";
+
+                
+            }
+            function changeButtonText() {
+                document.getElementById("button1").value="Click Me";
+                document.getElementById("button").value="hi";
+
+            }
+            function changeSubmit() {
+                document.getElementById("button1").value="submit1";
+            }
+            function msg2(){
+                document.getElementsByClassName("confirmmsg").innerHTML="Successfully submitted";
+
+            }        
+            </script>
+
+    </head>
+    <body>
+        <input type="text" id="uname" onfocus="colorchange()" onblur="msg()">
+        <input type="submit" value="button" id="button" onmouseover="changebuttoncolor()" onclick="confirmation()">
+        <input type="submit" value="submit1" id="button1" onmouseover="changeButtonText()" onmouseout="changeSubmit()" ondblclick="msg2()" >
+        <div class="confirmmsg">
+
+        </div>
+    </body>
+</html>
