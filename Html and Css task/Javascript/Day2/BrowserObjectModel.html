@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            var name;
+            window.onload=function()
+            {
+                name = prompt("Enter your name");
+            }
+            function validate(){
+                alert("Hello"+name+"chack the emailId");
+            }
+
+            function msg(){
+                var conf = confirm("Are you sure to submit");
+                if(conf == true){
+                    open("https://fontawesome.com/v4/icon/times");
+                }
+                else{
+                    open("http://google.com");
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+        <input type="text" name="email" onblur="validate()">
+        <input type="submit" name="button" onclick="msg()">
+    </body>
+
+</html>

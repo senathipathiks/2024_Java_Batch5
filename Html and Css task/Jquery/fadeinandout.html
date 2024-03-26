@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            img{
+                width: 400px;
+                height: 400px;
+            }
+        </style>
+        <!-- <script src="jquery.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+               
+                $("#hide").click(function(){
+                    $("#img1").fadeOut(1000);
+                })
+                
+            })
+            $(function(){
+                $("#show").click(function(){
+                    $("#img1").fadeIn(1000);
+                })
+                
+            })
+        </script>
+    </head>
+    <body>
+        <img src="img1.jpg" id="img1">
+        <input type="submit" id="show" value="Show">
+        <input type="submit" id="hide" value="Hide">
+    </body>
+</html>

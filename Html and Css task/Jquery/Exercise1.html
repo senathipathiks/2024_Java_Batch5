@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <!-- <script src="jquery.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            // $(document).ready(function(){
+            //     document.write("hello world");
+            // })
+
+            // $(function(){
+            //     document.write("HELLO WORLD");
+            // })
+
+            $(function(){
+                
+                $("p").css({"color":"blue","font-size":"22px"});
+                $("#hide").click(function(){
+                    $("#para").fadeOut();
+                })
+                
+            })
+            $(function(){
+                
+                $("p").css({"color":"blue","font-size":"22px"});
+                $("#show").click(function(){
+                    $("#para").fadeIn();
+                })
+                
+            })
+        </script>
+    </head>
+    <body>
+        <p id="para">this is my paragraph</p>
+        <input type="submit" id="show" value="Show">
+        <input type="submit" id="hide" value="Hide">
+    </body>
+</html>

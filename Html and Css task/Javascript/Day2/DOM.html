@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+           function msg(){
+            var name = document.getElementById("uname").value;
+            alert("Hello "+ name); 
+           }
+
+           function msg1(){
+            var name = document.getElementsByName("name");
+            alert("Hello "+ name[0].value); 
+           }
+
+           function msg2(){
+            var name = document.getElementsByTagName("p");
+            document.getElementById("div").innerHTML = name[0].innerHTML;
+            document.getElementById("div").style.color="blue";
+           }
+           
+        </script>
+    </head>
+    <body>
+         ById
+        <input type="text" id="uname">
+        <input type="text" id="uname">
+        <input type="submit" name="button" onclick="msg()"><br><br>
+        ByName
+        <input type="text" name="name">
+        <input type="text" name="name">
+        <input type="submit" name="button" onclick="msg1()"><br><br>
+
+        <p>this is a paragraph 1</p>
+        <p>this is a paragraph 2</p>
+        <input type="submit" name="button" onclick="msg2()"><br><br>
+        <div id="div"></div>
+        
+    </body>
+
+</html>

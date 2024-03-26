@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Login</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+           .background{
+                height: 150px;
+                width: 150px;
+           }
+           .card{
+            margin-top: px;
+            margin-right: auto;
+            margin-left: 400px;
+            width: 250px;
+            box-shadow: 0 15px 25px rgb(219, 202, 19);
+            height: 300px;
+            border-radius: 10px;
+            backdrop-filter: blur(4px);
+            background-color: rgba(49, 70, 72, 0.767);
+            padding: 10px;
+            text-align: center;
+           }
+            body{
+            background-image: url(shopping.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-size: 500px; */
+            /* height: 70px; */
+}
+            input{
+                border:none;
+                outline:none;
+                display:inline-block;
+                height:34px;
+                vertical-align:middle;
+                position:relative;
+                bottom:14px;
+                border-radius:22px;
+                width:220px;
+                box-sizing:border-box;
+                padding:0 18px; 
+            }
+            h2{
+                color:white;
+            }
+            h1{
+                color:rgba(49, 70, 72, 0.767);
+                margin-left: 410px;
+                margin-top: 40px;
+            }
+            button{
+               padding: 10px;
+               border-radius: 10px;
+               cursor:pointer;
+
+                
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <h1>WELCOME ALL!</h1>
+       <div class="background">
+        <div class="card">
+            <form>
+            <h2>Email</h2>
+            <input type="text" id="email"><br>
+            <p id="para1" style="color:rgb(207, 49, 14); font-size: 20px;"></p>
+            <h2>Password<h2>
+            <input type="password" id="password"><br>
+            <p id="para2" style="color:rgb(207, 49, 14); font-size: 20px;"></p>
+            <button id="login">Login</button>
+            </form>
+        </div>
+       </div>
+       <script>
+            $(document).ready(function(){
+
+                $("#login").click(function(){
+                var email = $("#email").val();
+                var pass = $("#password").val();
+                if(email == ""){
+                    alert("Email must be entered");
+                }
+                else if(email!=""){
+                    if(!email.includes("@") || !email.includes(".com")){
+                        alert('enter valid email');
+                    }
+                    else{
+                        if(pass == ""){
+                            alert("password should be entered");
+                        }
+                    }
+                }
+                
+                })
+
+            })
+       </script>
+    </body>
+</html>

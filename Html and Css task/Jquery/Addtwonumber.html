@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            img{
+                width: 400px;
+                height: 400px;
+            }
+        </style>
+        <!-- <script src="jquery.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                $("#add").click(function(){
+                    var x = parseInt ($("#num1").val());
+                    var y = parseInt ($("#num2").val());
+                    var z = x+y;
+                    $("#result").val(z);    
+                })
+                
+            })
+           
+        </script>
+    </head>
+    <body>
+        Number 1:<input type="text" id="num1">
+        Number 2:<input type="text" id="num2">
+        <br><br>
+        <input type="submit" id="add" value="add">
+        <br><br>
+        Result : <input id="result" type="text">
+    </body>
+</html>
