@@ -1,0 +1,53 @@
+<html>
+<head>  
+    <style>
+        .style1{
+            color: blue;
+            background-color: black;
+        }
+        .style2{
+            color: rgb(255, 0, 230);
+            background-color: black;
+        }
+        .style3{
+            color: rgb(229, 245, 9);
+            background-color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+    </style>
+    
+
+
+<script src="jquery-3.7.1.js"></script>
+<script>
+    $(document).ready(function(){
+     $("#append").click(function(){
+        $("#para").append(" kook ");
+    })
+    $("#prepend").click(function(){
+        $("#para").prepend(" jeon ");
+    })
+    $("#remove").click(function(){
+        $("#para").remove();
+    })
+    $("#effect").click(function(){
+        $("#para").addClass("style3");
+    })
+
+
+    })
+</script>
+</head>
+<body>
+    
+    2
+    <h1 id="para">jung</h1>
+    <input type="submit" id="append" value="append">
+    <input type="submit" id="prepend" value="prepend">
+    <input type="submit" id="remove" value="remove">
+    <input type="submit" id="effect" value="effect">
+
+
+</body>
+</html>

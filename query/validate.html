@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.js"></script>
+<script>
+    $(document).ready(function(){
+     $("#button").click(function(){
+        var f= $("#fname").val();
+        var l= $("#lname").val();
+        var e= $("#email").val();
+        var p= $("#pass").val();
+        if(f==""){
+            alert("enter your first nameee");
+        }
+        else if(l==""){
+            alert("enter your last nameee");
+        }
+        else if(e!=""){
+            if(!e.includes("@gmail.com")){
+                alert('enter valid email');
+            }     
+        }
+        // || !(p.includes("!")) || !(p.includes("#"))
+            else if(!p.includes("@") ) {
+                alert('we succeeded');
+            }
+        
+    })
+})
+</script>
+
+    </head>
+    <body>
+        enter firstname: <input type="text" id="fname">
+        <br>
+        enter lastname: <input type="text" id="lname">
+        <br>
+        enter email: <input type="text" id="email">
+        <br>
+        enter password: <input type="text" id="pass">
+        <br>
+        
+
+        <input type="submit" id="button" >
+
+    </body>
+</html>
