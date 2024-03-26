@@ -1,0 +1,22 @@
+
+            p{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: bisque;
+            
+            }
+            h2{
+                color:crimson;
+                font-style: italic;
+               /*text-decoration:underline;*/
+                /*background-color:deeppink;*/
+                border-style: dashed;
+                border-radius:;
+               /* border-radius: 1cap;*/
+
+            }
+            body{
+                background-image: url(https://img.freepik.com/free-vector/beautiful-decorative-soft-colorful-watercolor-texture-background_1055-14290.jpg);
+                background-size:cover;
+                background-repeat:no;
+            }
+       
