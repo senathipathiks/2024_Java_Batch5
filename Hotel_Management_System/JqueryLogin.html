@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    var uname = $("#name").val();
+                    var password = $("#pass").val();
+                    var email = $("#email").val();
+                    var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;  
+                    var validEmail = regEx.test(email); 
+                    if(uname == ""){
+                        alert("First name cannot be empty");
+                    }
+                    else if(email == ""){
+                            alert("Email cannot be empty");
+                        }
+                    else if(email != ""){
+                     if (!validEmail) {  
+                    $('#email').after('<span class="error">Enter a valid email</span>');  
+                    }
+                }
+             })
+               
+        })
+        </script>
+        <style>
+            span{
+                color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <table>
+          
+                <tr>
+                    <td>Username :</td>
+                    <td><input type="text"  id="name"></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><input type="text"  id="email"></td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td><input type="password"  id="pass"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit"  id="submit" value="submit"></td>
+                </tr>
+
+           
+        </table>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title> Login page </title>
+        <h6> The Palms</h6>
+        <script>
+            $(document).ready(function(){
+                var uname = $("fname").val()
+            if(uname == ""){
+                alert("First name cannot be empty");
+            }
+        })
+        </script>
+        <style>
+            body{
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+
+            }
+            *{
+                text-align: center;
+            }
+
+        table{
+            color: aliceblue;
+            margin-top: 150px;
+        }
+        body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.card{
+    margin-top : px;
+    margin-right: auto;
+    margin-left: 400px;
+    width: 250px;
+    box-shadow:0 15px 25px rgba ()
+}
+       
+
+        </style>
+    </head>
+    <body background="background.jpg">
+     
+
+            <div class="bg-text">
+                <div class = "card">
+            <table border ="1" align = "center">
+                <tr align = "center">
+                    <td>Username</td>
+                    <td><input type = "text" name = "uname" </td>
+                </tr>
+                <tr align = "center">
+                    <td>Password</td>
+                    <td><input type = "password" name = "password"></td>
+                </tr>
+            </table>
+            </div>
+    </div>
+</div>
+    </body>
+
+</html>
