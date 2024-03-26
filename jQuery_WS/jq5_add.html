@@ -1,0 +1,32 @@
+<head>
+    <title></title>
+    <!-- <script src="jquery.js"> </script> -->
+    <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            $("#addButton").click(function(){
+                var x = parseInt($("#n1").val());
+                var y = parseInt($("#n2").val());
+                var z= x+y;
+            $("#sum").val(z);    
+            })
+        
+    })
+
+
+
+    </script>
+</head>
+<body>
+  
+  enter number 1 : <input type="text" id="n1" >
+  <br><br>
+  enter number 2 : <input type="text" id="n2" >
+  
+  <input type="submit" id="addButton" value="add">
+  <br><br>
+  sum of numbers : <input type="text" id="sum" >
+
+
+</body>
+</html>

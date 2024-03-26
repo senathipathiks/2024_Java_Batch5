@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            .style1{
+                color: aqua;
+                background-color: brown;
+            }
+            .style2{
+                color: aqua;
+                background-color: blue;
+            }
+            .style3{
+                color: aqua;
+                background-color: blueviolet;
+            }
+        </style>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#append").click(function()
+                {
+                    $("#para1").append(" I'm intern-software Engineer");
+                })
+                $("#remove").click(function()
+                {
+                    $("#para1").remove();
+                })
+                $("#prepend").click(function()
+                {
+                    $("#para1").prepend("hello everyone !");
+                })
+            })
+        </script>
+</head>
+<body>
+    <p id="para1">Hi This is vidhusha</p>
+    <input type="submit" id="append" value="Append">
+    <input type="submit" id="remove" value="Remove ">
+    <input type="submit" id="prepend" value="Prepend">
+ 
+</body>
+</html>

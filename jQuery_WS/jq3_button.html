@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title></title>
+        <!-- <script src="jquery.js"> </script> -->
+        <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"> </script>
+        <script>
+            $(document).ready(function(){
+                $("#show").click(function(){
+                    // $("#h").hide(); //will hide h1 when button clicked
+                 $("#h").show();
+ 
+            })
+            $("#hide").click(function(){
+                    $("#h").hide(); //will hide h1 when button clicked
+                })
+      
+        })
+
+
+    
+        </script>
+    </head>
+    <body>
+       <h2 id="h" style="display: none;"> paathadhu podhum ...</h2>
+       <input type="submit" id="show" value="show" >
+       <input type="submit" id="hide" value ="hide">
+    
+    </body>
+</html>

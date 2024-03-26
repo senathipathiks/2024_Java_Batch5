@@ -1,0 +1,54 @@
+<head>
+    <title></title>
+    <!-- <script src="jquery.js"> </script> -->
+    <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+
+            $("#sub").click(function(){
+                var names=$('#name').val();
+                var email= $('#email').val();
+                var pswrd =$('#pswrd').val();
+                mrex= /^[A-Za-z0-9\d=!\-@._*]*$/;
+               
+                if(names==""){
+                    alert(" enter name");
+                }
+                else if(email ==""){
+                    alert(" enter mail ID");
+                }
+                else if(pswrd ==""){
+                    alert(" enter password");
+                }
+               
+                else if(!pswrd.match(mrex)){
+
+                    alert("invalid password")
+                }
+                else{
+
+                alert("login successful");
+}
+            })
+   
+    })
+
+
+
+    </script>
+</head>
+<body>
+  
+  enter name : <input type="text" id="name" >
+  <br><br>
+  enter mail ID: <input type="text" id="email" >
+  <br><br>
+  enter pswrd : <input type="text" id="pswrd" >
+  <br><br>
+
+  <input type="submit" id="sub" value="submit">
+  <br><br>
+  
+  </body>
+
+  </html>
