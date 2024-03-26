@@ -1,0 +1,41 @@
+Cascading style sheet
+selectors{
+properties:values;
+}
+
+types of selectors 
+1, element (tags)
+applied to all the specified tags
+
+2, id (# and id name) #id1 {pro:val;}
+applied only to the specific id
+
+3, class
+ .selectors{
+properties:values;
+}
+<div class="bg"></div>
+<p class>
+
+4, universal
+*{
+properties:values;
+}
+
+5, group
+body,html{
+}
+
+inline - <p style="color:blue">
+internal - <style>p{color:blue} this has to be placed in the head tag
+external - <link rel="stylesheet" type="text/css" href="style.css"> this should be placed under head tag
+
+position
+-static
+-fixed
+-relative
+-absolute
+
+cursors
+
+
