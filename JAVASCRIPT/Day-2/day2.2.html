@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <!-- <script src="sample.js"></script> -->
+        <script>
+            var name;
+            window.onload=function()
+            {
+                name=prompt("Enter the username")
+            }
+               function validate()
+               {
+                window.alert("Hello"+name+"check the email ID");
+                
+               }
+               function msg()
+               {
+                var conf=confirm("Are you sure to submit...");
+                if(conf==true)
+                {
+                    open("https://www.google.com");
+                }
+                else{
+                    open("https://www.gmail.com");
+                }
+               }
+
+        </script>
+    </head>
+    <body>
+        <input type="text" name="email" onblur="validate()">
+        <input type="submit" name="button" onclick="msg()">
+    </body>
+</html>

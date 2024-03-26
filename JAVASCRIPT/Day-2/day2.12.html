@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <!-- <script src="sample.js"></script> -->
+        <script>
+                var emailformat='^[a-ZA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$';
+               function emailValidate()
+               {
+                    var email=document.getElementById("email").value;
+                    // console.log(email);
+                    if(!email.match(emailformat))
+                    {
+                        document.getElementById('emailvalidmsg').innerHTML="Enter valid email";
+                        document.getElementById('emailvalidmsg').style.color="red";
+                       // document.getElementById('email').value="";
+                        document.getElementById('email').focus();
+                    }
+                  
+               }
+               function nameValidate()
+               {
+                var name=document.getElementById("uname").value;
+                if(name=="")
+                {
+                    document.getElementById('namevalidmsg').innerHTML="Name not be empty";
+                        document.getElementById('namevalidmsg').style.color="red";
+                        document.getElementById('uname').focus();
+                }
+               }
+               function confirmation()
+               {
+                  confirm("Are your sure to confirm");
+               }
+               
+        </script>
+    </head>
+    <body>
+        Enter the name:<input type="text" id="uname" onblur="nameValidate()">
+        <div id="namevalidmsg"></div>
+        Enter the email:<input type="email" id="email" onblur="emailValidate()">
+        <div id="emailvalidmsg"></div>
+        <input type="button" value="submit1" id="button1">
+        <div id="confirm"></div>
+    </body>
+</html>

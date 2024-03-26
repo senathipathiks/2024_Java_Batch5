@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <!-- <script src="sample.js"></script> -->
+        <script>
+    
+               function start()
+               {
+                var timeRanges=new TimeRanges().getTime();
+                document.getElementById("timer").innerHTML=TimeRanges;
+                setTimeout(start,1000);   
+               }
+        </script>
+    </head>
+    <body>
+        <input type="submit" name="button" onclick="start()" value="Start">
+        <input type="submit" name="button" onclick="msg()" value="Stop">
+        <input type="submit" name="button" onclick="msg()" value="reset"><br><br>
+        <input type="text" name="t1" value="00:00:00">
+        <div id="timer"></div>
+    </body>
+</html>
