@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            .style1
+            {
+                color: aqua;
+                background-color: beige;
+            }
+            .style2
+            {
+                color: rgb(255, 0, 140);
+                background-color: rgb(137, 203, 123);
+            }
+            .style3
+            {
+                color: rgba(0, 247, 78, 0.656);
+                background-color: rgb(235, 17, 162);
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    
+    <script>
+        // (Method 1)
+        $(document).ready(function()  {
+            $("#Append").click(function(){
+              $("#para1").append("This is Madhan");               
+                
+            })
+            $("#Prepand").click(function(){
+              $("#para1").prepend("Good Afternoon!!");               
+                
+            })
+            $("#remove").click(function(){
+              $("#para1").remove();               
+                
+            })
+           
+        } )
+
+        
+        
+    </script>
+    </head>
+    <body>
+        <p id="para1">Hi everyone Good Morning!!!!!!!!!</p>
+        <input type="submit" id="Append" value="Append the class" ><br>
+        <input type="submit" id="Prepand" value="Prepand  the class" ><br>
+        <input type="submit" id="remove" value="remove the class" ><br>
+    </body>
+</html>

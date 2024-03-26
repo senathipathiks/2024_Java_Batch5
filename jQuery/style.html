@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            .style1
+            {
+                color: aqua;
+                background-color: beige;
+            }
+            .style2
+            {
+                color: rgb(255, 0, 140);
+                background-color: rgb(137, 203, 123);
+            }
+            .style3
+            {
+                color: rgb(234, 119, 19);
+                background-color: rgb(235, 17, 162);
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    
+    <script>
+        // (Method 1)
+        $(document).ready(function()  {
+            $("#add").click(function(){
+              $("#para1").addClass("style1");               
+                
+            })
+            $("#remove").click(function(){
+              $("#para1").removeClass("style1 style2 style3");               
+                
+            })
+            $("#toggle").click(function(){
+              $("#para1").toggleClass("style3");               
+                
+            })
+        } )
+
+        
+        
+    </script>
+    </head>
+    <body>
+        <p id="para1">Hi everyone Good Morning!!!!!!!!!</p>
+        <input type="submit" id="add" value="Add the class" ><br>
+        <input type="submit" id="remove" value="Remove  the class" ><br>
+        <input type="submit" id="toggle" value="Toggle class" ><br>
+    </body>
+</html>

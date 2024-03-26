@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    
+    <script>
+        // (Method 1)
+        $(document).ready(function()  {
+            $("#show").click(function(){
+                $("#para1").show();
+                // $("#para1").hide();
+            })
+        } )
+
+        
+        // $(function()  {
+        //     document.write("Hello world");
+        // } ) Equivalent to the above statement
+
+        
+    </script>
+    </head>
+    <body>
+        <p id="para1"style="display: none;">This is my paragraph 1</p>
+        <input type="submit" id="show" value="show">
+    </body>
+</html>

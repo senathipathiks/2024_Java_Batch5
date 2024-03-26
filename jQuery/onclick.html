@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    
+    <script>
+        // (Method 1)
+     function display()
+     {
+        var para = document.querySelectorAll("p");
+        document.querySelector("#para").innerHTML=para[1].innerHTML;
+     }    
+        
+    </script>
+    </head>
+    <body>
+        
+     <p>This is para 1</p>
+     <p>This is para 2</p>
+        <input type="button" id="add" value="submit" onclick="display()" ><br>
+
+        <div id="para"></div>
+    
+    </body>
+</html>

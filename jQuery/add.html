@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    
+    <script>
+        // (Method 1)
+        $(document).ready(function()  {
+            $("#add").click(function(){
+                var x = parseInt($(num1).val());
+                var y = parseInt($(num2).val());
+                var z = x + y;
+                $("#sum").val(z);
+                
+            })
+        } )
+
+        
+        
+    </script>
+    </head>
+    <body>
+        
+       Enter number 1:<input type="text" id="num1"><br>
+       Enter number 2:<input type="text" id="num2"><br>
+
+        <input type="submit" id="add" value="Add" ><br>
+        Result: <input type="text" id="sum"><br>
+    </body>
+</html>
