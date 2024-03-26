@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function() // or $()
+            {
+                $("#submit").click(function()
+                {
+                    var passwordRegex='^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+                    var emailRegex='^[A-Za-z]+$'; //'[a-z0-9]+@[a-z]+\.[a-z]{2,3}$'
+                  var fname=$('#name').val();
+                    var password=$('#pwd').val();
+                    var email=$('#email').val();
+                    if(fname=="")
+                    {
+                        alert("Name cannot be empty");
+                    }
+                    else if(password=="")
+                    {
+                        alert("password should not be empty");
+                    }
+                    else if(!password.match(passwordRegex))
+                    {
+                        alert("Enter a valid password");
+                    }
+                    else if(!email.match(emailRegex))
+                    {
+                        alert("Enter a valid email");
+                    }
+                    else if(!fname=="" && !password=="")
+                    {
+                        alert("Login successful");
+                    }
+                })
+            })  
+        </script>
+    </head>
+    <body>
+       Enter Name:<input type="text" id="name"><br>
+       Enter Password:<input type="password" id="pwd"><br>
+       Enter email:<input type="tetr" id="email"><br>
+       <input type="submit" id="submit" value="Submit"><br>
+       
+       
+        
+    </body>
+</html>

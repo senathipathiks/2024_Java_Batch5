@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function() // or $()
+            {
+                    $("#show").click(function()
+                    {
+                        $("#para1").hide();
+                    })
+            })
+            // both are same 
+            // $(function(){
+            //     document.write("Hello Ani");
+            // })
+
+        </script>
+    </head>
+    <body>
+        <p id="para1">This is a paragraph 1</p>
+        <input type="submit" id="show" value="show">
+       
+        
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function() // or $()
+            {
+                    $("#fadeOut").click(function()
+                    {
+                        $("#img").fadeOut(10000);
+                    })
+            }) 
+            $(document).ready(function() // or $()
+            {
+                    $("#fadeIn").click(function()
+                    {
+                        $("#img").fadeIn(10000);
+                    })
+            })  
+        </script>
+    </head>
+    <body>
+       <img src="flower.jpg" id="img" alt="flower">
+        <input type="submit" id="fadeIn" value="fadeIn">
+        <input type="submit" id="fadeOut" value="fadeOut">
+       
+        
+    </body>
+</html>
