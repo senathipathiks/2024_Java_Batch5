@@ -1,14 +1,30 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+        
         <script>
+            function confirmpass(){
+                var firstpass=document.f1.pwd.value;
+                var secondpass=document.f1.cpwd.value;
+
+                if(firstpass==secondpass){
+                    return true;
+                }
+                else{
+                    alert("password must be same");
+                    return false;
+                }
+            }
+        
             $(document).ready(function(){
                 $("#signup").click(function(){
                     var name1 = $("#name1").val();
                     var name2 = $("#name2").val();
                     var email = $("#emailid").val();
                     var pass = $("#pwd").val();
+                    var cpwd = $("#cpwd").val();
+                    var regEx =/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/;
+                    var validPass = regEx.test(pass)
                     if(name1 ==""){
                         alert("First Name is Required")
                     }
@@ -26,12 +42,29 @@
                             alert("Email entered is not Valid");
                         } 
                         else if(pass == ""){
-                        alert("password should be entered");
-                    }  
-                    }
+                            alert("password should be entered");
+                        }
+                        else if(!validPass){
+                            alert("Enter valid password");
+                        }
+                        else if(cpwd == ""){
+                            alert("password needs to be confirmed")
+                        }
+                        else if(cpwd!=""){
+                            if(cpwd!=pass){
+                                alert("password must be same");
+                            }
+                
+                            else{
+                                alert("Registered Succesfully");
+                            }
+                        }  
+                        }
+                        
+                    })
                     
                     })
-                })
+                
                 
         </script>
         <style>
