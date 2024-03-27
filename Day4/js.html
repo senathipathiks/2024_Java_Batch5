@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            window.onload=function()
+            {
+                console.log(document.cookie)
+                colorsele=document.cookie.split("=");
+                document.bgColor=colorsele[1];
+                document.querySelector("#color").valuecolorsele[1];
+            }
+            function display(){
+                if(document.querySelector("#color").value!="Select")
+                {
+                    colorsel=document.querySelector("#color").value;
+                    document.bgColor=colorsel;
+                    document.cookie="color"+colorsel;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <select id="color" onchange="display()">
+        <option value="Select">Select</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+    
+    
+    </select>
+    </body>
+</html>

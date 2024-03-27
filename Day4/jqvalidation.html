@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#button").click(function(){
+                var emailRegEx='^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$'; 
+                var passwordRegEx='/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/';
+                  var fn=  $("#fname").val();
+                  var ln=  $("#lname").val();
+                  var em=$("#email").val();
+                  var password=$("#pwd").val();
+                  if(fn==""){
+                  alert("The name field should not be empty");
+                  }
+                  
+                else if(ln==""){
+                alert("The last name should not be empty");
+                  }
+                  else if(em==""){
+                    alert("The email can not be empty");
+                  }
+                  else if(!em.match(emailRegEx)){
+                    
+                    alert("The email is not valid");
+                  }
+                  else if(password=="")
+                  {
+                    alert("Password is empty");
+                  }
+                  else if(password.length <6 && !password.match(passwordRegEx)){
+                    alert("Enter valid password");
+                  }
+                 
+
+
+                })
+            })
+        </script>
+    </head>
+    <body>
+        Enter First Name:<input type="text" id="fname">
+        Enter Last Name:<input type="text" id="lname">
+        Enter the E-mail:<input type="text" id="email">
+        Enter the password:<input type="text" id="pwd">
+        <input type="submit" id="button">
+        
+    </body>
+</html>

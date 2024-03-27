@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            .style1{
+                color: blanchedalmond;
+                background-color: aquamarine;
+
+            }
+            .style2{
+                color: aquamarine;
+                background-color: black;
+            }
+            .style3{
+                color: brown;
+                background-color: bisque;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#add").click(function(){
+                    $("#para1").addClass("style1");
+            
+            })
+            $("#remove").click(function(){
+                    $("#para1").removeClass("style1 style2 style3");
+            })
+            $("#toggle").click(function(){
+                    $("#para1").toggleClass("style3");
+            })
+        })
+        </script>
+    </head>
+    <body>
+        <p id="para1">Hi this me from Relevantzzz</p>
+        <input type="submit"id="add" value="addClass">
+        <input type="submit"id="remove" value="removeClass">
+        <input type="submit" id="toggle" value="toggleClass">
+    </body>
+</html>
