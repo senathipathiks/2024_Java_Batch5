@@ -1,0 +1,20 @@
+*{
+    background-color: skyblue;
+}
+#one
+{
+    background-color: yellow;
+    width: 250;
+}
+
+input{
+    width: 60;
+    height: 60;
+    background-color: blueviolet;
+}
+
+table{
+    width: 100;
+    padding: 100;
+    margin: 50;
+}
