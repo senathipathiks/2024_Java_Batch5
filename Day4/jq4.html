@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function display()
+            {
+                var para=document.querySelector('p');
+                document.querySelector("#para").innerHTML=para.innerHTML;
+            }
+        </script>
+    </head>
+    <body>
+        <p>Paragraph</p>
+        <p>Para</p>
+        <input type="submit" id="show" onclick="display()">
+        <div id="para"></div>
+    </body>
+</html>

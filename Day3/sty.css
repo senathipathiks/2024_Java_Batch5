@@ -1,0 +1,38 @@
+#login{
+    color: rgb(201, 106, 128);
+    background-image: url(log.jpg);
+    width:200px;
+    padding:50px;
+    margin:50px;
+    border-radius:15px;
+    box-shadow:0 9px 50px rgba(0, 0, 0, 0.4);
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 200px;
+
+    margin-left: 600px;
+}
+.frame{
+    display: flex;
+    float: right;
+    gap: 0.5rem;
+    margin-top: 20px;
+    
+    
+}
+.box{
+    width: 100px;
+    height: 20px;
+    background-color: rgb(235, 161, 170);
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+.box:hover{
+    background-color: rgb(232, 172, 184);
+    color: white;
+}
+a{
+    text-decoration: none;
+}

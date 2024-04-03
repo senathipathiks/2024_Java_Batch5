@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            .style1{
+                color: blanchedalmond;
+                background-color: aquamarine;
+
+            }
+            .style2{
+                color: aquamarine;
+                background-color: black;
+            }
+            .style3{
+                color: brown;
+                background-color: bisque;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#append").click(function(){
+                    $("#para1").append("Enjoy your snacks");
+            
+            })
+            $("#prepend").click(function(){
+                    $("#para1").prepend("Welcome to Sathyam cinemas");
+            })
+            $("#remove").click(function(){
+                    $("#para1").remove();
+            })
+        })
+        </script>
+    </head>
+    <body>
+        <p id="para1"></p>
+        <input type="submit"id="append" value="Append">
+        <input type="submit"id="prepend" value="Prepend">
+        <input type="submit" id="remove" value="remove">
+    </body>
+</html>

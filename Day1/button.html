@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function verify()
+            {
+                var a=document.getElementById("username").value;
+                if(a==""){
+                alert("Required");
+            }
+        }
+            function msg()
+            {
+                alert("Hello");
+            }
+        </script>
+    </head>
+    <body>
+<form>
+    <input type="text" id="username" onblur="verify()">
+    <input type="submit" name="submit" onclick="msg()">
+</form>
+    </body>
+</html>
