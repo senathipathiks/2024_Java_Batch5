@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script>
+            var hr = 0;var min = 0;var sec = 0;
+            time = true;
+            function Start()
+            {
+                if(time)
+                {
+                    sec++;
+                
+                if(sec==60)
+                {
+                    min+=2;
+                    sec=0;
+                    document.getElementById("min").innerHTML=min;
+                }
+                if(min==60)
+                {
+                    hr++;
+                    min=0;
+                    document.getElementById("hr").innerHTML=hr;
+                }
+                document.getElementById("sec").innerHTML=sec;
+
+                setTimeout(Start,1000);
+                }
+                else{
+                    time = true;
+                }
+            }
+            function Stop()
+            {
+                if(time)
+                {
+                    time=false;
+                }
+                else
+                {
+                    time=true;
+                }
+            }
+        </script>
+        <style>
+            body
+            {
+                font-size: larger;
+                font-style: oblique;
+                
+            }
+        </style>
+    </head>
+    <body align="center">
+        Timer <br>
+        <h1 id="hr"> 00 <h1 id="min"> 00 </h1> <h1 id="sec"> 00 </h1>
+        <input type="button"  value="Start" onclick="Start()">
+        <input type="button"  value="Stop" onclick="Stop()">
+        <div id="start"> </div>
+        <div id="stop"> </div>
+    </body>
+</html>
