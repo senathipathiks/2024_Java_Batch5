@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+
+            $(function()
+            {
+                $("p").css({"color":"yellow","background-color":"blue"});
+                $("#Show").click(function(){
+                    $("#para1").show();
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <p id="para1" style="display: none;">This is my paragraph</p>
+        <input type="submit" id="Show" value="Show">
+    </body>
+</html>

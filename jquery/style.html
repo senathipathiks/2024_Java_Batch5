@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+            .style1
+            {
+                color: aqua;
+                background-color: blanchedalmond;
+            }
+
+            .style2
+            {
+                color: blueviolet;
+                background-color: antiquewhite;
+            }
+
+            .style3
+            {
+                color: beige;
+                background-color: gold;
+            }
+        </style>
+
+        <script>
+            // $(document).ready(function(){
+            //     $("#add").click(function(){
+            //         $("#para1").addClass("style1");
+            //     })
+            // })
+
+            // $(document).ready(function(){
+            //     $("#remove").click(function(){
+            //         $("#para1").removeClass("style1 style2 style3");
+            //     })
+            // })
+
+            // $(document).ready(function(){
+            //     $("#toggle").click(function(){
+            //         $("#para1").toggleClass("style3");
+            //     })
+            // })
+
+            $(document).ready(function(){
+                $("#Append").click(function(){
+                    $("#para1").append("  At Virudhunagar");
+                })
+            })
+
+            $(document).ready(function(){
+                $("#Prepend").click(function(){
+                    $("#para1").prepend("  Relevantzzz!!");
+                })
+            })
+
+            $(document).ready(function(){
+                $("#Remove").click(function(){
+                    $("#para1").remove();
+                })
+            })
+        </script>
+        </head>
+
+        <body>
+            <p id="para1">Software Trainee</p><br>
+            <!-- <input type="submit" id="add" value="addClass">
+            <input type="submit" id="remove" value="removeClass">
+            <input type="submit" id="toggle" value="toggleClass"> -->
+
+            <input type="submit" id="Append" value="append">
+            <input type="submit" id="Prepend" value="prepend">
+            <input type="submit" id="Remove" value="remove">
+        </body>

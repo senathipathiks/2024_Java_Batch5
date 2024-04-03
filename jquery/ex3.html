@@ -1,0 +1,26 @@
+<!-- //Effects -->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function()
+            {
+                // $("p").css({"color":"blue","background-color":"yellow"});
+                $("#Show").click(function(){
+                    $("#img1").fadeOut(1000);
+                    $("#img1").slideDown(1000);
+                    $("#img1").scrollLeft(1000);
+                    $("#img1").fadeToggle(1000);
+                    $("#img1").focusin(1000);
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <!-- <p id="para1" style="display:none;">This is my paragraph</p> -->
+        <img src="paris.jpg" id="img1">
+        <input type="submit" id="Show" value="Button">
+    </body>
+</html>

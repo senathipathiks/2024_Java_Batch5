@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#button").click(function(){
+                    var f=$("#fname").val();
+                    var l=$("#lname").val();
+                    var e=$("#mail").val();
+                    var passreg="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-+.]).{6,20}$/;"
+                    var pass=$("#password").val();
+                    if(f==""){
+                        alert("Enter your fname");
+                    }
+                    else if(l=="")
+                    {
+                        alert("Enter last name");
+                    }
+
+                    else if(e=="")
+                    {
+                        alert("enter the mail id");
+                    }
+
+                    else if(e!="")
+                    {
+                        // if(!e.includes("@")){
+                        //     alert("enter valid mail id");
+                        // }
+                        // else if(!e.includes(".com")){
+                        //     alert("enter valid mail id");
+                        // }
+                        // else{
+                        //     return true;
+                        // }
+                        if(!e.includes("@") || (!e.includes(".com"))){
+                            alert("enter valid mail id");
+                        }
+
+                        else if(pass=="")
+                        {
+                           alert("enter the password");
+                        }
+
+                        else if(!pass.match(passreg))
+                        {
+                          alert("Enter valid password");
+                        }
+                    }
+
+                    
+                    })
+                })
+            
+        </script>
+    </head>
+    <body>
+        Enter first name:<input type="text" id="fname"><br><br>
+
+        Enter last name:<input type="text" id="lname"><br><br>
+
+        Enter Email:<input type="text" id="mail"><br><br>
+
+        Enter Password:<input type="text" id="password"><br><br>
+
+        <input type="submit" id="button">
+    </body>
+</html>
