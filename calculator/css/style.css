@@ -1,0 +1,36 @@
+.corner{
+    background-color: yellow;
+}
+.top{
+    background-color: orange;
+}
+.main-frame{
+    border: 2px solid;
+    width: fit-content;
+    background-color: black;
+    border-radius: 10px;
+}
+button{
+    margin: 7px;
+    /* margin: 2px;; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+input{
+    font-size: 18px;
+}
+#zero{
+    width: 137px;
+    border-radius: 30px;
+}
+input{
+    margin: 25px;
+    font-size: 21px;
+    border-radius: 10px
+}
+.corner:hover{
+    background-color: rgba(255, 255, 0, 0.603);
+    box-shadow: 3px 5px 10px rgba(255, 255, 255,0.65);
+}
+
