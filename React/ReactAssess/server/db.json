@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "id": "26e6",
+      "Name": "Maida",
+      "Price": "349",
+      "City": "Kunnoor",
+      "Quantity": "5"
+    },
+    {
+      "id": "d5c2",
+      "Name": "Turmeric",
+      "Price": "566",
+      "City": "Kodaikanal",
+      "Quantity": "24"
+    },
+    {
+      "id": "844a",
+      "Name": "dummy",
+      "Price": "23",
+      "City": "dummy",
+      "Quantity": "2"
+    },
+    {
+      "id": "64b4",
+      "Name": "Sugar",
+      "Mobile": "",
+      "City": "Madurai",
+      "Price": "12345",
+      "Quantity": "23"
+    }
+  ],
+  "users": [
+    {
+      "id": "d5c2",
+      "Name": "Turmeric",
+      "Price": "12945",
+      "City": "Kodaikanal",
+      "Quantity": "24"
+    },
+    {
+      "id": "ac42",
+      "Name": "Sugar",
+      "Mobile": "",
+      "City": "mdu",
+      "Price": "3245",
+      "Quantity": "12"
+    },
+    {
+      "id": "4751",
+      "Name": "wheat",
+      "Quantity": "12",
+      "City": "mdu",
+      "Price": "34556"
+    }
+  ]
+}

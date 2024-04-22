@@ -1,0 +1,24 @@
+#logo{
+    width:50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-image: linear-gradient(to right,#904e95,#e964, #904e95);
+    height: 1vh;
+    /* animation: title 1s alternate forwards; */
+}
+
+/* @keyframes title {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+} */
+
