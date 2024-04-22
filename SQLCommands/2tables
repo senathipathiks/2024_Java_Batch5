@@ -1,0 +1,184 @@
+Microsoft Windows [Version 10.0.22631.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: **************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sms_db             |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use sms_db;
+Database changed
+mysql> create table student(sno int,sname varchar(20),scit varchar(20),smobile varchar(10));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_sms_db |
++------------------+
+| student          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scit    | varchar(20) | YES  |     | NULL    |       |
+| smobile | varchar(10) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table student modify sno int primary key;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | NO   | PRI | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scit    | varchar(20) | YES  |     | NULL    |       |
+| smobile | varchar(10) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table student modify sname varchar(20) not null;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table student modify scit varchar(20) not null;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table student modify smobile varchar(20) unique;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | NO   | PRI | NULL    |       |
+| sname   | varchar(20) | NO   |     | NULL    |       |
+| scit    | varchar(20) | NO   |     | NULL    |       |
+| smobile | varchar(20) | YES  | UNI | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> rename student to tbl_student;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'student to tbl_student' at line 1
+mysql> rename table student to tbl_student;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc tbl_student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | NO   | PRI | NULL    |       |
+| sname   | varchar(20) | NO   |     | NULL    |       |
+| scit    | varchar(20) | NO   |     | NULL    |       |
+| smobile | varchar(20) | YES  | UNI | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from tbl_student;
+Empty set (0.00 sec)
+
+mysql> create table tbl_course(cid int primary key, cname varchar(20) not null, cduration int);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> show tables
+    -> ;
++------------------+
+| Tables_in_sms_db |
++------------------+
+| tbl_course       |
+| tbl_student      |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> alter  table tbl_course add sno int;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> tbl_course;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tbl_course' at line 1
+mysql> desc tbl_course;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| cid       | int         | NO   | PRI | NULL    |       |
+| cname     | varchar(20) | NO   |     | NULL    |       |
+| cduration | int         | YES  |     | NULL    |       |
+| sno       | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table tbl_course modify foreign key(sno) references tbl_student(sno);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(sno) references tbl_student(sno)' at line 1
+mysql> alter table tbl_course set foreign key(sno) references tbl_student(sno);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'set foreign key(sno) references tbl_student(sno)' at line 1
+mysql> alter table tbl_course where foreign key(sno) references tbl_student(sno);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where foreign key(sno) references tbl_student(sno)' at line 1
+mysql> alter table tbl_course drop sno;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc tbl_course;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| cid       | int         | NO   | PRI | NULL    |       |
+| cname     | varchar(20) | NO   |     | NULL    |       |
+| cduration | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> alter table tbl_course add sno foreign key(sno) references tbl_student(sno);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(sno) references tbl_student(sno)' at line 1
+mysql> alter table tbl_course add sno int foreign key(sno) references tbl_student(sno);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(sno) references tbl_student(sno)' at line 1
+mysql> alter table tbl_course add sno int, foreign key(sno) references tbl_student(sno);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(sno) references tbl_student(sno)' at line 1
+mysql> alter table tbl_course add sno int;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table tbl_course add constraint foreign key(sno) references tbl_student(sno);
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates:s 0  Warnings: 0
+
+mysql> desc tbl_course;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| cid       | int         | NO   | PRI | NULL    |       |
+| cname     | varchar(20) | NO   |     | NULL    |       |
+| cduration | int         | YES  |     | NULL    |       |
+| sno       | int         | YES  | MUL | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)s

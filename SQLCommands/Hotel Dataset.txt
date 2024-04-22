@@ -1,0 +1,455 @@
+Microsoft Windows [Version 10.0.22631.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: **************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 13
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database online_shooping
+    -> ;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| online_shooping    |
+| performance_schema |
+| sms_db             |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use online_shooping
+Database changed
+mysql> create table customer(cid int primary key, cname varchar(20) not null, ccity not null, cmobile unique);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'not null, cmobile unique)' at line 1
+mysql> create table customer(cid int primary key, cname varchar(20) not null, ccity not null, cmobile varchar(10) unique
+);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'not null, cmobile varchar(10) unique)' at line 1
+mysql> create table customer(cid int primary key, cname varchar(20) not null, ccity varchar(20) not null, cmobile varcha
+r(10) unique);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> show tables;
++---------------------------+
+| Tables_in_online_shooping |
++---------------------------+
+| customer                  |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> desc customer;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| cid     | int         | NO   | PRI | NULL    |       |
+| cname   | varchar(20) | NO   |     | NULL    |       |
+| ccity   | varchar(20) | NO   |     | NULL    |       |
+| cmobile | varchar(10) | YES  | UNI | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> rename table customer to tbl_customer;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
++---------------------------+
+| Tables_in_online_shooping |
++---------------------------+
+| tbl_customer              |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> insert into tbl_customer values(101,"Aravind","dgl",8610617945);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into tbl_customer values(102,"vickee","vn",4510617945),(103,"Vidhu","mdu",908780384);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from tbl_customer;
++-----+---------+-------+------------+
+| cid | cname   | ccity | cmobile    |
++-----+---------+-------+------------+
+| 101 | Aravind | dgl   | 8610617945 |
+| 102 | vickee  | vn    | 4510617945 |
+| 103 | Vidhu   | mdu   | 908780384  |
++-----+---------+-------+------------+
+3 rows in set (0.00 sec)
+
+mysql> update tbl_customer set cmobile="9087907654" where id=103;
+ERROR 1054 (42S22): Unknown column 'id' in 'where clause'
+mysql> update tbl_customer set cmobile="9087907654" where cid=103;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from tbl_customer;
++-----+---------+-------+------------+
+| cid | cname   | ccity | cmobile    |
++-----+---------+-------+------------+
+| 101 | Aravind | dgl   | 8610617945 |
+| 102 | vickee  | vn    | 4510617945 |
+| 103 | Vidhu   | mdu   | 9087907654 |
++-----+---------+-------+------------+
+3 rows in set (0.00 sec)
+
+mysql> create table order(orderid int primary key,foodname varchar(20) not null,cid int, foreign key(cid) references tbl
+_customer(cid));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order(orderid int primary key,foodname varchar(20) not null,cid int, foreign key' at line 1
+mysql> create table order(orderid int primary key,foodname varchar(20) not null,cid int not null, foreign key(cid) refer
+ences tbl_customer(cid));
+ERROR 1select * from tbl_customer;^C                                                                                                             use near 'o
+mysql> ^Crid int primary key,foodname varchar(20) not null,cid int not null, fo' at line 1
+mysql> ^C
+mysql> ^C
+mysql> create table tbl_order(orderid int primary key,foodname varchar(20) not null,cid int not null,foreign key(cid) references tbl_customer(cid));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables
+    -> ;
++---------------------------+
+| Tables_in_online_shooping |
++---------------------------+
+| tbl_customer              |
+| tbl_order                 |
++---------------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc tbl_order;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| orderid  | int         | NO   | PRI | NULL    |       |
+| foodname | varchar(20) | NO   |     | NULL    |       |
+| cid      | int         | NO   | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tbl_order(1,"fried rice",101),(2,"pizza",103),(3,"burger",102);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,"fried rice",101),(2,"pizza",103),(3,"burger",102)' at line 1
+mysql> insert into tbl_order values(1,"fried rice",101),(2,"pizza",103),(3,"burger",102);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from tbl_order;
++---------+------------+-----+
+| orderid | foodname   | cid |
++---------+------------+-----+
+|       1 | fried rice | 101 |
+|       2 | pizza      | 103 |
+|       3 | burger     | 102 |
++---------+------------+-----+
+3 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid
+=tbl_order.cid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 102 | vickee  | vn    |       3 | burger     |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
++-----+---------+-------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid=tbl_order.cid group by tbl_order.orderid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 102 | vickee  | vn    |       3 | burger     |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
++-----+---------+-------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid=tbl_order.cid group by tbl_order.orderid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 102 | vickee  | vn    |       3 | burger     |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
++-----+---------+-------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid=tbl_order.cid order by tbl_order.orderid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
+| 102 | vickee  | vn    |       3 | burger     |
++-----+---------+-------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tbl_customer values(104,"Guru","dgl",8989783456);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid=tbl_order.cid order by tbl_order.orderid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
+| 102 | vickee  | vn    |       3 | burger     |
++-----+---------+-------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tbl_order (cid,orderid) values (104,4);
+ERROR 1364 (HY000): Field 'foodname' doesn't have a default value
+mysql> insert into tbl_order (cid,orderid,foodname) values (104,4,'dosa');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid=tbl_order.cid order by tbl_order.orderid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
+| 102 | vickee  | vn    |       3 | burger     |
+| 104 | Guru    | dgl   |       4 | dosa       |
++-----+---------+-------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql>  create table menu(menuid int primary key, menuname varchar(20) not null, price double not null, ratings varchar(4) not null);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc menu
+    -> ;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| menuid   | int         | NO   | PRI | NULL    |       |
+| menuname | varchar(20) | NO   |     | NULL    |       |
+| price    | double      | NO   |     | NULL    |       |
+| ratings  | varchar(4)  | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> rename table menu to tbl_menu;
+Query OK, 0 rows affected (0.54 sec)
+
+mysql> insert into tbl_menu(201,"fried rice",100,"4.5");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '201,"fried rice",100,"4.5")' at line 1
+mysql> insert into tbl_menu(201,"fried rice",100,4.5);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '201,"fried rice",100,4.5)' at line 1
+mysql> insert into tbl_menu values(201,"fried rice",100,"4.5");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into tbl_menu(202,"pizza",200,"5"),(203,"burger",500,"3.5"),(204,"dosa",30,"4");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '202,"pizza",200,"5"),(203,"burger",500,"3.5"),(204,"dosa",30,"4")' at line 1
+mysql> insert into tbl_menu values(202,"pizza",200,"5"),(203,"burger",500,"3.5"),(204,"dosa",30,"4");
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from tbl_menu;
++--------+------------+-------+---------+
+| menuid | menuname   | price | ratings |
++--------+------------+-------+---------+
+|    201 | fried rice |   100 | 4.5     |
+|    202 | pizza      |   200 | 5       |
+|    203 | burger     |   500 | 3.5     |
+|    204 | dosa       |    30 | 4       |
++--------+------------+-------+---------+
+4 rows in set (0.00 sec)
+
+mysql> desc tbl_food;
+ERROR 1146 (42S02): Table 'online_shooping.tbl_food' doesn't exist
+mysql> desc tbl_order;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| orderid  | int         | NO   | PRI | NULL    |       |
+| foodname | varchar(20) | NO   |     | NULL    |       |
+| cid      | int         | NO   | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> alter table tbl_food add menuid;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> alter table tbl_food add menuid int;
+ERROR 1146 (42S02): Table 'online_shooping.tbl_food' doesn't exist
+mysql> alter table tbl_order add menuid int;3
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3' at line 1
+mysql> alter table tbl_order add menuid int;
+ERROR 1060 (42S21): Duplicate column name 'menuid'
+mysql> desc tbl_order;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| orderid  | int         | NO   | PRI | NULL    |       |
+| foodname | varchar(20) | NO   |     | NULL    |       |
+| cid      | int         | NO   | MUL | NULL    |       |
+| menuid   | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table tbl_order add constraint foreign key(menuid) references tbl_menu(menuid);
+Query OK, 4 rows affected (0.16 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> desc tbl_order;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| orderid  | int         | NO   | PRI | NULL    |       |
+| foodname | varchar(20) | NO   |     | NULL    |       |
+| cid      | int         | NO   | MUL | NULL    |       |
+| menuid   | int         | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from tbl_order;
++---------+------------+-----+--------+
+| orderid | foodname   | cid | menuid |
++---------+------------+-----+--------+
+|       1 | fried rice | 101 |   NULL |
+|       2 | pizza      | 103 |   NULL |
+|       3 | burger     | 102 |   NULL |
+|       4 | dosa       | 104 |   NULL |
++---------+------------+-----+--------+
+4 rows in set (0.00 sec)
+
+mysql> insert into tbl_order(menuid)values(201,202,203,204);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> update tbl_order set menuid=201 where orderid=1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update tbl_order set menuid=202 where orderid=2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update tbl_order set menuid=203 where orderid=3;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update tbl_order set menuid=204 where orderid=4;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from tbl_order;
++---------+------------+-----+--------+
+| orderid | foodname   | cid | menuid |
++---------+------------+-----+--------+
+|       1 | fried rice | 101 |    201 |
+|       2 | pizza      | 103 |    202 |
+|       3 | burger     | 102 |    203 |
+|       4 | dosa       | 104 |    204 |
++---------+------------+-----+--------+
+4 rows in set (0.00 sec)
+
+mysql> select * from tbl_customer;
++-----+---------+-------+------------+
+| cid | cname   | ccity | cmobile    |
++-----+---------+-------+------------+
+| 101 | Aravind | dgl   | 8610617945 |
+| 102 | vickee  | vn    | 4510617945 |
+| 103 | Vidhu   | mdu   | 9087907654 |
+| 104 | Guru    | dgl   | 8989783456 |
++-----+---------+-------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from tbl_menu;
++--------+------------+-------+---------+
+| menuid | menuname   | price | ratings |
++--------+------------+-------+---------+
+|    201 | fried rice |   100 | 4.5     |
+|    202 | pizza      |   200 | 5       |
+|    203 | burger     |   500 | 3.5     |
+|    204 | dosa       |    30 | 4       |
++--------+------------+-------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_menu.menuid,tbl_order.orderid,tbl_customer.cname,tbl_customer.ccity,tbl_menu.menuname,tbl_order.foodname,tbl_menu.price,t
+bl_menu.ratings from tbl_customer,tbl_order,tbl_menu where tbl_customer.cid = tbl_order.cid and tbl_order.menuid = tbl_menu.menuid;
++-----+--------+---------+---------+-------+------------+------------+-------+---------+
+| cid | menuid | orderid | cname   | ccity | menuname   | foodname   | price | ratings |
++-----+--------+---------+---------+-------+------------+------------+-------+---------+
+| 101 |    201 |       1 | Aravind | dgl   | fried rice | fried rice |   100 | 4.5     |
+| 102 |    203 |       3 | vickee  | vn    | burger     | burger     |   500 | 3.5     |
+| 103 |    202 |       2 | Vidhu   | mdu   | pizza      | pizza      |   200 | 5       |
+| 104 |    204 |       4 | Guru    | dgl   | dosa       | dosa       |    30 | 4       |
++-----+--------+---------+---------+-------+------------+------------+-------+---------+
+4 rows in set (0.00 sec)
+
+mysql> create table tbl_payment(payid int primary key,status varchar(20) not null, orderid not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'not null)' at line 1
+mysql> create table tbl_payment(payid int primary key,status varchar(20) not null, orderid int not null);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> alter table tbl_payment modify payid varchar(20);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc tbl_payment;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| payid   | varchar(20) | NO   | PRI | NULL    |       |
+| status  | varchar(20) | NO   |     | NULL    |       |
+| orderid | int         | NO   |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tbl_payment("1A","Paid",1);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"1A","Paid",1)' at line 1
+mysql> insert into tbl_payment values("1A","Paid",1),("2A","pending",2),("3A","Not delivered",3),("4A","delivered not paid",4);
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from tbl_payment;
++-------+--------------------+---------+
+| payid | status             | orderid |
++-------+--------------------+---------+
+| 1A    | Paid               |       1 |
+| 2A    | pending            |       2 |
+| 3A    | Not delivered      |       3 |
+| 4A    | delivered not paid |       4 |
++-------+--------------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_menu.menuid,tbl_order.orderid,tbl_payment.payid,tbl_customer.cname,tbl_customer.ccity,tbl_menu.menuname,tbl_order.foodnam
+e,tbl_menu.price,tbl_payment.status,tbl_menu.ratings from tbl_customer,tbl_order,tbl_menu,tbl_payment where tbl_customer.cid = tbl_order.cid and tbl_order.m
+enuid = tbl_menu.menuid and tbl_payment.orderid=tbl_order,orderid;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',orderid' at line 1
+mysql> select tbl_customer.cid,tbl_menu.menuid,tbl_order.orderid,tbl_payment.payid,tbl_customer.cname,tbl_customer.ccity,tbl_menu.menuname,tbl_order.foodname,tbl_menu.price,tbl_payment.status,tbl_menu.ratings from tbl_customer,tbl_order,tbl_menu,tbl_payment where tbl_customer.cid = tbl_order.cid and tbl_order.menuid = tbl_menu.menuid and tbl_payment.orderid=tbl_order.orderid;
++-----+--------+---------+-------+---------+-------+------------+------------+-------+--------------------+---------+
+| cid | menuid | orderid | payid | cname   | ccity | menuname   | foodname   | price | status             | ratings |
++-----+--------+---------+-------+---------+-------+------------+------------+-------+--------------------+---------+
+| 101 |    201 |       1 | 1A    | Aravind | dgl   | fried rice | fried rice |   100 | Paid               | 4.5     |
+| 103 |    202 |       2 | 2A    | Vidhu   | mdu   | pizza      | pizza      |   200 | pending            | 5       |
+| 102 |    203 |       3 | 3A    | vickee  | vn    | burger     | burger     |   500 | Not delivered      | 3.5     |
+| 104 |    204 |       4 | 4A    | Guru    | dgl   | dosa       | dosa       |    30 | delivered not paid | 4       |
++-----+--------+---------+-------+---------+-------+------------+------------+-------+--------------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_menu.menuid,tbl_order.orderid,tbl_payment.payid,tbl_customer.cname,tbl_customer.ccity,tbl_menu.menuname,tbl_order.foodname,tbl_menu.price,tbl_payment.status,tbl_menu.ratings from tbl_customer,tbl_order,tbl_menu,tbl_payment where tbl_customer.cid = tbl_order.cid and tbl_order.menuid = tbl_menu.menuid and tbl_payment.orderid=tbl_order.orderid order by tbl_customer.cname;
++-----+--------+---------+-------+---------+-------+------------+------------+-------+--------------------+---------+
+| cid | menuid | orderid | payid | cname   | ccity | menuname   | foodname   | price | status             | ratings |
++-----+--------+---------+-------+---------+-------+------------+------------+-------+--------------------+---------+
+| 101 |    201 |       1 | 1A    | Aravind | dgl   | fried rice | fried rice |   100 | Paid               | 4.5     |
+| 104 |    204 |       4 | 4A    | Guru    | dgl   | dosa       | dosa       |    30 | delivered not paid | 4       |
+| 102 |    203 |       3 | 3A    | vickee  | vn    | burger     | burger     |   500 | Not delivered      | 3.5     |
+| 103 |    202 |       2 | 2A    | Vidhu   | mdu   | pizza      | pizza      |   200 | pending            | 5       |
++-----+--------+---------+-------+---------+-------+------------+------------+-------+--------------------+---------+
+4 rows in set (0.00 sec)
+
+mysql>

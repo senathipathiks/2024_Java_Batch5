@@ -1,0 +1,420 @@
+Microsoft Windows [Version 10.0.22631.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root-p
+ERROR 1045 (28000): Access denied for user 'root-p'@'localhost' (using password: NO)
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: **************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database sms_db;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sms_db             |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use sms_db;
+Database changed
+mysql> drop database sms_db;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> create database sms_db;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sms_db             |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use sms_db;
+Database changed
+mysql> create table student(sno int, sname varchar(20), scity varchar(20), sgender varchar(20));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_sms_db |
++------------------+
+| student          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scity   | varchar(20) | YES  |     | NULL    |       |
+| sgender | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> describe student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scity   | varchar(20) | YES  |     | NULL    |       |
+| sgender | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scity   | varchar(20) | YES  |     | NULL    |       |
+| sgender | varchar(20) | YES  |     | NULL    |       |
+| sage    | int         | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table student modify sgender char(1);
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scity   | varchar(20) | YES  |     | NULL    |       |
+| sgender | char(1)     | YES  |     | NULL    |       |
+| sage    | int         | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table student drop sage;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scity   | varchar(20) | YES  |     | NULL    |       |
+| sgender | char(1)     | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> rename table student to tbl_student;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_sms_db |
++------------------+
+| tbl_student      |
++------------------+
+1 row in set (0.00 sec)
+mysql> insert into tbl_student values(19,"Aravind","Dindigul","Male");
+ERROR 1406 (22001): Data too long for column 'sgender' at row 1
+mysql> insert into tbl_student values(19,"Aravind","Dindigul","M");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into tbl_student values(06,"Vickee","Madurai","M");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into tbl_student values(22,"Velan","Dindigul","M");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into tbl_student values(16,"vidhusha","Madurai","F"),(17,"Ani","Nellai","F");
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from tbl_student;
++------+----------+----------+---------+
+| sno  | sname    | scity    | sgender |
++------+----------+----------+---------+
+|   19 | Aravind  | Dindigul | M       |
+|    6 | Vickee   | Madurai  | M       |
+|   22 | Velan    | Dindigul | M       |
+|   16 | vidhusha | Madurai  | F       |
+|   17 | Ani      | Nellai   | F       |
++------+----------+----------+---------+
+5 rows in set (0.00 sec)
+
+mysql> delete from tbl_student where sname="vidhusha";
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from tbl_student;
++------+---------+----------+---------+
+| sno  | sname   | scity    | sgender |
++------+---------+----------+---------+
+|   19 | Aravind | Dindigul | M       |
+|    6 | Vickee  | Madurai  | M       |
+|   22 | Velan   | Dindigul | M       |
+|   17 | Ani     | Nellai   | F       |
++------+---------+----------+---------+
+4 rows in set (0.00 sec)
+
+mysql> update tbl_student set scity="viruthunagar" where sno=6;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from tbl_student;
++------+---------+--------------+---------+
+| sno  | sname   | scity        | sgender |
++------+---------+--------------+---------+
+|   19 | Aravind | Dindigul     | M       |
+|    6 | Vickee  | viruthunagar | M       |
+|   22 | Velan   | Dindigul     | M       |
+|   17 | Ani     | Nellai       | F       |
++------+---------+--------------+---------+
+4 rows in set (0.00 sec)
+mysql> delete from tbl_student where sname="velan";
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from tbl_student;
++------+---------+--------------+---------+
+| sno  | sname   | scity        | sgender |
++------+---------+--------------+---------+
+|   19 | Aravind | Dindigul     | M       |
+|    6 | Vickee  | viruthunagar | M       |
+|   17 | Ani     | Nellai       | F       |
++------+---------+--------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> alter table tbl_student add sdegree varchar(10);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from tbl_student;
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|   19 | Aravind | Dindigul     | M       | NULL    |
+|    6 | Vickee  | viruthunagar | M       | NULL    |
+|   17 | Ani     | Nellai       | F       | NULL    |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> update sbl_student set sdegree="B.E";
+ERROR 1146 (42S02): Table 'sms_db.sbl_student' doesn't exist
+mysql> update sbl_student set sdegree="BE";
+ERROR 1146 (42S02): Table 'sms_db.sbl_student' doesn't exist
+mysql> update tbl_student set sdegree="B.E";
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select * from tbl_student;
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|   19 | Aravind | Dindigul     | M       | B.E     |
+|    6 | Vickee  | viruthunagar | M       | B.E     |
+|   17 | Ani     | Nellai       | F       | B.E     |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tbl_student(&sno,&sname,&scity,&sgender,&sdegree);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '&sno,&sname,&scity,&sgender,&sdegree)' at line 1
+mysql> insert into tbl_student values(&sno,&sname,&scity,&sgender,&sdegree);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '&sno,&sname,&scity,&sgender,&sdegree)' at line 1
+mysql> select * from tbl_student where sname like 'a%';
++------+---------+----------+---------+---------+
+| sno  | sname   | scity    | sgender | sdegree |
++------+---------+----------+---------+---------+
+|   19 | Aravind | Dindigul | M       | B.E     |
+|   17 | Ani     | Nellai   | F       | B.E     |
++------+---------+----------+---------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select * from tbl_student where sname like '%i';
++------+-------+--------+---------+---------+
+| sno  | sname | scity  | sgender | sdegree |
++------+-------+--------+---------+---------+
+|   17 | Ani   | Nellai | F       | B.E     |
++------+-------+--------+---------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from tbl_student where sname like '%i%';
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|   19 | Aravind | Dindigul     | M       | B.E     |
+|    6 | Vickee  | viruthunagar | M       | B.E     |
+|   17 | Ani     | Nellai       | F       | B.E     |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from tbl_student where scity in ("Dindigul","nellai
+    "> ");
++------+---------+----------+---------+---------+
+| sno  | sname   | scity    | sgender | sdegree |
++------+---------+----------+---------+---------+
+|   19 | Aravind | Dindigul | M       | B.E     |
++------+---------+----------+---------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from tbl_student where scity in ("Dindigul","Nellai");
++------+---------+----------+---------+---------+
+| sno  | sname   | scity    | sgender | sdegree |
++------+---------+----------+---------+---------+
+|   19 | Aravind | Dindigul | M       | B.E     |
+|   17 | Ani     | Nellai   | F       | B.E     |
++------+---------+----------+---------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select * from tbl_student where scity not in ("Dindigul","Nellai");
++------+--------+--------------+---------+---------+
+| sno  | sname  | scity        | sgender | sdegree |
++------+--------+--------------+---------+---------+
+|    6 | Vickee | viruthunagar | M       | B.E     |
++------+--------+--------------+---------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from tbl_student order by sno;
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|    6 | Vickee  | viruthunagar | M       | B.E     |
+|   17 | Ani     | Nellai       | F       | B.E     |
+|   19 | Aravind | Dindigul     | M       | B.E     |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from tbl_student order by sno,sname;
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|    6 | Vickee  | viruthunagar | M       | B.E     |
+|   17 | Ani     | Nellai       | F       | B.E     |
+|   19 | Aravind | Dindigul     | M       | B.E     |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from tbl_student order by sname,scity;
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|   17 | Ani     | Nellai       | F       | B.E     |
+|   19 | Aravind | Dindigul     | M       | B.E     |
+|    6 | Vickee  | viruthunagar | M       | B.E     |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from tbl_student order by sname,scity desc;
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|   17 | Ani     | Nellai       | F       | B.E     |
+|   19 | Aravind | Dindigul     | M       | B.E     |
+|    6 | Vickee  | viruthunagar | M       | B.E     |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from tbl_student order by sname desc;
++------+---------+--------------+---------+---------+
+| sno  | sname   | scity        | sgender | sdegree |
++------+---------+--------------+---------+---------+
+|    6 | Vickee  | viruthunagar | M       | B.E     |
+|   19 | Aravind | Dindigul     | M       | B.E     |
+|   17 | Ani     | Nellai       | F       | B.E     |
++------+---------+--------------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> truncate table tbl_student;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> select * from tbl_student;
+Empty set (0.00 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_sms_db |
++------------------+
+| tbl_student      |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> des tbl_student;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'des tbl_student' at line 1
+mysql> desc tbl_student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scity   | varchar(20) | YES  |     | NULL    |       |
+| sgender | char(1)     | YES  |     | NULL    |       |
+| sdegree | varchar(10) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+mysql> truncate table tbl_student;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> select * from tbl_student;
+Empty set (0.00 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_sms_db |
++------------------+
+| tbl_student      |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> des tbl_student;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'des tbl_student' at line 1
+mysql> desc tbl_student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| sno     | int         | YES  |     | NULL    |       |
+| sname   | varchar(20) | YES  |     | NULL    |       |
+| scity   | varchar(20) | YES  |     | NULL    |       |
+| sgender | char(1)     | YES  |     | NULL    |       |
+| sdegree | varchar(10) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> drop table tbl_student;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc tbl_student;
+ERROR 1146 (42S02): Table 'sms_db.tbl_student' doesn't exist

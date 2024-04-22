@@ -1,0 +1,57 @@
+mysql> create table tbl_order(orderid int primary key,foodname varchar(20) not null,cid int not null,foreign key(cid) references tbl_customer(cid));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables
+    -> ;
++---------------------------+
+| Tables_in_online_shooping |
++---------------------------+
+| tbl_customer              |
+| tbl_order                 |
++---------------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc tbl_order;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| orderid  | int         | NO   | PRI | NULL    |       |
+| foodname | varchar(20) | NO   |     | NULL    |       |
+| cid      | int         | NO   | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tbl_order values(1,"fried rice",101),(2,"pizza",103),(3,"burger",102);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from tbl_order;
++---------+------------+-----+
+| orderid | foodname   | cid |
++---------+------------+-----+
+|       1 | fried rice | 101 |
+|       2 | pizza      | 103 |
+|       3 | burger     | 102 |
++---------+------------+-----+
+3 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid
+=tbl_order.cid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 102 | vickee  | vn    |       3 | burger     |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
++-----+---------+-------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select tbl_customer.cid,tbl_customer.cname,tbl_customer.ccity,tbl_order.orderid,tbl_order.foodname from tbl_customer,tbl_order where tbl_customer.cid=tbl_order.cid order by tbl_order.orderid;
++-----+---------+-------+---------+------------+
+| cid | cname   | ccity | orderid | foodname   |
++-----+---------+-------+---------+------------+
+| 101 | Aravind | dgl   |       1 | fried rice |
+| 103 | Vidhu   | mdu   |       2 | pizza      |
+| 102 | vickee  | vn    |       3 | burger     |
++-----+---------+-------+---------+------------+
+3 rows in set (0.00 sec)
