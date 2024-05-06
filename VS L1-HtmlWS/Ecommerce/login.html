@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login.com</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login.css" />
+    <!-- <style> -->
+    <!-- #form{
+        margin: 0;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%,-50%);
+        border: 2px rgb(255, 255, 255) solid;
+        position: fixed;
+        padding: 30px;
+        font-family: 'Montserrat', sans-serif;
+    }
+   #form input{
+    width: 100%;
+    height: 40px;
+   }
+   .input{
+    display: flex;
+    border: 1px solid rgb(254, 254, 254);
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+   }
+   .name{
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    
+   }
+   button{
+    margin-top: 20px;
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #f86f03;
+    color:white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+   }
+  .social-media{
+    display: flex;
+    
+  }
+   .social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #333;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  }
+.social-icon:hover {
+  color: #F86F03;
+  border-color: #F86F03;
+}
+
+#bgimg{
+    width: 50%;
+    background-color: #f86f03;
+    height: 730px;
+    border-bottom-right-radius:500px ;
+    /* border-top-right-radius: 20px; */
+
+} -->
+    <!-- </style> -->
+
+    <style>
+      #warningname,#warningpass{
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="container">
+        <div id="bgimg">
+          <div id="img">
+            <img src="Signup.png" alt="" />
+          </div>
+        </div>
+
+        <div id="form">
+          <h2>SIGN IN</h2>
+          <div class="input">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              placeholder="Username"
+              id="name"
+              class="name"
+              required
+            />
+            
+
+          </div>
+          <p id="warningname" style="color: red;">Username should not be Empty</p>
+          <div class="input">
+            <i class="fas fa-lock"></i>
+            <input   type="password" placeholder="Password" required id="pass"class="name"
+            />
+           
+          </div>
+          <p  id="warningpass" style="color: red;">Password should not be Empty</p>
+          <!-- <div id="warningpass">  <p></p></div> -->
+
+          <center>
+            <button type="submit" onclick="valid()">LOGIN</button>
+            <p>Or signin with socialmedia accounts</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function valid() {
+      var name = document.getElementById("name").value;
+      var pass = document.getElementById("pass").value;
+      if (name == "") {
+        
+        document.getElementById('warningname').style.display='block';
+      }
+      if (pass == "") {
+       document.getElementById('warningpass').style.display='block';
+      //  document.getElementById("warningpass").innerHTML="Password not empty"
+      }
+
+      if (name == "Vasi07" && pass == "12345") {
+        alert("Login Successfull!");
+      } else {
+        alert("Login Fail!");
+      }
+    }
+  </script>
+</html>

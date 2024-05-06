@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Concert+One&family=Elsie+Swash+Caps:wght@400;900&family=Joti+One&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Elsie+Swash+Caps:wght@400;900&family=Joti+One&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+   body{
+    background-image: url(PB_Feature-image-cd9aa4444ec4e8020935.jpg);
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+   }
+
+
+   #navbar {
+        border: 2px blue none;
+        background-color: transparent;
+        width: 197%;
+        height: 45px;
+        position:relative;
+        margin-top: -360px;
+        box-shadow: 5px 3px 3px 3px rgba(0, 0, 0, 0.557);
+        backdrop-filter: blur(4px);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: -370px;
+      }
+      #navbar a {
+        font-family: "Concert One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        text-decoration: none;
+        float: right;
+        margin-right: 15px;
+        margin-top: 3px;
+        font-weight: bolder;
+        color: rgb(39, 39, 134);
+        font-size: x-large;
+      }
+      span {
+        font-family: "Joti One", serif;
+        font-weight: bolder;
+        font-style: normal;
+        color: rgb(70, 10, 116);
+        margin-top: 20px;
+        font-size: x-large;
+        font-size: 30px;
+        justify-content: space-around;
+        padding-left: 10px;
+      }
+      span:hover {
+        color: rgb(252, 162, 60);
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        color: rgb(11, 11, 129);
+        font-size: x-large;
+        font-weight: bolder;
+        margin-top: -15px;
+        margin-right: 10px;
+        padding-bottom: 20px;
+      }
+      #navbar a:hover {
+        color: rgb(247, 250, 250);
+      }
+      button:hover {
+        color: white;
+      }
+       #main{
+        border: none;
+        border-radius: 15px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        margin: 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        border: 2px cyan inset;
+        transform: translate(-50%, -50%);
+        box-shadow:  8px 9px 9px  1px rgba(2, 215, 248, 0.861);
+        
+       }
+       #name{
+        display: flex;
+        padding: 10px;
+        justify-content: space-evenly;
+        padding-top: 20px;
+      
+       }
+       #mailnum{
+        display: flex;
+        padding: 10px;
+        justify-content: space-evenly;
+       }
+
+      #pw{
+        display: flex;
+        padding: 10px;
+        justify-content: space-evenly;
+      }
+      input{
+        font-family: "Concert One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        width: 230px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+      }
+       
+      #signup button[type=submit] {
+        background-color: rgb(2, 47, 132);
+        height: 40px;
+        width: 150px;
+        border-radius: 10px;
+        color: rgb(246, 249, 249);
+        margin-left: 200px;
+        text-align: center;
+        padding: 5px;
+        margin-top: 10px;
+      } 
+      p a{
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+      }
+      p{
+        font-weight: bold;
+        color: rgb(10, 2, 124);
+        font-size: larger;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <span>PARK BEYOND - AMUSEMENT RIDES & WATER THEME PARK</span>
+  
+        <a href="Themepark.html"><button><i class="fa fa-bars"></i></button
+        ></a>
+        <a href="BookTicket.html">Book your Tickets</a>
+        <a href="Loginpark.html">Login</a>
+        <a href="registeration.html" style="color: white";>SignUp</a>
+        <a href="aboutus.html" target="_self" >AboutUs</a>
+      </div>
+      <div id="main">
+         <div id="name">
+            <input type="text" placeholder=" Enter your FirstName "  required >
+            <input type="text" placeholder=" Enter your SecondName " required>
+
+         </div>
+         <div id="mailnum">
+            <input type="email" placeholder=" Enter your Email id" required>
+            <input type="text" placeholder=" Enter your Mobile Number" required>
+            
+         </div>
+
+         <div id="pw">
+            <input type="password" placeholder="Set new password" required>
+            <input type="password" placeholder="Repeat your password">
+         </div>
+         <div id="signup">
+
+            <button id=""type="submit" >SignUp</button>
+
+
+         </div>
+        <center> <p>If you are already a registered user ?  <a href="Loginpark.html">Login</a></p></center>
+      </div>
+</body>
+</html>
