@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <SCript>
+        // $(document).ready(function(){
+        //     document.write("Hello boy!");
+        // });
+
+        $(document).ready(function(){
+            $("#im").hide();
+            $("#rd").hide();
+            $("#more").click(function(){
+                $("#more").hide();
+                $("#rd").slideToggle();
+            })
+
+            $("#p1").click(function(){
+                $("#p1").css({"color":"blue","font-size":"20px"});
+                var msg = "This is edited ";
+                $("#p2").text(msg);
+            });
+        })
+        $(document).ready(function(){
+            $("#hd").click(function(){
+                $("#p1").toggle();
+            });
+        })
+        $(document).ready(function(){
+            $("#sh").click(function(){
+                $("#p1").slideToggle();
+                $("#im").slideToggle();
+            });
+        })
+        
+    </SCript>
+</head>
+<body>
+    <p id="p1">Heloo Guys</p>
+    <p id="p2"></p>
+    <button id="hd">hide/show toggle </button><button id="sh">slide toggle</button>
+    <p>Lorem ipsum dolor sit amet consectetur, <a href="#" id="more">read more</a><p id="rd">adipisicing elit. Non autem iure quos laudantium. Accusantium culpa in cupiditate voluptatem minima mollitia, corrupti, tenetur odio repellendus quasi quo praesentium aliquam natus voluptates?</p></p>
+    <img id="im" src="img.jpg" alt="sun-rise" height="50%" width="50%">
+</body>
+</html>

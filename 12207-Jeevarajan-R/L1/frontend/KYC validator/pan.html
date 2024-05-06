@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN-Validator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f3f4f5;
+        }
+
+        .login-form{
+            margin: 10% auto;
+            border: 2px solid #0000BF;
+            width:40%;
+            background-color: #DDD;
+            border-radius: 15px;
+            /* margin-bottom: 5%; */
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        .logo{
+            width: fit-content;
+            margin: 5px 35%;
+        }
+        input{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            /* padding-left: 6%; */
+            font-size: 20px;
+            padding-top: 1%;
+            text-align: center;
+        }
+        label{
+            color: #0000BF;
+            font-size: 22px;
+        }
+        p{
+            color: #0000BF;
+        }
+        #submit {
+            padding: 1% 5% ;
+            font-size: 15px;
+            background-color: #242024;
+            color: #DDD;
+            border-color: #0000BF;
+        }
+        #submit:hover {
+            cursor: pointer;
+            background-color: #2002ef;
+            border-color: #DDD;
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        a {
+            font-size: 20px;
+            color: #2002ef;
+            text-decoration: none;
+            
+        }
+        a:hover {
+            font-size: 25px;
+            color: #0000BF;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            // var num=0;
+            $("#pan").keyup(function(){
+                var pan = $("#pan").val();
+                // var len = pan.length;
+                $("#pan").css("text-transform","uppercase");
+            })
+            $("#submit").click(function(){
+                var pan = $("#pan").val();
+                var regEx = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/g;
+                if(pan != ""){
+
+                    const isValid = regEx.test(pan);
+                    if(!isValid){
+                        $("#pn").text("InValid PAN Number");
+                        $("#pan").focus();
+                    } else {
+                        $("#pn").text("Your PAN Number is Valid one");
+                    }
+                } else {
+                    alert("Please Enter your PAN Number")
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="login-form">
+        <div class="input">
+                <center>
+                <label for="name">Enter your PAN no : </label>
+                <input type="text" name="name" placeholder="xxxxx0000x" id="pan" required maxlength="10">
+                <p id="pn"></p>
+                <input id="submit" type="submit" value="Validate"><br>
+                <br><a href="index.html">go back</a>
+                </center>
+        </div>
+    </div>
+</body>
+</html>

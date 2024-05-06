@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget-password</title>
+    <link rel="shortcut icon" href="img/marvel-logo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f3f4f5;
+        }
+        .login-form{
+            margin: 10% auto;
+            border: 2px solid #bf0000;
+            width:40%;
+            background-color: #DDD;
+            border-radius: 15px;
+            /* margin-bottom: 5%; */
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        input{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            /* padding-left: 6%; */
+            font-size: 15px;
+            padding-top: 1%;
+            text-align: left;
+        }
+        label{
+            color: #bf0000;
+            font-size: 22px;
+        }
+        p{
+            color: #bf0000;
+        }
+        #submit {
+            padding: 2% 5% ;
+            font-size: 15px;
+            background-color: #242024;
+            color: #DDD;
+            border-color: #bf0000;
+        }
+        #submit:hover {
+            cursor: pointer;
+            background-color: #e30220;
+            border-color: #DDD;
+            box-shadow: 3px 4px 20px 4px rgba(0,0,0,0.6); 
+        }
+        a {
+            margin-top: 12px;
+            color: #e30220;
+            text-decoration: none;
+        }
+        a:hover {
+            font-size: 17px;
+            color: #bf0000;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#submit").click(function(){
+                var email = $("#em").val();
+                if(email == "" ){
+                    $("#para").text("please Enter your mail ID");
+                } else {
+                    $("#para").text(`Mail sent successfully`);
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="login-form">
+        <div class="logo" align="center">
+            <h1 style="width: fit-content; color: #e30220;">Forget Password</h1><br>
+            <img src="img/marvel-logo.png" alt="Logo" width="150px" height="100px">
+        </div>
+        <div class="input">
+            <form action="">
+                <center>
+                    <div>
+                        <p id="para"></p>
+                        <label for="email">Email :</label>
+                        <input type="email" name="email" placeholder="Enter your mail id" id="em" required>
+                    </div>
+                    <div>
+                        <button id="submit" type="button">Continue</button>
+                    </div>
+                    <div>
+                        <a href="login-form.html"><-go back to login</a>
+                    </div>
+                </center>
+            </form>
+        </div>
+            
+    </div>
+        </body>
+</html>
