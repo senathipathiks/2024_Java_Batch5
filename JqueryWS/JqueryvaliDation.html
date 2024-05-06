@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <style>
+    #form {
+      box-shadow: 3px 3px 5px 5px rgba(17, 2, 2, 0.379);
+      width: 70%;
+      border-radius: 20px;
+    }
+    body {
+      background-image: radial-gradient(
+        rgba(4, 222, 255, 0.947),
+        rgba(18, 1, 251, 0.135)
+      );
+      background-color: rgba(182, 235, 251, 0.959);
+    }
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 850;
+      font-style: italic;
+    }
+    #form {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    button {
+      padding: 15px;
+      border: none;
+      border-radius: 20px;
+      background-color: rgb(38, 10, 253);
+      color: rgb(254, 254, 253);
+      font-weight: bolder;
+    }
+    input {
+      border: 3px;
+      width: 190px;
+      height: 23px;
+      padding: 5px;
+      margin-right: -30px;
+      border-radius: 5px;
+      position: relative;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+    label {
+      margin-left: -50px;
+    }
+    input {
+      margin-right: -40px;
+    }
+  </style>
+  <body>
+    <center>
+      <h2>SIGNUP</h2>
+
+      <p>Fill this form to create an user account</p>
+      <br />
+      <br />
+      <div style="background-color: rgb(131, 242, 250)" id="form">
+        <br />
+        <label for="fname"></label> First Name :
+        <input
+          type="text"
+          placeholder="   Enter your firstname "
+          name="fname"
+          required
+          id="uname"
+        /><br /><br />
+        <div id="jqname"></div><br><br>
+        <label for="lname"></label> Last Name :
+        <input
+          type="text"
+          placeholder="  Enter your lastname  "
+          name="lname"
+          required
+        /><br /><br />
+        <label for="Mobile"></label> Mobile num :
+        <input
+          type="text"
+          placeholder="  Enter your Mobilenumber  "
+          name="Mobile"
+          required
+          id="mob"
+        /><br /><br />
+        <div id="jqmob"></div> <br><br>
+
+        <label for="email"></label> Email id :
+        <input
+          type="text"
+          placeholder="  Enter your EmailId "
+          name="email"
+          
+          id="mail"
+        /><br /><br />
+        <div id="jqmail"></div><br><br>
+        <label for="pw"></label> Password :
+        <input
+          type="password"
+          placeholder="  Enter your new password  "
+          name="pw"
+          required
+          id="pwd"
+        /><br /><br />
+        <div id="jqpwd"></div><br><br>
+        <p>Agree to <a href="#">Terms and Conditions</a></p>
+        <button type="Submit" id="bt">Register</button>
+
+        <br />
+        <p>
+          Already having an Account ? Click here to
+          <a href="Login.html">Login</a>
+        </p>
+        <br />
+      </div>
+    </center>
+
+    <p>q</p>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <div id="division"></div>
+
+    <script>
+      var emailregex = "^[a-zA-Z0-9]+@[a-z]+.[a-z]{2,3}$";
+      var pwdregex = "^[a-zA-Z0-9!@#$%^&*]{8,16}$";
+      var nameregex = "^[A-za-z0-9!@#$%^&*]{6,29}$";
+      var numregex  =  "^[6-9]{1}+[0-9]{9}$";
+       
+      var nums = document.querySelectorAll("p");
+      document.querySelector("#division").innerHTML = nums[6].innerHTML;
+      
+
+      $(document).ready(function () {
+
+
+        var num = $('p:*').val();
+        
+        $('#division').html =num[5].get;
+
+       
+        $("#uname").blur(function () {
+          var uname = $("#uname").val();
+
+          if (uname == "") {
+            alert("UserName cant be empty");
+          }
+        });
+
+        $("#pwd").blur(function () {
+          var pswd = $("#pwd").val();
+
+          if (pswd == "") {
+            $("#jqpwd").html("Password cant be empty");
+            $("#jqpwd").css("color", "red");
+          }
+        });
+
+        
+        $("#mob").blur(function () {
+            var num    = $("#mob").val();
+          
+          if (num == "") {
+            $("#jqmob").html("Mobile number cant be empty");
+            $("#jqmob").css("color", "red");
+          }
+          else{
+            $("#jqmob").html("");
+          }
+        });
+
+        
+        $("#mail").blur(function () {
+            var email  = $("#mail").val();
+          if (email == "") {
+            $("#jqmail").html("Mail Id cant be empty");
+            $("#jqmail").css("color", "red");
+          }
+        });
+
+        $("#bt").click(function () {
+     var emailregex = '^[a-z0-9]+@[a-z]+.[a-z]{2,3}$';
+      var pwdregex = '^[a-zA-Z0-9!@#$%^&*]{8,16}$';
+      var nameregex = "^[A-za-z0-9!@#$%^&*]{6,29}$";
+      var numregex  =  "^[6-9]{1}[0-9]{9}$";
+          var uname = $("#uname").val();
+          var pswd = $("#pwd").val();
+          var email  = $("#mail").val();
+          var num    = $("#mob").val();
+          if (uname == "") {
+            alert("UserName cant be empty");
+          } 
+          if(!uname.match(nameregex)){
+            $("#jqname").html("Enter a valid UserName");
+            $("#jqname").css("color", "red");
+
+          }
+          if (!pswd.match(pwdregex)) {
+            $("#jqpwd").html("Enter Correct Password");
+            $("#jqpwd").css("color", "red");
+          } 
+          if (!email.match(emailregex)) {
+            $("#jqmail").html("Enter Correct Username or Mailid");
+            $("#jqmail").css("color", "red");
+          } 
+          if(!num.match(numregex)){
+            $("#jqmob").html("Enter a valid Mobile number");
+            $("#jqmob").css("color", "red");
+          }
+          if (pswd.match(pwdregex) && email.match(emailregex)) {
+            $("#jqmob").html("");
+            alert("LOGIN SUCCESS");
+          }
+
+          
+          
+          
+        });
+
+
+
+      });
+    </script>
+  </body>
+</html>
