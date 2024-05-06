@@ -1,0 +1,5 @@
+BOM - browser object model
+DOM - document object model
+Event handling
+Simple validation
+

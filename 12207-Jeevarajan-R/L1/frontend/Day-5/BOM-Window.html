@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <input type="email" name="" onblur="validate()" id="email">
+    <input type="submit" onclick="sum()" name="" id="">
+    <h2 id="tag"></h2>
+      
+    <script>
+        // in BOM we gonna see alert
+        function greet(a){
+            // var name = document.getElementById("name");
+            alert(`Hello ${a}!!! welcome`);
+        }
+        function show(){
+            document.getElementById('tag').innerHTML = "Wait for 5 sec!!!!";
+        }
+        function showtime(){
+            var date = Date();
+            document.getElementById('tag').innerHTML = date;
+            setInterval(show,5000);
+            setTimeout(showtime, 3000);
+        }
+
+        var name = "";
+        window.onload = function() {
+            name = window.prompt("Enter your name:");
+            greet(name);
+            showtime();
+        }
+
+        function validate(){
+            var email = document.getElementById('email').value;
+            if(email ==""){
+                alert('Email required. Please Enter....');
+            } 
+        }
+        
+        function sum(a){
+            var cnf = confirm("Are you sure???")
+            if(cnf == true){
+                open('https://www.outlook.com');
+            } else {
+                open("https://www.google.com");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

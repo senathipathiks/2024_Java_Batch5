@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            /* background-color: black; */
+        }
+        .stopwatch{
+            border: 2px solid;
+            border-radius: 30px;
+            margin: 15% auto;
+            width: fit-content;
+            height: 150px;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            padding: 30px;
+            background-color: gray;
+            backdrop-filter: blur(100px);
+            background: transparent;
+            box-shadow: 4px 5px 5px 4px rgba(0, 255, 255, 0.57);
+
+        }
+        .display{
+            margin: 2px auto;
+            border: 2px solid silver;
+            border-radius: 50px;
+        }
+        button{
+            background-color: cyan ;
+            color: gray;
+            border-radius: 40px;
+            margin: 10px;
+            padding: 5px 10px ;
+        }
+    </style>
+    <script>
+        // document.getElementById('screen').innerHTML = 10;
+        var sec = document.getElementById('s');
+        var min = document.getElementById('m');
+        var hr = document.getElementById('h');
+        var flag = true;
+        function reset(){
+            flag = false;
+            sec = 0;
+            min = 0;
+            hr = 0;
+            document.getElementById('h').innerHTML="00";
+            document.getElementById('m').innerHTML="00";
+            document.getElementById('s').innerHTML="00";
+        }
+        function start(){            
+            if (flag){
+                sec = sec+1;
+                document.getElementById('s').innerHTML = sec;
+                if(sec == 60){
+                    sec = 0;
+                    min = min + 1;
+                    document.getElementById('m').innerHTML = min;
+                } else if(min == 60) {
+                    min = 0;
+                    hr = hr + 1;
+                    document.getElementById('h').innerHTML = hr;
+                }
+                setTimeout(start,1000);
+            } else {
+                flag = true;
+            }
+        }
+        function stop(){
+            if(flag){
+                flag = false;
+            } else {
+                flag = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="stopwatch">
+
+        <div class="display">
+            <center>
+                <h1><span id="h">00</span>:<span id="m">00</span>:<span id="s">00</span></h1>
+            </center>
+        </div>
+        <div class="btn">
+            <center>
+                <button type="button" onclick="start()">Start</button>
+                <button type="button" onclick="stop()">Stop</button>
+                <button type="reset" onclick="reset()">Reset</button>
+            </center>
+        </div>
+    </div>
+        
+</body>
+</html>
