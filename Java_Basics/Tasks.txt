@@ -1,0 +1,46 @@
+Day 1:
+
+Write a java program to
+
+	find area and perimeter of circle using cmd arguments - Without Scanner
+	Calculator Program using cmd line arguments (add,sub,mul,div) - Without Scanner
+
+Using Scanner:
+	Print a mul table.(upto 10)
+
+Pyramid:
+	asterisk and reverse asterisk
+	Pyramid patterns
+	
+Control Statements:
+	Convert integer to binary.
+	To add two binary numbers.
+	Display the numbers div by 3 and 5 (upto 100)
+	Find no of days in a month(leap year)
+	Reverse a number
+	Sum of digits
+	Display the date for given input
+	Print prime numbers for the given range(range from user).
+
+Day 2:
+Create an array of size 10,initialize to user input, find the sum and avg.
+To sort the elements in desc
+To copy all the array values to another array w/o using copy method
+To perform merge sort
+To Find the longest subsequence
+Find the duplicate elements in an array
+Display unique elements in an array
+Display odd index values
+Display even index values
+Display the count of odd and primary nos in an array
+Duplicate characters in a string
+Encryption and decryption
+Reverse a sentence
+Palindrome or not (W/O reverse function)
+To generate a pin(fname,lname,aadhar,pan,d.o.b(dd-mm-yyyy)) 
+	Conditions 
+		- lastname 2 chars should be capital
+		- First 3 chars from firstname
+		- aadhar 2nd portion
+
+	
