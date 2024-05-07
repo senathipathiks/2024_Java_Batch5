@@ -1,0 +1,15 @@
+Day 1
+
+write a java program to find area and perimeter of circle using command line arguments
+calculator program using command line arguments.
+
+1.print a multiplication table 
+2.pattern printing (3)
+3.convert integer to binary 
+4.program to add two binary numbers
+5.display the number which are divible by 3 and 5 range 1 to 100 
+6.program to find the number of days in a month 
+7.reverse the number 
+8.sum of digits of given number 
+9.display the day for the given number(0,1) 
+10.print the prime numbers for the given range start and end.

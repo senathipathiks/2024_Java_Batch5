@@ -1,0 +1,18 @@
+Day 2
+
+1)create an array with the size of 10 intialize the values through the user inputs and find sum and Average of array elements  
+2)write a program to sort the array values in descending order
+3)write a program to copy all the array values to another array.
+4)write a program to perform mergesort.
+5)write a program to find the longest subsequents.
+6)find the duplicate elements.
+7)display the unique elements in the array.
+8) display the odd position values in the array
+9)display the even position values in the array
+10)count of odd numbers in the array
+11)display the number of prime numbers in the given array.
+12)Duplicate characters in string
+13)Encryption  & decryption ceaser cipher.
+14)reverse the sentence.
+15)check whether a string is a palindrome or not.
+16)write a program to generate the pin (fir stname,lastna me,addhar(xxxx- xxxx -xxxx),pan(5character4numbersx,dob(d,m,y)

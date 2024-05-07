@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <div class="container"> 
+
+        <label class="todo">
+            <input type="checkbox" name="" id="myCheckBox1" onclick="disableCheckBox('myCheckBox1')">
+            <span>Workout</span>
+        </label>
+
+        <label class="todo">
+            <input type="checkbox" name="" id="myCheckBox2" onclick="disableCheckBox('myCheckBox2')">
+            <span>Book Reading</span>
+        </label>
+
+        <label class="todo">
+            <input type="checkbox" name="" id="myCheckBox3" onclick="disableCheckBox('myCheckBox3')">
+            <span>Attend Meeting</span>
+        </label>
+
+        <label class="todo">
+            <input type="checkbox" name="" id="myCheckBox4" onclick="disableCheckBox('myCheckBox4')">
+            <span>Solving Problems</span>
+        </label>      
+
+    </div>
+
+    <script>
+       
+       function disableCheckBox(id){
+            var checkbox = document.getElementById(id);
+            checkbox.disabled = true;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <center>
+            <div class="login">
+                <h1 style="color: azure;">Register Page</h1>
+                    <input type="name" placeholder="Enter your Name" pattern=[A-Z\sa-z]{3,20} required ><br>
+                    <br>
+                    <input type="email" placeholder="Enter your Email" required><br>
+                    <br>
+                    <input type="tel" placeholder="Enter your Phone Number"  pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required><br>
+                    <br>
+                    <textarea cols="30" placeholder="Enter your Address" required></textarea>
+                    <br>
+                <button>Submit</button>
+            </div>     
+        </center>
+       <style>
+        .login{
+            background-color: rgb(255, 221, 0);
+            width: 25wh;
+            height: 45vh;
+        }
+       </style>
+    </form>
+</body>
+</html>
