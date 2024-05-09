@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function msg()
+            {
+                var name=document.getElementsByTagName("p");
+                document.getElementById("para").innerHTML=name[0].innerHTML;
+                document.getElementById("para").style.color="red";
+            }
+
+        </script>
+    </head>
+    <body>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <input type="submit" onclick="msg()">
+        <div id="para"></div>
+    </body>
+</html>+

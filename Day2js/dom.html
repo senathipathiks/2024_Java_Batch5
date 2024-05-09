@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+          function msg1()
+          {
+            var name=document.getElementById("uname");
+            alert("Hello "+name.value);
+          }
+
+          function msg2()
+          {
+            var name=document.getElementsByName("urname");
+            alert("Hello Hii"+name[0].value);
+          }
+        </script>
+    </head>
+    <body>
+      Firstname:<input type="text" id="uname"><br> 
+      <!-- By using id -->
+      Lastname:<input type="text" name="urname"><br>
+      <!-- by using name -->
+      <input type="submit" name="button" onclick="msg2()">
+    </body>
+</html>
