@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        // $(document).ready(function() {
+        //     document.write("Hello World");
+        // })
+
+        // $(function(){
+        //     document.write("Hello world!");
+        // })
+
+        
+        $(document).ready(function(){
+            
+            $("#show").click(function(){
+                $("p").css({"background-color": "yellow", "font-size": "200%"});
+                $("#para1").fadeIn();
+            })
+
+            $("#hide").click(function(){
+            $("#para1").fadeOut();
+            })
+        })
+
+    
+
+    </script>
+</head>
+<body>
+    <p id="para1" style="display: none;"> This is my paragraph 1 </p>
+    <input type="submit" value="show" id="show">
+    <input type="submit" value="hide" id="hide">
+</body>
+</html>

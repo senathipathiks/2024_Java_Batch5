@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query</title>
+</head>
+<body>
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p>This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <input type="submit" id="show" onclick="display()">
+    <div id="pd"></div>
+    <script>
+        function display(){
+            var p = document.querySelectorAll("p");
+            document.querySelector("#pd").innerHTML=p[3].innerHTML;
+        }
+    </script>
+</body>
+</html>

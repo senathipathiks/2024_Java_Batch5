@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#Append").click(function(){
+                $("#para1").append("Created By Raj!");
+            })
+            $("#Prepend").click(function(){
+                $("#para1").prepend("Welcome to Relevantz!");
+            })
+            $("#remove").click(function(){
+                $("#para1").remove();
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <p id="para1"> Hello World! </p>
+    <input type="submit" value="Append Text" id="Append">
+    <input type="submit" value="Prepend Text" id="Prepend">
+    <input type="submit" value="remove Text" id="remove">
+</body>
+</html>

@@ -1,0 +1,39 @@
+.container-fluid .navbar-brand{
+    gap: 2rem;
+}
+#navbarSupportedContent li a{
+    font-weight: bolder;
+}
+#navbarSupportedContent ul {
+    column-gap: 2rem;
+}
+
+#btn{
+    margin-right: 2rem;
+    position: ;
+}
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    margin-top: 1rem;
+  }
+  
+  .grid > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .grid > article img {
+    max-width: 100%;
+  }
+  
+  .grid .text {
+    padding: 20px;
+
+  }
+  
+
+  

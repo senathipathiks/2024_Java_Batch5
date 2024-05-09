@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+<body>
+    <form>
+       <input type="text" id="uname" name="uname" onblur="verify()">
+       <input type="submit" name="submit" onclick="msg()">
+    </form>
+    <script>
+        function msg(){
+            alert("Hello");
+        }
+        function verify(){
+            var a = document.getElementById("uname").value;
+            if(a==""){
+                alert("Required");
+            }
+        }
+    </script>
+</body>
+</html>

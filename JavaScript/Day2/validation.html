@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+</head>
+<body>
+    <form>
+        Enter your Name: <input type="name"  id="uname" onblur="nameValidate()"><br>
+        <p id="ves"> </p>
+        Enter your Email: <input type="email" name="uemail" id="uemail" onblur="emailValidate()"><br>
+       <p id="em"> </p>
+       <input type="submit" onclick="myFunction()" >
+       
+       
+    </form>   
+
+    <script>
+
+        var name = document.getElementById("uname").value;
+        var exp = "/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/";
+        var email = document.getElementById("uemail").value
+
+        function nameValidate() {
+            if(name==""){
+                document.getElementById("ves").style.color="red";
+                document.getElementById("ves").innerHTML="Name Should Not Be Empty";
+                document.getElementById("ves").innerHTML.focus();
+            }
+        }
+
+        function emailValidate(){
+            if(exp.match(email)){
+                document.getElementById("em").style.color="red";
+                document.getElementById("em").innerHTML="Enter the Valid Email!";
+                document.getElementById("em").innerHTML.focus();
+            }
+        }
+
+        function myFunction(){
+
+        }
+    </script>
+
+
+</body>
+</html>

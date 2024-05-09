@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" href="s-1.png">
+    <link rel="stylesheet" href="register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+            $("#btn").click(function(){
+    
+                var emlexp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                var phexp = /^(0|91)?[6-9][0-9]{9}$/;
+                var pasexp =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var tel = $("#phnum").val();
+                var pass = $("#pass").val();
+                var rpas = $("#rpass").val();
+
+                if(name==""){
+                    alert("name cant be Empty!");
+                }
+                else{
+                    if(!email.match(emlexp)){
+                        alert("Email not valid!");
+                    }
+                    else{
+                        if(!tel.match(phexp)){
+                            alert("Check the Phone Number!");
+                        }
+                        else{
+                            if(!pass.match(pasexp)){
+                                alert("Check the Password!");
+                            }
+                            else{
+                                if(pass!=rpas){
+                                    alert("Password Doesn't Matchs!");
+                                }
+                                else{
+                                    confirm("Are you ready to Submit?");
+                                }
+                            }
+                        }
+                    }
+                }
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    
+    <div class="bg-img">
+
+        <form class="container" id="myform">
+
+          <center><h1>REGISTER</h1></center>
+         
+            <input type="text" placeholder="Enter Name" id="name" required>
+            <p id=""></p>
+            <input type="email" placeholder="Enter Email" id="email" required>
+            <p id="display1"></p>
+
+            <input type="tel" placeholder="Enter Phone Number" id="phnum" required>
+            <p id="display2"></p>
+
+            <input type="password" placeholder="Enter Password" id="pass" required>
+            <p id="display3"></p>
+
+            <input type="password" placeholder="Retype Password" id="rpass" required>
+            <p id="display4"></p>
+
+            <button type="submit" class="btn" id="btn" onclick="valid()">Create Account</button>
+
+            <center><a href="login.html">Already have an account? <b>Login</b></a></center>
+            
+        </form>
+    </div>
+
+    <script>
+
+        // document.getElementById('myform').addEventListener('submit', function(event){
+        //     event.preventDefault();
+        // });
+
+        // function valid(){
+
+        //     var count = 0;
+
+        //     var email = document.getElementById("email").value;
+        //     var emlexp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        //     if(email.match(emlexp)){
+        //         console.log("Success!");
+        //         count++;
+        //     } else {
+        //         document.getElementById("display1").innerHTML="Enter Valid email!";
+        //         console.log("Fail!");
+        //     }
+
+        //     var phnum = document.getElementById("phnum").value;
+        //     var phexp = /^(0|91)?[6-9][0-9]{9}$/;
+
+        //     if(phnum.match(phexp)){
+        //         console.log("Success!");
+        //         count++;
+        //     } else {
+        //         document.getElementById("display2").innerHTML="check the Phone Number!";
+        //         console.log("Fail!");
+        //     }
+
+
+        //     var pass = document.getElementById("pass").value;
+        //     var pasexp=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+
+        //     if(pass.match(pasexp)){
+        //         console.log("Valid Password!");
+        //         count++;
+        //     } else{
+        //         document.getElementById("display3").innerHTML="Password Not Valid!";
+        //         console.log("Not Valid!");
+        //     }
+
+        //     var rpass = document.getElementById("rpass").value;
+
+        //     if(pass==rpass){
+        //         console.log("Password Matches!");
+        //         count++;
+        //     } else{
+        //         document.getElementById("display4").innerHTML="Your Password Does Not Match!";
+        //         console.log("Password Does not Matches!");
+        //     }
+            
+        //     if(count==4){
+        //         confirm("Are You confirm ?");
+        //         window.location.href = "login.html";
+        //     }
+
+        // }
+    </script>
+</body>
+</html>

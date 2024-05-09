@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="display">
+            <span id="min">00:</span>
+            <span id="ss">00:</span>
+            <span id="mss">00</span>
+        </div>
+
+        <div class="options">
+            <button id="start" onclick="start()">start</button>
+            <button id="stop">Stop</button>
+            <button id="Reset">Restart</button>
+        </div> 
+
+    </div>
+
+    <script>
+       
+       window.onload = function () 
+       {
+  
+            var minutes = 0; 
+            var seconds = 0; 
+            var milli = 0;
+
+            var appendMilliSec = document.getElementById("mss");
+            var appendSec = document.getElementById("ss");
+            var appendmin = document.getElementById("min");
+            
+            var Start = document.getElementById('start');
+            var Stop = document.getElementById('stop');
+            var Reset = document.getElementById('Reset');
+
+            var Interval;
+
+            Start.onclick = function() {
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10);
+            }   
+
+            Stop.onclick = function() {
+                clearInterval(Interval);
+            }
+    
+            function startTimer() {
+                milli++; 
+                if(milli <= 99){
+                    appendMilliSec.innerHTML = milli;
+                }
+                if(milli > 9){
+                    seconds++;
+                    appendMin.innerHTML = "0" + seconds;
+                    milli = 0;
+                    appendMilliSec.innerHTML = "0" + 0;
+                }
+                if(milli > 9){
+                    appendMin.innerHTML = seconds;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
