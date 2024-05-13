@@ -43,4 +43,8 @@ To generate a pin(fname,lname,aadhar,pan,d.o.b(dd-mm-yyyy))
 		- First 3 chars from firstname
 		- aadhar 2nd portion
 
-	
+Day 4:
+	1. Invalid Month Exception - input should be within 12
+	2. Invalid format exception - dd-mmm-yyy. Ex: 25-JUL-2001
+	3. Invalid Password Exception - within 8 to 16
+	4. Invalid File type Exception - should accept only png and pdf,ppt,docx only
