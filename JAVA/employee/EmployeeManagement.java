@@ -1,78 +1,50 @@
 package employee;
+import java.util.Set;
 import java.util.ArrayList;
 import java.util.Iterator;
-public class EmployeeManagement {
-	ArrayList<Employee> list = new ArrayList<>();
-	
-	public boolean addEmployee(Employee emp)
-	{
-		return list.add(emp);
-	}
-	public boolean UpdateEmployee(Employee emp)
-	{
-		boolean flag = false;
-		Iterator<Employee> it = list.iterator();
-		while(it.hasNext())
-		{
-			if(it.next().getEid() == emp.getEid())
-			{
-				it.remove();
-				list.add(emp);
-				flag = true;
-				break;
-			}
-		}
-		
-		return flag;
-	}
-	public boolean deleteEmployee(int id)
-	{
+import java.util.HashMap;
 
-//		Employee emp = null;
-//		int index = 0;
-//		for(Employee e : list)
-//		{
-//			if (e.getEid() == id) {
-//				list.remove(index);
-//				break;
-//			} 
-//			index++;
-//		}
-//		return emp;
-		boolean flag = false;
-		Iterator<Employee> it = list.iterator();
-		while(it.hasNext())
-		{
-			if(it.next().getEid() == id)
-			{
-				it.remove();
-				flag = true;
-				break;
-			}
-		}
+public class EmployeeManagement {
+	HashMap<Integer, Employee> map = new HashMap<>();
+
+	public boolean addEmployee(Employee emp) {
+		map.put(emp.getEid(), emp);
+		return true;
+	}
+
+	public boolean UpdateEmployee(Employee emp) {
 		
-		return flag;
-	}
-	public Employee findEmployee(int id)
-	{
-		Employee emp = null;
-		for(Employee e : list)
+		if(map.containsKey(emp.getEid()))
 		{
-			if (e.getEid() == id) {
-				emp = e;
-				break;
-			} 
+			map.put(emp.getEid(),emp);
+			return true;
 		}
-		return emp;
-	}
-	public void viewAllEmployee()
-	{
-		for(Employee e : list)
+		else
 		{
-			e.display();
+			return false;
 		}
-		
+
 	}
-	
+
+	public boolean deleteEmployee(int id) {
+
+		if(map.remove(id)!= null)
+			return true;
+		else
+			return false;	
+	}
+
+	public Employee findEmployee(int id) {
+		return map.get(id);
+	}
+
+	public void viewAllEmployee() {
+		Set<Integer> keys = map.keySet();
+		for(Integer key : keys)
+		{
+			map.get(key).display();
+		}
+
+	}
 
 }

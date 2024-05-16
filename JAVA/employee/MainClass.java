@@ -2,7 +2,6 @@ package employee;
 
 import java.util.Scanner;
 
-
 public class MainClass {
 	static public void menu() {
 		System.out.println("1 .Add Employee");
@@ -36,28 +35,37 @@ public class MainClass {
 			case 2:
 				System.out.println("Enter employee Id ,name,salary,dno");
 				Employee emp1 = new Employee(sc.nextInt(), sc.next(), sc.nextDouble(), sc.nextInt());
-				if (ems.UpdateEmployee(emp1)) {
+				if(ems.UpdateEmployee(emp1))
+				{
 					System.out.println("Employee object updated");
-				} else {
+				}
+				else
+				{
 					System.out.println("Employee not found");
 				}
 				break;
 			case 3:
 				System.out.println("Enter the Employee Id to delete: ");
 				int id1 = sc.nextInt();
-				if (ems.deleteEmployee(id1)) {
+				if(ems.deleteEmployee(id1))
+				{
 					System.out.println("Employee object removed");
-				} else {
+				}
+				else
+				{
 					System.out.println("Employee not found");
 				}
 				break;
 			case 4:
-				System.out.println("Enter the Employee Id to find : ");
+				System.out.println("1Enter the Employee Id to find : ");
 				int id = sc.nextInt();
 				Employee e = ems.findEmployee(id);
-				if (e != null) {
+				if(e!=null)
+				{
 					e.display();
-				} else {
+				}
+				else
+				{
 					System.out.println("Employee is not present");
 				}
 				break;
@@ -74,4 +82,3 @@ public class MainClass {
 	}
 
 }
-
