@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup.html</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="login.css" /> -->
+
+    <style>
+      #form {
+        margin: 0;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        /* border: 2px rgb(13, 10, 10) solid;  */
+        position: fixed;
+        padding: 30px;
+        width: 510px;
+        font-family: "Montserrat", sans-serif;
+        margin-left: 5%;
+      }
+      #form input {
+        width: 100%;
+        height: 40px;
+      }
+      .input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-right: 20px; */
+        /* border: 1px solid rgb(238, 12, 12); */
+        padding: 10px;
+        justify-content: center;
+        outline: none;
+        border: none;
+        align-items: center;
+        border-radius: 15px;
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(49, 26, 26);
+        padding: 10px;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        /* margin-top: 20px; */
+        background-color: #f0f0f0;
+        font-family: "Montserrat", sans-serif;
+        /* border: 2px solid red; */
+        margin-left: 30px;
+      }
+      button {
+        margin-top: 20px;
+        width: 50%;
+        height: 45px;
+        border-radius: 5px;
+        background-color: #f86f03;
+        color: white;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        cursor: pointer;
+      }
+      .social-media {
+        display: flex;
+        justify-content: center;
+      }
+      .social-icon {
+        height: 46px;
+        width: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.45rem;
+        color: #333;
+        border-radius: 50%;
+        border: 1px solid #333;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: 0.3s;
+      }
+      .social-icon:hover {
+        color: #f86f03;
+        border-color: #f86f03;
+      }
+
+      #bgimg {
+        width: 50%;
+        background-color: #f86f03;
+        height: 730px;
+        border-bottom-right-radius: 450px;
+        /* border-top-right-radius: 200px; */
+        /* border-top-right-radius: 20px; */
+      }
+      #ln,
+      #rp {
+        margin-left: 30px;
+      }
+      textarea {
+        margin-left: 50px;
+        font-family: "Montserrat", sans-serif;
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="container">
+        <div id="bgimg">
+          <div id="img">
+            <img src="Login.png" alt="" />
+          </div>
+        </div>
+
+        <div id="form">
+          <center><h2>SIGN UP</h2></center>
+          <div class="input">
+            <!-- <div class="name"> -->
+            <!-- <i class="fas fa-user"></i> -->
+            <input
+              type="text"
+              placeholder="First name"
+              id="fn"
+              class="name"
+              required
+              onblur="msg()"
+            />
+            <div id="ur"></div>
+
+            <!-- </div> -->
+            <!-- <div class="name"> -->
+            <!-- <i class="fas fa-user"></i> -->
+            <input
+              type="text"
+              placeholder="Last name"
+              id="ln"
+              class="name"
+              required
+            />
+          </div>
+
+          <div class="input">
+            <!-- <i class="fas fa-lock"></i> -->
+            <input
+              type="password"
+              placeholder="New Password"
+              required
+              id="pass"
+              class="name"
+            />
+            <input
+              type="password"
+              placeholder="Repeat Password"
+              required
+              id="rp"
+              class="name"
+            />
+          </div>
+          <div class="input">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              id="mail"
+              class="name"
+            />
+            <input
+              type="text"
+              placeholder="Mobile "
+              required
+              id="num"
+              class="name"
+              onblur="Check()"
+            /><br /><br />
+          </div>
+          <br />
+          <div id="numb" style="margin-left: 270px"></div>
+          <br />
+          <br /><br />
+
+          <div id="addr">
+            <textarea
+              name="addr"
+              id=""
+              cols="60"
+              rows="7"
+              placeholder="  Address"
+            ></textarea>
+          </div>
+          <center>
+            <button type="submit" onclick="validate()">Register</button>
+            <p>Or Continue with socialmedia accounts</p>
+            <center>
+              <div class="social-media">
+                <a href="#" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </center>
+          </center>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </body>
+  <script>
+    function msg() {
+      var user = document.getElementById("fn").value;
+      if (user == "") {
+        document.getElementById("ur").innerHTML = "Enter your username";
+        document.getElementById("ur").style.color = "red";
+      }
+    }
+    function validate() {
+      var name = document.getElementById("fn").value;
+      var pass = document.getElementById("pass").value;
+      var repeat = document.getElementById("rp").value;
+      var email = document.getElementById("mail").value;
+      var mob = document.getElementById("num").value;
+
+      if (name == "") {
+        alert("Firsname Should not be empty");
+      } else if (pass == "") {
+        alert("Password should not be empty");
+      } else if (pass != repeat) {
+        alert("Password should be same ");
+      } else if (email == "") {
+        alert("Email  should not be empty");
+      } else if (mob == "") {
+        alert("Mobile number  should not be empty");
+      }
+    }
+    function Check() {
+      var mobregex =
+        "^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$";
+      var mobi = document.getElementById("num").value;
+
+      if (mobi == "") {
+        document.getElementById("numb").innerHTML =
+          "Enter a valid mobile number";
+        document.getElementById("numb").style.color = "red";
+      } else if (mobi.match(mobregex)) {
+        document.getElementById("numb").innerHTML = "MOBILE NUMBER IS CORRECT";
+        document.getElementById("numb").style.color = "red";
+      } 
+      else if(!mobi.match(mobregex)) {
+        document.getElementById("numb").innerHTML =
+          "MOBILE NUMBER IS INCORRECT";
+        document.getElementById("numb").style.color = "red";
+      }
+    }
+  </script>
+</html>

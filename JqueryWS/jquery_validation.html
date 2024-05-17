@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin: 0;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .in {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #0d3828;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .container {
+            padding: 20%;
+            /* border: 3px solid red; */
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .optional{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#email").blur(function(){
+                var email = $("#email").val();
+                if(email == ""){
+                    $("#emailcrt").html("Email Should not be empty !!");
+                    // alert("Email Should not be empty !!");
+                    return false;
+                }
+                else{
+                    $("#emailcrt").html("");
+                }
+            })
+
+            $("#psw").blur(function(){
+                var password = $("#psw").val();
+                if(password == ""){
+                    $("#pswcrt").html("password Should not be empty !!");
+                    return false;
+                }
+                else{
+                    $("#pswcrt").html("");
+                }
+            })
+
+            $("#submit").click(function(){
+                var email = $("#email").val();
+                var password = $("#psw").val();
+                var emailRegEx = '^[a-z0-9]+@[a-z]+.[a-z]{2,3}$';
+                var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+                if(email == ""){
+                    $("#emailcrt").html("Email Should not be empty !!");
+                    // alert("Email Should not be empty !!");
+                    return false;
+                }
+                if(password == ""){
+                    $("#pswcrt").html("password Should not be empty !!");
+                    return false;
+                }
+                if(!email.match(emailRegEx)){
+                    $("#emailcrt").html("email is invalid");
+                    document.getElementById("psw").focus();
+                    return false;
+                }
+                if(!password.match(passwordRegEx)){
+                    $("#pswcrt").html("password is invalid");
+                    document.getElementById("psw").focus();
+                    return false;
+                }
+                else{
+                    $("#emailcrt").html("");
+                    $("#pswcrt").html("");
+                    $("#success").html("Login Successful");
+                    // alert("Login successful");
+                }
+            })
+        })
+        
+    </script>
+
+</head>
+<body>
+    <div class="container" style="border: 2px solid red;">
+        <!-- <form action="#" method=""> -->
+            <h1>Login</h1>
+            Username
+            <input type="email" placeholder="Enter Username" id="email" class="in" autofocus>
+            <label id="emailcrt"></label><br>
+            <label for="psw">Password</label>
+            
+            <input type="password" placeholder="Enter Password" id="psw" class="in">
+            <label id="pswcrt"></label><br>
+
+            <button type="submit" id="submit">Login</button>
+            <label id="success"></label><br>
+            <div class="optional">
+            <div style="display: flex;justify-content: center; align-items: center;"><input type="checkbox" checked="checked" name="remember"> Remember me</div>
+                <a href="#">Forget Password?</a>
+            </div>
+        <!-- </form> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+
+    <!-- <script>
+      $(document).ready(function () {
+        document.write("Heloo ");
+      });
+
+      $(function () {
+        document.writeln("Using function");
+      });
+    </script> -->
+
+    
+  </head>
+  <body>
+    <div>
+      <h1>helo</h1>
+    </div>
+<p style="display: none ;" id="p1">Hii Im visible now</p>
+<p id="p2">I will Hide if u  click below</p>
+<p>join</p>
+
+<input type="submit" id="show" value="click me to see text " >
+<img id="img1"  src="images.png" alt="">
+<input type="submit" id="showimg" value="click me" >
+
+
+<input type="text" name="" id="num1">
+<input type="text" id="num2">
+<input type="text" id="res">
+<input type="submit" id="func" value="ADD">
+
+<script>
+    $(document).ready(function(){
+      $("#show").click(function(){
+          $("#p1").show();
+          $("#p2").hide();
+          
+      })
+    })
+    
+    $(document).ready(function(){
+        $("#showimg").click(function(){
+            $("#img1").fadeOut(1000)
+        })
+    })
+    $(document).ready(function(){
+        $("#showimg").dblclick(function(){
+            $("#img1").fadeIn(1000)
+        })
+    })
+    $(document).ready(function(){
+        $("#showimg").click(function(){
+            $("#img1").fadeToggle(1000)
+        })
+    })
+
+
+    $(document).ready(function(){
+        $("#func").onMouseMove(function(){
+            var a = parseInt($("#num1").val());
+            var b = parseInt($("#num2").val());
+            var c = a+b;
+            $("#res").val(c);
+        })
+    })
+    
+    $( "div" ).css( "width", "300px" ).add( "p" ).css( "background-color", "blue" );
+
+
+  </script>
+  </body>
+</html>

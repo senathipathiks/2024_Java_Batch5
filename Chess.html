@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessBoard.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+
+      }
+
+    #board{
+        border: 3px solid white;
+        width: 400px;
+        height: 400px;
+        margin-left: 50px;
+    }
+    #main{
+
+       
+
+        background-color: rgba(90, 39, 39, 0.936);
+        width: 500px;
+        height: 450px;
+        padding-top: 50px;
+        
+    }
+    #white{
+        color: rgb(255, 183, 2);
+    }
+    #black{
+        color: rgb(7, 4, 2);
+    }
+    .button1{
+background-color: blanchedalmond;
+width: 50px;
+height: 50px;
+    }
+    .button2{
+        background-color: 84, 23, 23, 0.936;
+    width: 50px;
+    height: 50px;
+    }
+   .box{
+    display: flex;
+   }
+   i{
+    margin-top: 15px;
+    margin-left: 15px;
+    
+   }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="board">
+       <div id="white">
+        <div class ="box">
+           
+            <div class="button2"><i class='fas fa-chess-rook'>  </i></div>
+            <div class="button1"><i class='fas fa-chess-knight'></i></div>
+            <div class="button2"><i class='fas fa-chess-bishop'></i></div>
+            <div class="button1"><i class='fas fa-chess-queen'> </i></div>
+            <div class="button2"><i class='fas fa-chess-king'>  </i></div>
+            <div class="button1"><i class='fas fa-chess-bishop'></i></div>
+            <div class="button2"><i class='fas fa-chess-knight'></i></div>
+            <div class="button1"><i class='fas fa-chess-rook'> </i></div>
+        </div>
+
+
+        <div class ="box">
+            <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+        </div>
+    </div>
+        <div class ="box">
+           
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+             <div class="button1"></div>
+        </div>
+
+
+        <div class ="box">
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+        </div>
+
+        <div class ="box">
+           
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+             <div class="button1"></div>
+        </div>
+
+
+        <div class ="box">
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button1"></div>
+            <div class="button2"></div>
+        </div>
+  <div id="black">
+        <div class ="box">
+           
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+            <div class="button2"><i class='fas fa-chess-pawn'></i></div>
+             <div class="button1"><i class='fas fa-chess-pawn'></i></div>
+        </div>
+
+
+        <div class ="box">
+            <div class="button1"><i class='fas fa-chess-rook' >  </i></div>
+            <div class="button2"><i class='fas fa-chess-knight'>  </i></div>
+            <div class="button1"><i class='fas fa-chess-bishop'>  </i></div>
+            <div class="button2"><i class='fas fa-chess-queen'>  </i></div>
+            <div class="button1"><i class='fas fa-chess-king'>  </i></div>
+            <div class="button2"><i class='fas fa-chess-bishop'>  </i></div>
+            <div class="button1"><i class='fas fa-chess-knight'>  </i></div>
+            <div class="button2"><i class='fas fa-chess-rook'>  </i></div>
+        </div>
+    </div>
+        </div>
+    </div>
+</body>
+</html>

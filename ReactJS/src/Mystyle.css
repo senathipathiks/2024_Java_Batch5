@@ -1,0 +1,38 @@
+
+header{
+    border: 2px solid none;
+    background-color: cyan;
+    display: flex;
+    padding: 3%;
+    text-decoration: none;
+    
+    gap: 35%;
+    color: rgb(201, 37, 37);
+}
+ button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(183, 0, 255);
+    border: none;
+    color:white;
+
+    margin-right: 10px;
+    text-decoration: none;
+    
+ }
+ Link{
+    color: rgb(255, 0, 47);
+    text-decoration: none;
+ }
+h1{
+    text-align: center;
+}
+footer{
+
+    border:2px solid none;
+    background-color: rgb(4, 67, 97);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5%;
+    margin-top: 41%;
+}
