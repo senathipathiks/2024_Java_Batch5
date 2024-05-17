@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "Name": "Prasanth",
+      "Mobile": "2435",
+      "City": "chennai",
+      "Pincode": "4325"
+    },
+    {
+      "id": "3",
+      "Name": "Kumar",
+      "Mobile": "2323232",
+      "City": "Erode",
+      "Pincode": "232323"
+    },
+    {
+      "id": "6016",
+      "Name": "gokul anand",
+      "Mobile": "123456789",
+      "City": "Madurai",
+      "Pincode": "625001"
+    }
+  ]
+}
