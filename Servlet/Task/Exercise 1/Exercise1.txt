@@ -1,0 +1,7 @@
+Exercise:1
+ 
+Create a servlet and name it as AuthServlet
+Create a html/jsp file
+Create a form that accepts a name, password and pass it on to the above servlet.
+The receiving servlet (AuthServlet) should check the name and password against a hard coded list of name-password pairs stored in a HashMap. HashMap should be initialized with some dummy usernames and passwords in the constructor/init method of the servlet.
+Servlet AuthServlet should return either 'Name/Password Match' or  'Name/Password Does Not Match' back to client.
