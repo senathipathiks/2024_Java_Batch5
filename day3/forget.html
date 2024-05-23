@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: teal;
+        }
+        .container {
+            background: #fff;
+            margin: 15% auto;
+            width: fit-content;
+            padding: 10px 10px;
+            border-radius: 12px;
+            row-gap: 5px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        } 
+        .container h2 {
+        font-size: 1.75rem;
+        color: #03045e;
+        font-weight: 500;
+        }
+        button {
+            margin-top: 25px;
+            width: 50%;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+            padding: 9px 0;
+            cursor: pointer;
+            border-radius: 12px;
+            /* pointer-events: none; */
+            background: teal;
+            transition: all 0.2s ease;
+        }
+        button:hover {
+            background: #0077b6;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        form div {
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        input {
+            /* height: 45px; */
+            /* width: 42px; */
+            border-radius: 6px;
+            outline: none;
+            font-size: 1.125rem;
+            text-align: center;
+            border: 1px solid #ddd;
+            color: #03045e;
+            padding-top: 10px;
+            padding-left: 5px;
+            text-align: left;
+        }
+        input:focus {
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin-left: -170px;
+            margin-bottom: -20px;
+            font-weight: bold;
+            font-size: larger;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <form action="">
+
+           
+                <div>
+                    <h2>Forgot Password </h2>
+                </div>
+                <div>
+                    <p>Email : </p><br><br>
+                    <input type="email" name="email" placeholder="Enter your mail id" id="" required>
+                </div>
+                <div>
+                    <button type="button"><a href="verify.html">Continue</a></button>
+                </div>
+                <div>
+                    <a href="Login.html">go back to login</a>
+                </div>
+            </center>
+        </form>
+    </div>
+    
+</body>
+</html>

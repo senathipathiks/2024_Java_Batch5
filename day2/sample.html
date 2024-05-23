@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name;
+        window.onload=function()
+        {
+            name=prompt("Enter you name:");
+        }
+        function showtimer(){
+            var 
+        }
+        function validate()
+        {
+            alert("Check the E-=mail ID");
+            showtimer()            
+        }
+        function msg()
+        {
+            var conf=confirm("Are you sure to submit?");
+            if(conf==true)
+            {
+                open("http://www.outlook.com")
+            }
+            else{
+                open("http://www.google.com")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="email" name="email" onblur="validate()">
+    <input type="submit" name="button" onclick="msg()">
+</body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    margin: 160px;
+    background-image:url(chess.jfif) ;
+}
+.b{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+.w{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+table{
+    box-shadow: 0 4px 40px ;
+}

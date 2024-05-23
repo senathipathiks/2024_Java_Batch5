@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function colorchange()
+        {
+            document.getElementById("uname").style.background="blue";
+        }
+        function msg(){
+            var name=document.getElementById("uname");
+            alert("hello"+name.value)
+
+        }
+        function confirmation(){
+            confirm("Are you sure to confirm")
+        }
+        function changebuttontext(){
+            document.getElementById("button1").value="click me";
+        }
+        function changeSubmit(){
+            document.getElementById("button1").value="submit1";
+        }
+        function msg2(){
+            document.getElementById("confirmmsg").innerHTML("Successfully updated")
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="uname" onfocus="colorchange()" onblur="msg()">
+    <input type="submit" name="" id="button" onmouseover="channgebuttoncolor()" onclick="confirmation()">
+    <input type="submit" name="" id="button1" onmouseover="changebuttontext()" onmouseout="changeSubmit()" ondblclick="msg2()">
+    <div id="confirmmsg"></div>
+</body>
+</html>
