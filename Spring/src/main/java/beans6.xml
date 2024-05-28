@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+   <!--   <bean class="com.aravind.task2.Department" name="dep">
+    <property name="d1" value="Trainee"></property>
+    <property name="d2" value="Intern"></property>
+    <property name="d3" value="Manager"></property>
+    <property name="d4" value="HR"></property>
+    <property name="d5" value="Traineer"></property>
+    </bean>
+    
+    <bean class="com.aravind.task2.Department" name="dep1">
+    <property name="d1" value="Trainee"></property>
+    <property name="d2" value="Intern"></property>
+    <property name="d3" value="Manager"></property>
+    <property name="d4" value="HR"></property>
+    <property name="d5" value="Traineer"></property>
+    </bean>
+     
+     <bean class="com.aravind.task2.Employee"  name="emp"> 
+    <property name="eid" value="17"></property>
+    <property name="ename" value="Aravinda Rajan"></property>
+    <property name="dept">
+    <list>
+    	<ref bean="dep"/>
+    </list>
+    </property>
+    </bean>
+    
+    <bean class="com.aravind.task2.Employee"  name="emp1"> 
+    <property name="eid" value="22"></property>
+    <property name="ename" value="velan"></property>
+    <property name="dept">
+    <list>
+    	<ref bean="dep1" />
+    </list>
+    </property>
+    </bean>  -->
+    
+    <bean class="com.aravind.task2.Department" name="dep">
+    <constructor-arg name="d1" value="Trainee"></constructor-arg>
+    <constructor-arg name="d2" value="Intern"></constructor-arg>
+    <constructor-arg name="d3" value="Manager"></constructor-arg>
+    <constructor-arg name="d4" value="HR"></constructor-arg>
+    <constructor-arg name="d5" value="Traineer"></constructor-arg>
+    </bean>
+    
+    <bean class="com.aravind.task2.Department" name="dep1">
+   <constructor-arg name="d1" value="Trainee"></constructor-arg>
+    <constructor-arg name="d2" value="Intern"></constructor-arg>
+    <constructor-arg name="d3" value="Manager"></constructor-arg>
+    <constructor-arg name="d4" value="HR"></constructor-arg>
+    <constructor-arg name="d5" value="Traineer"></constructor-arg>
+    </bean>
+     
+    <bean class="com.aravind.task2.Employee"  name="emp"> 
+    <constructor-arg name="eid" value="17"></constructor-arg>
+    <constructor-arg name="ename" value="Aravinda Rajan"></constructor-arg>
+    <constructor-arg name="dept">
+    <list>
+    	<ref bean="dep"/>
+    </list>
+    </constructor-arg>
+    </bean>
+    
+    <bean class="com.aravind.task2.Employee"  name="emp1"> 
+    <constructor-arg name="eid" value="22"></constructor-arg>
+    <constructor-arg name="ename" value="velan"></constructor-arg>
+    <constructor-arg name="dept">
+    <list>
+    	<ref bean="dep1" />
+    </list>
+    </constructor-arg>
+    </bean>  
+    
+    
+</beans>

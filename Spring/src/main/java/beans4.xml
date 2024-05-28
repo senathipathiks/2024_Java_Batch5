@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+   <!--  <bean class="com.aravind.dependencies.Address" name="ad">
+    <property name="doorno" value="383"></property>
+    <property name="strname" value="NGO Colony"></property>
+    <property name="city" value="dindigul"></property>
+    </bean>
+    
+    <bean class="com.aravind.dependencies.Address" name="ad1">
+    <property name="doorno" value="385"></property>
+    <property name="strname" value="SS Nagar"></property>
+    <property name="city" value="KovilPatti"></property>
+    </bean>
+     
+     <bean class="com.aravind.dependencies.Student"  name="stu"> 
+    <property name="sid" value="17"></property>
+    <property name="sname" value="Rajan"></property>
+    <property name="address">
+    <list>
+    	<ref bean="ad"/>
+      <ref bean="ad1" />  
+    </list>
+    </property>
+    </bean>
+    
+    <bean class="com.aravind.dependencies.Student"  name="stu1"> 
+    <property name="sid" value="19"></property>
+    <property name="sname" value="Vickee"></property>
+    <property name="address">
+    <list>
+    	<ref bean="ad1" />
+    </list>
+    </property>
+    </bean>  -->
+    
+    <bean class="com.aravind.dependencies.Address" name="ad">
+    <constructor-arg name="doorno" value="383"></constructor-arg>
+    <constructor-arg name="strname" value="NGO Colony"></constructor-arg>
+    <constructor-arg name="city" value="dindigul"></constructor-arg>
+    </bean>
+    
+    <bean class="com.aravind.dependencies.Address" name="ad1">
+    <constructor-arg name="doorno" value="385"></constructor-arg>
+    <constructor-arg name="strname" value="SS Nagar"></constructor-arg>
+    <constructor-arg name="city" value="KovilPatti"></constructor-arg>
+    </bean>
+     
+     <bean class="com.aravind.dependencies.Student"  name="stu"> 
+    <constructor-arg name="sid" value="17"></constructor-arg>
+    <constructor-arg name="sname" value="Rajan"></constructor-arg>
+    <constructor-arg name="address">
+    <list>
+    	<ref bean="ad"/>
+    <!--<ref bean="ad1" />  -->
+    </list>
+    </constructor-arg>
+    </bean>
+    
+    <bean class="com.aravind.dependencies.Student"  name="stu1"> 
+    <constructor-arg name="sid" value="19"></constructor-arg>
+    <constructor-arg name="sname" value="Vickee"></constructor-arg>
+    <constructor-arg name="address">
+    <list>
+    	<ref bean="ad1" />
+    </list>
+    </constructor-arg>
+    </bean>
+    
+    
+</beans>

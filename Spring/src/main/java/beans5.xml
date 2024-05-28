@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+  <!--   <bean class="com.aravind.practice.Subject" name="sy">
+    <property name="sub1" value="CNS"></property>
+    <property name="sub2" value="CC"></property>
+    <property name="sub3" value="GC"></property>
+    <property name="sub4" value="THT"></property>
+    <property name="sub5" value="JAVA"></property>
+    </bean>
+    
+    <bean class="com.aravind.practice.Subject" name="sy1">
+    <property name="sub1" value="CNS"></property>
+    <property name="sub2" value="CC"></property>
+    <property name="sub3" value="GC"></property>
+    <property name="sub4" value="THT"></property>
+    <property name="sub5" value="JAVA"></property>
+    </bean>
+     
+     <bean class="com.aravind.practice.Student"  name="stud"> 
+    <property name="regno" value="17"></property>
+    <property name="name" value="Aravinda Rajan"></property>
+    <property name="sub">
+    <list>
+    	<ref bean="sy"/>
+    </list>
+    </property>
+    </bean>
+    
+    <bean class="com.aravind.practice.Student"  name="stud1"> 
+    <property name="regno" value="27"></property>
+    <property name="name" value="Ashwin"></property>
+    <property name="sub">
+    <list>
+    	<ref bean="sy1" />
+    </list>
+    </property>
+    </bean>  -->
+    
+   <bean class="com.aravind.practice.Subject" name="sy">
+    <constructor-arg name="sub1" value="CNS"></constructor-arg>
+    <constructor-arg name="sub2" value="CC"></constructor-arg>
+    <constructor-arg name="sub3" value="GC"></constructor-arg>
+    <constructor-arg name="sub4" value="THT"></constructor-arg>
+    <constructor-arg name="sub5" value="JAVA"></constructor-arg>
+    </bean>
+    
+    <bean class="com.aravind.practice.Subject" name="sy1">
+    <constructor-arg name="sub1" value="CNS"></constructor-arg>
+    <constructor-arg name="sub2" value="CC"></constructor-arg>
+    <constructor-arg name="sub3" value="GC"></constructor-arg>
+    <constructor-arg name="sub4" value="THT"></constructor-arg>
+    <constructor-arg name="sub5" value="JAVA"></constructor-arg>
+    </bean>
+     
+     <bean class="com.aravind.practice.Student"  name="stud"> 
+    <constructor-arg name="regno" value="17"></constructor-arg>
+    <constructor-arg name="name" value="Aravinda Rajan"></constructor-arg>
+    <constructor-arg name="sub">
+    <list>
+    	<ref bean="sy"/>
+    </list>
+    </constructor-arg>
+    </bean>
+    
+    <bean class="com.aravind.practice.Student"  name="stud1"> 
+    <constructor-arg name="regno" value="27"></constructor-arg>
+    <constructor-arg name="name" value="Ashwin"></constructor-arg>
+    <constructor-arg name="sub">
+    <list>
+    	<ref bean="sy1" />
+    </list>
+    </constructor-arg>
+    </bean>    
+    
+    
+</beans>
