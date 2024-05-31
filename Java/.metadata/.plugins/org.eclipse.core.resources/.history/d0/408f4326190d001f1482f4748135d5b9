@@ -1,0 +1,40 @@
+package com.day6;
+
+import java.io.File;
+
+class file{
+	public void print() {
+		for(int i = 0 ; i < 10 ; i++) {
+			System.out.println(i);
+		}
+	}
+}
+
+class Thread1 extends Thread{
+	File f = new File();
+	THread1(File f){
+		this.f = f;
+	}
+	public void run() {
+		f.print();
+	}
+}
+
+class Thread2 extends Thread{
+	File f = new File();
+	THread1(File f){
+		this.f = f;
+	}
+	public void run() {
+		f.print();
+	}
+}
+
+public class SyncEx {
+
+	public static void main(String[] args) {
+		Thread1 t1 = new Thread1(f);
+		Thread2 t2 = new Thread2(f);
+	}
+
+}

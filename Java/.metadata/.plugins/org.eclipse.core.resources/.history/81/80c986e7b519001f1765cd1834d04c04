@@ -1,0 +1,27 @@
+package com.cms.bean;
+
+public class User {
+	int uid;
+	String uname;
+	int cid;
+	String uadd;
+	String desti;
+	String rec_name;
+	
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public User(int uid, String uname, int cid, String uadd, String desti, String rec_name) {
+		super();
+		this.uid = uid;
+		this.uname = uname;
+		this.cid = cid;
+		this.uadd = uadd;
+		this.desti = desti;
+		this.rec_name = rec_name;
+	}
+	
+	
+}

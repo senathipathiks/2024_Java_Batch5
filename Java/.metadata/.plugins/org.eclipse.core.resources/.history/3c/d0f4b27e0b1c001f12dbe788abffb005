@@ -1,0 +1,11 @@
+package com.spring.SpringEx;
+
+public class Employee {
+	int id;
+	
+	public static void display() {
+		
+		System.out.println("Nagarjun");
+	}
+
+}
