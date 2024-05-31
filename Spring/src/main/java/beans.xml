@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+    
+ 
+    <bean class ="com.spring.Springex.Employee" name ="emp">
+    <property name="id" value="123" ></property>
+     <property name="name" value="Vashanth" ></property>
+    
+    </bean>
+    
+    
+    <bean class ="com.spring.Springex.Student" name ="std">
+      <constructor-arg name="sid" value="1010"></constructor-arg>
+     <constructor-arg name="sname" value="Nandha"></constructor-arg>
+    
+    </bean>
+    
+    <bean class ="com.spring.dependency.Address" name ="addr">
+      <property name="no" value="44"></property>
+     <property name="st" value="Senthamil-6th-Street"></property>
+     <property name="city" value="MAdurai" ></property>
+     </bean>
+     
+     <bean class ="com.spring.dependency.Address" name ="addr1">
+      <property name="no" value="6"></property>
+     <property name="st" value="Kurinji 3rd  Street"></property>
+     <property name="city" value="MAdurai-12 " ></property>
+     </bean>
+    
+    
+    
+     <bean class ="com.spring.dependency.Student" name ="st">
+      <constructor-arg name="id" value="1011"></constructor-arg>
+     <constructor-arg name="name" value="Nandhakumaran"></constructor-arg>
+     <constructor-arg name="addr">
+     
+   <list>
+   
+   <ref bean="addr"></ref>
+      <ref bean="addr1"></ref>
+   
+   </list>  
+     </constructor-arg>
+    </bean>
+</beans>
