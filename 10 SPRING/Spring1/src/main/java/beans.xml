@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+    
+
+    <bean class ="com.gopi.Spring1.Employee" name ="emp">
+    <property name = "id" value = "123"></property>
+    <property name="name" value ="Gopi"></property>
+    </bean>
+    <bean class ="com.gopi.Spring1.Student" name ="std">
+    <property name = "stdId" value = "1"></property>
+    <property name="stdName" value ="Gopikrishnan"></property>
+    </bean>
+ 
+	<bean class ="com.gopi.Spring1.Student" name ="std1">
+	<constructor-arg name = "stdId" value ="2"></constructor-arg>
+	<constructor-arg name = "stdName" value="Siva"></constructor-arg>
+	</bean>
+</beans>

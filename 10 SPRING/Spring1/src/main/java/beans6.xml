@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+    <bean class ="com.gpi.employee.Department" name ="dep">
+    <property name ="depid" value = "1"></property>
+    <property name="depname" value ="L and D"></property>
+    <property name="depmanager" value ="Gopi"></property>
+    </bean>
+
+    <bean class ="com.gpi.employee.Department" name ="dep2">
+    <constructor-arg name ="depid" value = "2" />
+    <constructor-arg name="depname" value ="R and D"/>
+    <constructor-arg name="depmanager" value ="Siva"/>
+
+    <!-- <property name = "doorno" value = "123"></property>
+    <property name="strname" value ="weststreet"></property>
+    <property name="city" value ="SVK"></property>
+    <property name="pin" value ="123456"></property> -->
+    </bean>
+    
+	<bean class ="com.gpi.employee.Employee" name ="emp">
+    <property name ="eid" value = "123"></property>
+    <property name="ename" value ="Gopi"></property>
+    <property name="department">
+    <list>
+    <ref bean="dep"></ref>
+    <ref bean="dep2"></ref>
+    </list>
+
+    </property>
+    </bean>
+	
+	
+	
+</beans>
