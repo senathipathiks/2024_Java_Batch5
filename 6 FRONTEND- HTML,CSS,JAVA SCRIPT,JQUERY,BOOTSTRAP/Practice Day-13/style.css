@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+    }
+
+#home {
+    width: 100%;
+    height: auto;
+}
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+.navbar {
+    background-color:rgb(198, 136, 136) ;
+}
+.navbar-brand{
+    color: white;
+}
+.navbar-brand:hover{
+    color: aliceblue;
+}
+.nav-link{
+    color: white;
+    font-size: 18px;
+}
+.nav-link:hover{
+    color: aliceblue;
+    font-size: 18.3px;
+}
+.navbar {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(163, 80, 158) 3%, rgb(72, 128, 184) 38%, rgb(87, 173, 167) 68%, rgb(145, 84, 178) 98%);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+.navabr-button{
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px 18px;
+    border: none;
+}
+  
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: 101%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <center><div id="feed">
+    <center><h1>Feedback</h1></center>
+    <center><img src="feedback.png" width = "30" height = "30"></center>
+    <form action=" ">
+        <table align="center">
+            <tr>
+                <td>Please select which of our location you visited.</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="location" id="">Chennai
+                <input type="radio" name="location" id="">Madurai
+                <input type="radio" name="location" id="">Virudhunagar
+                <input type="radio" name="location" id="">Sivakasi</td>
+            </tr>
+            <tr>
+                <td>When did you visit this location ?</td>
+            </tr>
+            <tr>
+                <td><input type="date" name="date" value="20224-03-15" min="2022-03-15" max="2030-12-31" id=""/>
+                <input type="time" name="time" id=""></td>
+            </tr>
+            <tr>
+                <td>Pleace rate your overall experiance during this visit</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rate1" id="">Excellent<br>
+                <input type="radio" name="rate1" id="">Very Good<br>
+                <input type="radio" name="rate1" id="">Good<br>
+                <input type="radio" name="rate1" id="">Fair<br>
+                <input type="radio" name="rate1" id="">Poor</td>
+            </tr>
+            <tr>
+                <td>What was the purpose of your stay?</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="purpose" id="">Leisure<br>
+                <input type="radio" name="purpose" id="">Business<br>
+                <input type="radio" name="purpose" id="">Good<br>
+                <input type="radio" name="purpose" id="">Other</td>
+            </tr>
+            <tr>
+                <td>Please out team's communication with you.</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rate" id="">Excellent<br>
+                <input type="radio" name="rate" id="">Very Good<br>
+                <input type="radio" name="rate" id="">Good<br>
+                <input type="radio" name="rate" id="">Fair<br>
+                <input type="radio" name="rate" id="">Poor</td>
+            </tr>
+            <tr>
+                <td>Did you encounter any issues during your stay?</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="issues" id="">Yes<br>
+                    <textarea name="Commands" cols="50" rows="6"></textarea><br>
+                <input type="radio" name="issues" id="">No</td>
+            </tr>
+        </table>
+        <td><center><button style="width: 15%;">Submit</button></center></td>
+    </form>
+    </div></center>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $("#register").click(function () {
+                var x = $("#fname").val();
+                var y = $("#lname").val();
+                var regemail = '/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/';
+                var email = $("#email").val();
+                var uname = $("#uname").val();
+                var address=$('#address').val();
+                var password=$('#password').val();
+                var confirmpassword=$("#confirmpassword").val();
+                var val;
+                if(val!=true)
+                if (x == "") {
+                    $("#a").show();
+                    val=false;
+                }
+                else {
+                    $("#a").hide();
+                    val=true;
+                }
+                if (y == "") {
+                    $("#b").show();
+                    $("#b").html("ouefh;fn");
+                    val=false;
+                }
+                else{
+                    $("#b").hide();
+                    val=true;
+                }
+                if (!email.match(regemail)) {
+                    $("#c").show();
+                    val=false;
+                }
+                else{
+                    $("#c").hide();
+                    val=true;
+                }
+                if (uname == "") {
+                    $("#d").show();
+                    val=false;
+                }
+                else{
+                    $("#d").hide();
+                    val=true;
+                }
+                if (address == "") {
+                    $("#e").show();
+                    val=false;
+                }
+                else{
+                    $("#e").hide();
+                    val=true;
+                }
+                if (password == "") {
+                    $("#f").show();
+                    val=false;
+                }
+                else{
+                    $("#f").hide();
+                    val=true;
+                }
+                if (!confirmpassword.match(password)) {
+                    $("#g").show();
+                    $('#confirmpassword')="";
+                    val=false;
+                }
+                else{
+                    $("#g").hide();
+                    val=true;
+                }   
+            })
+        })
+    </script>
+</head>
+<body>
+    <center>
+        <form action="login.html">
+        <div id="reg">
+            <h1>Registration</h1>
+            <img src="register.png" width="40" height="40"><br>
+            <div class="con">
+                Name:<br>
+                <input type="text" id="fname" name="firstname" placeholder="First" required>
+                <p id="a" style="display: none; font-size: smaller; color:red;">enter the first name</p><br>
+
+                <input type="text" name="lastname" placeholder="Last" id="lname" required>
+                <p id="b" style="display: none; font-size: smaller; color:red;">enter the last name</p><br>
+
+                Email Id:<br>
+                <input type="text" name="emailid" id="email" required>
+                <p id="c" style="display: none; font-size: smaller; color:red;">Enter the correct email id</p><br>
+
+                User Name:<br>
+                <input type="text" name="username" id="uname" required>
+                <p id="d" style="display: none; font-size: smaller; color:red;">enter the user name</p><br>
+
+                Address:<br>
+                <textarea name="address" id="address" cols="20" rows="5" required></textarea><br>
+                <p id="e" style="display: none; font-size: smaller; color:red;">enter the user address</p><br>
+
+                Password:<br>
+                <input type="password" name="password" id="password" required><br>
+                <p id="f" style="display: none; font-size: smaller; color:red;">enter the password</p><br>
+
+                Confirm Password:<br>
+                <input type="password" name="confirmpassword" id="confirmpassword" required><br>
+                <p id="g" style="display: none; font-size: smaller; color:red;">password and confirm password must be same</p><br>
+
+                Gender:<br>
+                <input type="radio" name="gender" id="gender">Male
+                <input type="radio" name="gender" id="gender">Female
+                <input type="radio" name="gender" id="gender">Transgender<br>
+            </div>
+            <button style="width: 30%;" id="register">Register</button><br>
+            <a href="login.html">Login</a>
+        </div>
+    </form>
+</body>
+</html>
