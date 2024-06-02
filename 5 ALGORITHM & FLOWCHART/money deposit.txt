@@ -1,0 +1,10 @@
+Step 1 : Start
+Step 2 : Insert the ATM card 
+Step 3 : Enter the pin number
+Step 4 : Select deposit
+Step 5 : Insert the cash in to deposit machine 
+Step 6 : Confirm the amount which is you inserted
+Step 7 : Confirm the transaction wait for the ATM process
+Step 8 : Put OPT for a transaction receipt if required
+Step 9 : Collect The ATM card
+Step 10 : Stop

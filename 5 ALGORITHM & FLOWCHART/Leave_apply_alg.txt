@@ -1,0 +1,12 @@
+Step 1 : start
+Step 2 : Open Nalan Portal
+Step 3 : LogIn with your credential
+Step 4 : Click the leave drop down 
+Step 5 : Click Apply for Leave option
+Step 6 : Select Leave type
+Step 7 : Select Duration
+Step 8 : Select Leave plan
+Step 9 : Select start and end date
+Step 10 : Select the reason
+Step 11 : click apply
+step 12 : end
