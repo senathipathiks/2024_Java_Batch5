@@ -1,0 +1,60 @@
+Note : To rise a ticket
+
+1.no
+2.Node Js & vs code
+3.Mysql server
+4.tomcat server v.10
+5.STS IDE [strin tool shoot]
+6.Jenkins [Genric war]
+7.postman api framework
+8.maven 3.5 <
+9.git bash
+10.SONARCUBE
+
+
+Linux Commands:
+
+ls - The most frequently used command in Linux to list directories
+pwd - Print working directory command in Linux
+cd - Linux command to navigate through directories
+mkdir - Command used to create directories in Linux
+mv - Move or rename files in Linux
+cp - Similar usage as mv but for copying files in Linux
+rm - Delete files or directories
+touch - Create blank/empty files
+ln - Create symbolic links (shortcuts) to other files
+cat - Display file contents on the terminal
+clear - Clear the terminal display
+echo - Print any text that follows the command
+uname - Linux command to get basic information about the OS
+tar - Command to extract and compress files in Linux
+grep - Search for a string within an output
+grep -i - ignore the case
+head - Return the specified number of lines from the top
+tail - Return the specified number of lines from the bottom
+diff - Find the difference between two files
+cmp - Allows you to check if two files are identical
+comm - Combines the functionality of diff and cmp
+sort - Linux command to sort the content of a file while outputting
+sort -r 
+zip - Zip files in Linux
+unzip - Unzip files in Linux
+kill and killall - Kill active processes by process ID or name
+df - Display disk filesystem information
+mount - Mount file systems in Linux
+chmod - Command to change file permissions
+chown - Command for granting ownership of files or folders
+ifconfig - Display network interfaces and IP addresses
+sudo - Command to escalate privileges in Linux
+alias - Create custom shortcuts for your regularly used commands
+whereis - Locate the binary, source, and manual pages for a command
+whatis - Find what a command is used for
+top - View active processes live with their system usage
+useradd and usermod - Add new user or change existing users data
+passwd - Create or update passwords for existing users
+wget - Direct download files from the internet
+wc - For count the Words,lines,character
+wc -w
+wc -l
+wc -c
+
