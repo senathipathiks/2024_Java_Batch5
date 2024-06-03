@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    <context:annotation-config/>
+
+    
+    
+    <bean class="com.aravind.LapSpecfic.Specfic" name="sp">
+    <constructor-arg name="processor" value="INTEL CORE I7"></constructor-arg>
+    <constructor-arg name="harddrivers" value="SSD"></constructor-arg>
+    <constructor-arg name="graphicscard" value="NVIDIA"></constructor-arg>
+    </bean>
+    
+   
+     
+     <bean class="com.aravind.LapSpecfic.Laptop"  name="lap"> 
+    <constructor-arg name="lapid" value="1903"></constructor-arg>
+    <constructor-arg name="lapname" value="HP"></constructor-arg>
+    </bean>
+    
+    
+    
+    
+</beans>
