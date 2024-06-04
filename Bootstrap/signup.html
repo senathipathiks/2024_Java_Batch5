@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>    
+        $(document).ready(function (){
+        $("#signup").click(function(){
+            var name1 = $("#name1").val();
+            var pass = $("#pwd").val();
+            var regEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-+.]).{6,20}$/;
+            var regEx1 = /^(0|[+91]{3})?[6-9][0-9]{9}$/;
+            if(name1 ==""){
+                alert("Username is Required");
+            }            else if(pass == ""){
+                alert("password should be entered");
+            }            else if(pass !=""){
+                if(!validPass){
+                    alert("Enter valid password");
+                }
+            }
+            else{
+                alert("Registered Successfully");
+                open("login.html");
+                return frame3;
+            }
+        })
+    })
+</script>
+    </script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 46rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:black;
+         }
+
+         .login{
+            border: 1px solid yellow;
+            border-radius: 1rem;
+            width:27rem;
+            height: 37rem;
+         }
+
+         .form{
+            display: grid;
+            place-content: center;
+            box-sizing: border-box;
+            background-color: rgb(151, 182, 241);
+            color: white;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 1rem;
+         }
+
+         label{
+            font-size: 1.3rem;
+            padding: 0.3rem;
+            color: aliceblue;
+            font-weight: bold;
+         }
+
+         button{
+            margin-top: 2rem;
+            width: 19rem;
+            height: 2.4rem;
+            font-weight: bold;
+            border-radius: 1rem ;
+            background-color: rgb(235, 168, 50);
+         }
+
+         input{
+            width: 18rem;
+            height: 1.5rem;
+            font-size: 1rem;
+            border: 2px solid;
+            border-radius: 1rem;
+            padding: 5px;
+         }
+
+         ::placeholder{
+            font-size: small;
+         }
+         a{
+            font-weight: bold;
+            color: white;
+
+         }
+
+         a:hover{
+            text-shadow: whitesmoke;
+
+         }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form class="form" name="f1" onsubmit="return formValidation()">
+            <h1>Login</h1>
+            <label>Username</label>
+            <input type="text" placeholder="Enter username here.." id="name1"><br>
+            <label>password</label>
+            <input type="password" placeholder="Enter password here...." id="pwd">
+            <p><a>Forgot password ?</a></p>
+            <button id="signup"><a href="navbar.html">Log In</a></button>
+            <p>Dont have an account?<a href="login.html">Register</a></p>
+
+        </form>
+
+    </div>
+    
+</body>
+</html>

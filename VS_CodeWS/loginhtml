@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <h1 align="center">The Upper House</h1>
+        <img src="download.png" align="center">
+        <Style>
+            img{
+                width:300;
+                height:300;
+            }
+        </Style>
+
+        <form>
+           <center> Enter your EmailId: <input type="text" name="username"><br></center>
+           <center> Enter tour Password:<input type="password" name="pwd"><br></center>
+           <center> <input type="submit" name="submit"> </center>
+
+        </form>>
+    </head>
+</html>
