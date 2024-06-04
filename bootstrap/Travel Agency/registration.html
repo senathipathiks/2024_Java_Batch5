@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url('home3.jpg');
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        form {
+            background-color: rgb(23, 116, 147);
+            padding: 120px;
+            border-radius: 125px;
+            width: 100%;
+            justify-content: center
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        h2 {
+            color: aliceblue;
+        }
+
+        label {
+            color: aliceblue;
+        }
+
+        p {
+            color: aliceblue;
+        }
+
+        #btn {
+            padding: 10px;
+            border-radius: 15px;
+            color: aliceblue;
+            background-color: black;
+
+        }
+    </style>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var fname = $("#fname").val();
+                var lname = $("#lname").val();
+                var password = $('#password').val();
+                if (fname == "") {
+                    alert("First name can not be empty");
+                }
+                if (lname == "") {
+                    alert("Last name can not be empty");
+                }
+
+                else if (password == "") {
+                    alert("password is must");
+                }
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h2>Registration Form</h2>
+        </center>
+        <form>
+            <div class="form-group">
+                <label for="fname">First Name: </label>
+                <input type="text" class="form-control" id="fname" name="firstname">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name: </label>
+                <input type="text" class="form-control" id="lname" name="lastname">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password: </label>
+                <input type="text" class="form-control" id="pwd" name="password">
+            </div>
+            <div class="form-group">
+                <label for="address">Address: </label>
+                <input type="textarea" class="form-control" rows="6" id="address">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender: </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="rd1">
+                    <input type="radio" class="form-check-input" id="rd1" name="opt1" value="male">Male
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="rd2">
+                    <input type="radio" class="form-check-input" id="rd2" name="opt1" value="female">Female
+                </label>
+            </div>
+            <center><button id="btn">Submit</button></center>
+        </form>
+    </div>
+</body>
+
+</html>
