@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+       
+        <script>
+           
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    var fname = $("#fname").val();
+                    var lname = $("#lname").val();
+                    var pwd = $("#pwd").val();
+                    var regEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-+.]).{6,20}$/;
+                    var validpwd = regEx.match(pwd);
+                    if(fname ==""){
+                        alert("First Name is Required")
+                    }
+                    else if(lname ==""){
+                        alert("Last Name is Required")
+                    }
+                            else if(pwd == ""){
+                                alert("password should be entered");
+                            }
+                            else if(pwd !=""){
+                                if(!validpwd){
+                                alert("Enter valid password");
+                                }
+                                    else{
+                                        alert("Submitted Succesfully");
+                                    }
+                                }  
+                            })
+                           
+                        })
+               
+               
+        </script>
+    <style>
+        h2{
+            color: brown;
+        }
+        input[type="text"]{
+            background-color:aliceblue;
+        }
+        body{
+            color: beige;
+            background-color: rgb(80, 152, 155);
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Registration Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for = "fname">First Name: </label>
+                    <input type = "text" class = "form-control" id = "fname" name = "firstname">
+                </div>
+                <div class="form-group">
+                    <label for = "lname">Last Name: </label>
+                    <input type = "text" class = "form-control" id = "lname" name = "lastname">
+                </div>
+                <div class="form-group">
+                    <label for = "pwd">Password: </label>
+                    <input type = "text" class = "form-control" id = "pwd" name = "password">
+                </div>
+                <div class="form-group">
+                    <label for = "address">Address: </label>
+                    <textarea class = "form-control" rows = "6" id = "address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for = "qual">Qualification: </label>
+                </div>
+                <div class="form-check">
+                    <label class = "form-check-label" for = "ch1">
+                        <input type = "checkbox" class = "form-check-input" id = "ch1" name = "opt1" value = "B.E/B.Tech">B.E/B.Tech
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class = "form-check-label" for = "ch2">
+                        <input type = "checkbox" class = "form-check-input" id = "ch2" name = "opt2" value = "M.E/M.Tech">M.E/M.Tech
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class = "form-check-label" for = "ch3">
+                        <input type = "checkbox" class = "form-check-input" id = "ch3" name = "opt3" value = "Ph.D">Ph.D
+                    </label>
+                </div><br>
+                <div class="form-group">
+                    <label for =  "gender">Gender: </label>
+                </div>
+                <div class="form-check">
+                   
+                    <label class = "form-check-label" for = "rd1">
+                        <input type = "radio" class = "form-check-input" id = "rd1" name = "opt1" value = "male">Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class = "form-check-label" for = "rd2">
+                        <input type = "radio" class = "form-check-input" id = "rd2" name = "opt1" value = "female">Female
+                    </label>
+                </div><br>
+                <div class="form-group">
+                    <label for =  "work">Select your priority </label>
+                    <select class = "form-control" id = "work">
+                        <option>Work-from-home</option>
+                        <option>office</option>
+                    </select>
+                </div>
+                <div>
+                    <button class = "btn btn-success" id = "submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
