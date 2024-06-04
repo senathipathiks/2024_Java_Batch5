@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+ <bean class = "com.gana.dependency.Student" name = "stu">
+ <property name = "id" value = "123"></property>
+    <property name = "name" value = "Ganapathy "></property>
+     <property name = "address">
+     <list>
+     <ref bean = "add1"/>
+     <ref bean = "add2"/>
+     </list>
+     </property>
+    </bean>
+    
+    <bean class = "com.gana.dependency.Address" name = "add1">
+ <property name = "doorno" value = "123"></property>
+    <property name = "strname" value = "jku street"></property>
+     <property name = "city" value = "madurai"></property>
+    </bean>
+    
+     <bean class = "com.gana.dependency.Address" name = "add2">
+ <property name = "doorno" value = "453"></property>
+    <property name = "strname" value = "ghr street"></property>
+     <property name = "city" value = "manglore"></property>
+    </bean>
+    
+    <bean class = "com.gana.dependency.Student" name = "stu">
+ <constructor-arg name = "id" value = "123"></constructor-arg>
+    <constructor-arg name = "name" value = "Ganapathy "></constructor-arg>
+     <constructor-arg name = "address">
+     <list>
+     <ref bean = "add1"/>
+     <ref bean = "add2"/>
+     </list>
+     </constructor-arg>
+    </bean>
+    
+    <bean class = "com.gana.dependency.Address" name = "add1">
+ <constructor-arg name = "doorno" value = "123"></constructor-arg>
+    <constructor-arg name = "strname" value = "jku street"></constructor-arg>
+     <constructor-arg name = "city" value = "madurai"></constructor-arg>
+    </bean>
+    
+     <bean class = "com.gana.dependency.Address" name = "add2">
+ <constructor-arg name = "doorno" value = "453"></constructor-arg>
+    <constructor-arg name = "strname" value = "ghr street"></constructor-arg>
+     <constructor-arg name = "city" value = "manglore"></constructor-arg>
+    </bean>
+ 
+ </beans>
