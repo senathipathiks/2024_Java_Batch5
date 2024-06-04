@@ -1,0 +1,41 @@
+package com.gana.hibernateTrainerTask;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Behavioural1")
+
+
+public class Behavioural extends Trainer {
+	
+	String qualification;
+	String specification;
+	public Behavioural() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Behavioural(int trainerid, String trainername, String city) {
+		super(trainerid, trainername, city);
+		// TODO Auto-generated constructor stub
+	}
+	public Behavioural(int trainerid, String trainername, String city, String qualification, String specification) {
+		super(trainerid, trainername, city);
+		this.qualification = qualification;
+		this.specification = specification;
+	}
+	public String getQualification() {
+		return qualification;
+	}
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	public String getSpecification() {
+		return specification;
+	}
+	public void setSpecification(String specification) {
+		this.specification = specification;
+	}
+	
+
+}
