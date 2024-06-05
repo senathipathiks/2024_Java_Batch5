@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+    
+<bean class ="com.srienath.dependency1.Subject" name ="add1" >
+    <property name="subno" value="1212"></property>
+    <property name="subname" value="Maths"></property>
+    <property name="chapters" value="10"></property>
+    </bean>
+    <bean class ="com.srienath.dependency1.Subject" name ="add2" >
+    <property name="subno" value="192"></property>
+    <property name="subname" value="tamil"></property>
+    <property name="chapters" value="7"></property>
+    </bean>
+    
+    <bean class ="com.srienath.dependency1.Student" name ="stud1" >
+    <property name="sid" value="12"></property>
+    <property name="sname" value="GopiKrishnan"></property>
+    <property name="sub">
+    <list>
+<ref bean="add1"/>
+<ref bean="add2"/>
+   </list>
+    </property>
+   
+    
+    </bean>
+    </beans>

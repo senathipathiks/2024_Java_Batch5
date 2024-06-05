@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <context:annotation-config/> 
+<bean class ="com.srienath.annotation.Subject" name ="subject" >
+    <property name="subno" value="1212"></property>
+    <property name="subname" value="Maths"></property>
+    <property name="chapters" value="10"></property>
+</bean>
+<bean class="com.srienath.annotation.Address" name="address">
+<property name="doorno" value="15"></property>
+<property name="strname" value="Vilangudi"></property>
+<property name="city" value="Madurai"></property>
+</bean>
+<bean class="com.srienath.annotation.Address" id="address2">
+<property name="doorno" value="08"></property>
+<property name="strname" value="Fathima College"></property>
+<property name="city" value="Madurai"></property>
+</bean>
+
+<bean class="com.srienath.annotation.Student" id="stu">
+<property name="sid" value="123"></property>
+<property name="sName" value="Srienath"></property>
+</bean>
+</beans>
