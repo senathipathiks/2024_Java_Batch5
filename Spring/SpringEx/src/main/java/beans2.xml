@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+ 
+<context:annotation-config/> 	
+ 	    
+    <bean class="com.vidhu.annotations.Address" name="address">
+    	<property name="doorno" value="39"></property>
+    	<property name="strname" value="kalvi nagar"></property>
+    	<property name="city" value="madurai"></property>
+     </bean>
+     
+     <bean class="com.vidhu.annotations.StudentPojo" name="stu">
+   	 <property name="id" value="456"></property>
+     <property name="name" value="vidhusha"></property>
+    
+    </bean>
+   
+
+    </beans>
+    
