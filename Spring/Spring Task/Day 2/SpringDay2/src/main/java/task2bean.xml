@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+    <context:annotation-config/>
+    
+    <bean class ="com.raj.emp.Depart" name="add1">
+	    <property name="deptid" value="90"></property>
+	    <property name="deptname" value="Developing"></property>
+    </bean>
+    
+    <bean class ="com.raj.emp.Depart" name="add2">
+	    <property name="deptid" value="91"></property>
+	    <property name="deptname" value="Marketing"></property>
+    </bean>
+    
+    
+    <bean class ="com.raj.emp.Employee" name="emp1" >
+	    <property name="empid" value="1"></property>
+	    <property name="empname" value="ponraj"></property>
+	    <property name="salary" value="75000"></property>
+	    <property name="dep">
+	    	<list>	    	
+	    		<ref bean="add1"/>	    	
+	    	</list>
+	    </property>
+    </bean> 
+    
+    <bean class ="com.raj.emp.Employee" name="emp2" >
+	    <property name="empid" value="2"></property>
+	    <property name="empname" value="Kutty"></property>
+	    <property name="salary" value="7000"></property>
+	    <property name="dep">
+	    	<list>	    	
+	    		<ref bean="add2"/>	
+	    	</list>
+	    </property>
+    </bean> 
+    
+    
+    
+</beans>

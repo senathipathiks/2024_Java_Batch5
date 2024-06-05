@@ -1,0 +1,3 @@
+Create a spring application and inject dependency for faculty and subject
+Create a spring application and inject dependency for Employee and department
+Create a spring application and inject dependency for Laptop and Specifications
