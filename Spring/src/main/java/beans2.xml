@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    <context:annotation-config></context:annotation-config> 
+
+
+    <bean class ="com.vicky.anno.Address" name="address">
+     <property name="doorno" value="447"></property>
+    <property name="strname" value="SS Nagar"></property>
+    <property name="city" value="Kovilpatti"></property>
+    </bean>
+    
+    <bean class ="com.vicky.anno.Student" name="student">
+    <property name="sid" value="124"></property>
+    <property name="sname" value="Joseph"></property>
+    </bean>
+    
+    <!--<bean class ="com.vicky.dependency.Address" name="add2">
+     <property name="doorno" value="447"></property>
+    <property name="strname" value="Rajiv Nagar"></property>
+    <property name="city" value="Kovilpatti"></property>
+    </bean>
+    
+   	<bean class ="com.vicky.dependency.Student" name="stud1">
+    <property name="id" value="125"></property>
+    <property name="name" value="Hari"></property>
+    <property name="address">
+    	<list>
+  			<ref bean="add1"/>
+  			<ref bean="add2"/>
+  		</list>
+    </property>
+    </bean>
+    -->
+    <!--<bean class ="com.vicky.Scope.Students" name="stud" scope="prototype">
+    <property name="id" value="124"></property>
+    <property name="name" value="Joseph"></property>
+    </bean>-->
+    
+   <!--<bean class="com.vicky.lifeCycle.BeanLifeCycle"  name="lf" init-method="init" destroy-method="destroy">
+    </bean>-->
+    
+    <!-- 
+     <bean class ="com.vicky.Task1.Subject" name="add1">
+     <property name="maths" value="99"></property>
+    <property name="physics" value="80"></property>
+    <property name="chemistry" value="45"></property>
+    </bean>
+    
+    <bean class ="com.vicky.dependency.Address" name="add2">
+     <property name="doorno" value="447"></property>
+    <property name="strname" value="Rajiv Nagar"></property>
+    <property name="city" value="Kovilpatti"></property>
+    </bean>-->
+    <!--
+   	<bean class ="com.vicky.Task1.Student" name="stu">
+    <property name="id" value="125"></property>
+    <property name="name" value="Hari"></property>
+    <property name="subject">
+    	<list>
+  			<ref bean="add1"/>
+  		</list>
+    </property>
+    </bean>-->
+</beans>
