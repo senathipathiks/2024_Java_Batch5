@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function showclock(){
+                var date = new Date();
+                document.getElementById("div").innerHTML = date;
+                setInterval(showclock,5000);
+            }
+           
+        </script>
+    </head>
+    <body>
+
+        
+        <input type="submit" name="button" onclick="showclock()">
+        <div id="div"></div>
+    </body>
+
+</html>

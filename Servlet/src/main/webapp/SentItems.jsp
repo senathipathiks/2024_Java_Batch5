@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+String name = (String) session.getAttribute("name");
+
+out.print("Hi "+name+" \n");
+%>
+ <h1>Welcome to our Sentitems</h1>
+ <a href="Profile.jsp">Move to Profile</a>
+</body>
+</html>

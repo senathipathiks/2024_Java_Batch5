@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            function checkUserName(){
+                var name = document.getElementById("uname").value;
+                if(name == ""){
+                    document.getElementById("name").style.color="red";
+                    document.getElementById("name").innerHTML="Name should not be empty";
+                    document.getElementById("uname").focus();
+                }
+            }
+            function checkEmailId(){
+                var emailformat = '^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$';
+                var mail = document.getElementById("email").value;
+                if(!mail.match(emailformat)){
+                    document.getElementById("email1").style.color="red";
+                    document.getElementById("email1").innerHTML="Enter the valid email";
+                    document.getElementById("email1").focus();
+                }
+            }
+            function confirm(){
+                alert("Submitted Successfully");
+            }
+            
+            </script>
+    </head>
+    <body>
+        Enter Name : <input type="text" id="uname" onblur="checkUserName()">
+        <p id="name"><p>
+            Enter Email : <input type="text" id="email" onblur="checkEmailId()">
+            <p id="email1"></p>
+            <input type="submit" name="submit" onclick="confirm()">
+        </body>
+        </html>

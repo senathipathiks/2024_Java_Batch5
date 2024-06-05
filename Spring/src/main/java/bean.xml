@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+    
+ 
+    <bean class ="com.subash.SpringEx.Employee" name ="emp1">
+    <property name="id" value="12208"></property>
+    <property name="name" value="subash"></property>
+    </bean>
+    
+    <bean class="com.subash.SpringEx.Employee" name="emp2">
+    <property name="id" value="12210"></property>
+    <property name="name" value="srienath"></property>
+    </bean>
+    <bean class="com.subash.SpringEx.Student" name="stu2">
+    <constructor-arg name="studid" value="123"></constructor-arg>
+    <constructor-arg name="studname" value="ponnu"></constructor-arg>
+    </bean>
+    <bean class="com.subash.SpringEx.Student" name="stu1">
+    <property name="studid" value="1"></property>
+    <property name="studname" value="NetajiSubash"></property>
+    </bean>
+</beans>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            .style1{
+                color: red;
+                background-color: yellow;
+            }
+            .style2{
+                color: green;
+                background-color: yellow;
+            }
+            .style3{
+                color: blue;
+                background-color: yellow;
+            }
+
+        </style>
+        <!-- <script src="jquery.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                $("#add1").click(function(){
+                       $("#para").addClass("style1");
+                })
+                
+                $("#add2").click(function(){
+                       $("#para").addClass("style2");
+                })
+                $("#add3").click(function(){
+                       $("#para").toggleClass("style3");
+                })
+                $("#remove").click(function(){
+                       $("#para").removeClass("style1 style2 style3");
+                })
+            })
+           
+        </script>
+    </head>
+    <body>
+      <p id="para">This is my paragraph</p>
+        <br><br>
+        <input type="submit" id="add1" value="style1">
+        <input type="submit" id="add2" value="style2">
+        <input type="submit" id="add3" value="style3">
+        <input type="submit" id="remove" value="remove">
+
+        <br><br>
+        
+    </body>
+</html>
