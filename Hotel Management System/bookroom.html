@@ -1,0 +1,97 @@
+<html>
+    <head><h2 align="center">Hotel</h2>
+      <style>
+        body{
+height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+color: wheat;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+    </style>
+    </head>
+    <div class="bg-text">
+    <body background="hotel background2.jpg">
+
+    <table   align="center">
+        <tr>
+            <th>Enter name:</th>
+            <td><input type="text"></td>
+         </tr>
+         <tr>
+            <th>Room type:</th>
+            <td><input type="radio">Classic</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><input type="radio">Premium</td>
+                      </tr>
+                      <tr>
+                        <th>Number of Persons</th>
+                        <td><input type="number">
+                    </tr>
+        <tr>
+            <th>Number of rooms</th>
+            <td><input type="number">
+        </tr><tr>
+            <th>Arrival date:</th>
+            <td><input type="datetime-local">
+        </tr>
+    </tr><tr>
+        <th>Depature date:</th>
+        <td><input type="datetime-local">
+    </tr>
+        
+        <tr>
+            <th>Payment option:</th>
+            <td><input type="radio">Credit Card</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><input type="radio">UPI</td>
+                      </tr>
+                      
+                        <td></td>
+                        <td><input type="radio">Net Banking</td>
+                      </tr>
+                      <tr>
+                        <th>Submit ID</th>
+                        <td><button>Choose File</button></td>
+                        
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>No file chosen</td>
+                      </tr>
+
+         
+         
+    </table><br><br>
+    </body>
+    <body align="center">
+   
+       
+        <tr>
+          <th colspan="2"><input type="button" onclick="alert('Booked Successfully')"value="Book"></th>
+      </tr>
+      <tr>
+        <th colspan="2"><input type="button" onclick="alert('Cancel')"value="Cancel"></th>
+    </tr>
+  </div>
+    
+</html>
