@@ -1,0 +1,205 @@
+div #app2{
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    margin: 30px 20px 0px 20px;
+}
+table{
+    border-radius: 20px;
+    color:white;
+}
+
+div #home{
+    background-color:darkorchid;
+}
+
+div #add2{
+    background: url('https://pearlsol.com/img/breadcrumb/hd%20blog%20pic.jpg');
+    background:cover;
+}
+div #edit2{
+
+    background: url('https://pearlsol.com/img/breadcrumb/hd%20blog%20pic.jpg');
+    background:cover;
+
+}
+div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-image: url("homebackground.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: ani 1s ease-in forwards;
+}
+
+#body{
+    animation: ani 1s ease-in forwards;
+}
+
+#homebutton{
+    background-color: darkorchid;
+    color: white;
+    border: solid;
+    border-radius: 15px;
+    border-color:white;
+    border-width: 2px;
+    box-shadow: white;
+}
+
+
+
+#basic-nav-dropdown{
+    background-color: plum;
+    color: white;
+    border: solid;
+    border-radius: 15px;
+    border-color:white;
+    border-width: 2px;
+    box-shadow: white;
+}
+
+#basic-nav{
+    background-color: darkorchid;
+    
+}
+
+#nav2{
+    margin-left:20px;
+    margin-right: 500px;
+}
+
+#nav3{
+    margin-right: 30px;
+}
+
+
+.text-block {
+    position: absolute;
+     bottom: 350px ;
+    right: 650px;
+    /* background-color: black; */
+    color: white;
+    padding-left: 100px;
+    padding-right: 20px;
+    font-size: larger;
+  }
+  #button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 4px solid darkorchid;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 plum;
+  }
+  #button2 {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 5px 5px;
+    width: 110px;
+    height:50px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 4px solid plum;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 darkorchid;
+  }
+ 
+  #button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 plum;
+  }
+  #button2:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 plum;
+  }
+ 
+  #button:active {
+    transform: scale(0.9);
+    color: darkorchid;
+  }
+  #button2:active {
+    transform: scale(0.9);
+    color: darkorchid;
+  }
+ 
+  .me-auto{
+    font-size: medium;
+    font-weight: 400;
+    text-decoration: none;
+ 
+  }
+
+  #viewlink{
+    margin: 15px;
+  }
+
+  tr{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  #addemp{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    margin: 30px 20px 0px 20px;
+ 
+}
+ 
+@keyframes ani {
+    from{
+        opacity: 0;
+        margin-top: -50px;
+    }
+    to{
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+   
+  }
+
+  #search{
+    width: 180px;
+    height:45px;
+    margin-top: 20px;
+  }
+ 
+
+ 
+
+
+  
+
+  
+ 
