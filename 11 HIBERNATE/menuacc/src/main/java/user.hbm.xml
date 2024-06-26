@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+   <class name = "com.gopi.menuacc.Account" table ="AccDetails">
+      
+           
+      <id name = "accNum" type = "int" column = "accNum">
+         <generator class="assigned"/>
+      </id>
+      
+      <property name = "accType" column = "accType" type = "string"/>
+      <property name = "bank" column = "bank" type = "string"/>
+      <property name = "branch" column = "branch" type = "string"/>
+      
+   </class>
+</hibernate-mapping>
