@@ -1,0 +1,13 @@
+package com.ani.emp;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class EmployeeManagementSpringApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
