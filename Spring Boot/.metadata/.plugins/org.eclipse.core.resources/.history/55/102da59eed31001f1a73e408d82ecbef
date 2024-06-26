@@ -1,0 +1,47 @@
+package com.hospital.service;
+
+import java.io.Serial;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hospital.model.Doctor;
+import com.hospital.repo.Doctorrepo;
+
+@Service
+public class DSerimpl implements DService{
+	
+	@Autowired
+	Doctorrepo repo;
+
+	@Override
+	public void addDoc(Doctor doc) {
+		
+	}
+
+	@Override
+	public void delDoc(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void upDoc(Doctor doc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Doctor> viewAllDoc() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Doctor getDoc(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.hospital.service;
+
+import com.hospital.model.Doctor;
+
+public interface DService{
+	public String addDoc(Doctor doc);
+	public String delDoc(int id);
+	public String upDoc(Doctor doc);
+	public List<Doctor> getAllDoc()
+}

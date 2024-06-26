@@ -1,0 +1,46 @@
+package com.hospital.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hospital.model.Hospital;
+import com.hospital.repo.Hospitalrepo;
+
+@Service
+public class HSerimpl implements HService{
+	
+	@Autowired
+	Hospitalrepo repo;
+
+	@Override
+	public void addHosp(Hospital hos) {
+		repo.save(hos);
+	}
+
+	@Override
+	public List<Hospital> getAllHospitals() {
+		List<Hospital> hoslist = repo.findAll();
+		return hoslist;
+	}
+
+	@Override
+	public Hospital upHosp(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delHosp(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getHosp(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

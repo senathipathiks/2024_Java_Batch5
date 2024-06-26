@@ -1,0 +1,7 @@
+package com.hospital.service;
+
+public interface DService{
+	public String addDoc(Doctor doc);
+	public String delDoc(int id);
+	
+}
