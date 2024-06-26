@@ -1,0 +1,34 @@
+.tables {
+   
+    height: auto;
+    padding: 35px;
+    width: 1110px;
+  
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.571);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    backdrop-filter: blur(15px);
+  }
+  .select{
+    background-color: transparent;
+    border-color: black;
+    border-radius: 25px;
+  }
+  .body {
+    font: 1em/1.618 Inter, sans-serif;
+        
+    color: #224;
+    background:
+      url(gta-6-teaser-3840x2160-13559.png)
+      center / cover no-repeat fixed;
+  }
+  .cardsHead{
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    width: 60rem;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  }
