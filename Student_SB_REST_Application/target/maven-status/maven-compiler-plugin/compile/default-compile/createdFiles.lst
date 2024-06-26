@@ -1,0 +1,6 @@
+com\prabha\restapp\model\Student.class
+com\prabha\restapp\repository\Studentrepo.class
+com\prabha\restapp\StudentSbRestApplication.class
+com\prabha\restapp\service\StudentService.class
+com\prabha\restapp\serviceimpl\StudentServiceImpl.class
+com\prabha\restapp\controller\StudentController.class
