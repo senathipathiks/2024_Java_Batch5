@@ -1,0 +1,6 @@
+com\madhan\restapp\model\Student.class
+com\madhan\restapp\StudentsbRestApplnApplication.class
+com\madhan\restapp\service\StudentService.class
+com\madhan\restapp\controller\StudentController.class
+com\madhan\restapp\serviceimpl\StudentServiceImpl.class
+com\madhan\restapp\repository\StudentRepo.class
