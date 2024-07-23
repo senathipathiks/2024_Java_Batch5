@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.1 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v10.1 Server at localhost" name="Tomcat v10.1 Server at localhost" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="9">
-    <list key="modules" value0="Servlet_Ex1::org.eclipse.jst.jee.server:Servlet_Ex1::jst.web::6.0" value1="TwoButtons::org.eclipse.jst.jee.server:TwoButtons::jst.web::6.0" value2="JSP_CRUD::org.eclipse.jst.jee.server:JSP_CRUD::jst.web::6.0" value3="JSP_Exercises::org.eclipse.jst.jee.server:JSP_Exercises::jst.web::6.0" value4="JSP_Exercise_Day2::org.eclipse.jst.jee.server:JSP_Exercise_Day2::jst.web::6.0" value5="JSP_Exercise_Day3::org.eclipse.jst.jee.server:JSP_Exercise_Day3::jst.web::6.0" value6="Courier_Assessment::org.eclipse.jst.jee.server:Courier_Assessment::jst.web::6.0" value7="Courier::org.eclipse.jst.jee.server:Courier::jst.web::6.0"/>
-  </server>
-</servers>

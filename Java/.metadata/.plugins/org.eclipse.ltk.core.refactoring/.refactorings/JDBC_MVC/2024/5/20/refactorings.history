@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move package &apos;com.lms.main&apos; to &apos;WEB-INF&apos;&#x0D;&#x0A;- Original project: &apos;JDBC_MVC&apos;&#x0D;&#x0A;- Destination element: &apos;WEB-INF&apos;&#x0D;&#x0A;- Original element: &apos;JDBC_MVC/src/com.lms.main&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" element1="/src&lt;com.lms.main" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1716016597871" target="/JSP_CRUD/src/main/webapp/WEB-INF" version="1.0"/>
-</session>
