@@ -1,5 +1,0 @@
-package com.emproll.repo;
-
-public interface Emprepoimpl {
-
-}

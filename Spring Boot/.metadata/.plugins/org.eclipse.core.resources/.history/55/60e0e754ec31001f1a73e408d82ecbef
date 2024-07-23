@@ -1,6 +1,0 @@
-package com.hospital.service;
-
-public interface DService{
-	public void addDoc(Doctor doc);
-	public void 
-}
