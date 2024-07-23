@@ -1,1 +1,0 @@
-document.write("JS file is running on Docker");
