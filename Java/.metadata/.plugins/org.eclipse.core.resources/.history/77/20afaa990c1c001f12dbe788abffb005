@@ -1,0 +1,6 @@
+package com.spring.SpringEx;
+
+public class Student {
+	private int rno;
+	private S
+}

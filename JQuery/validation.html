@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Using Jquery</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#btn").click(function()
+            {
+                event.preventDefault();
+                var emailRegEx = "^(.+)@(.+)$";
+                var passRegEx = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#/";
+                var first = $("#fname").val();
+                var last = $("#lname").val();
+                var email = $("#em").val();
+                var user = $("#uname").val();
+                var pas = $("#pass").val();
+                var cpass = $("#conpass").val();
+                
+                if(first==""){
+                    // alert("Firstname cannot be empty ");
+                    $("#fnamef").html("Firstname cannot be empty ");
+                }
+
+                if(last==""){
+                    // alert("Lastname cannot be empty");
+                    $("#lnamef").html("Lastname cannot be empty");
+                }
+
+                if(user == ""){
+                    // alert("Username cannot be empty");
+                    $("#unamef").html("Username cannot be empty");
+                }
+
+                if(email == ""){
+                    // alert("E-mail cannot be empty");
+                    $("#emf").html("E-mail cannot be empty");
+                }
+
+                if(!email.match(emailRegEx)){
+                    // alert("E-mail is not valid");
+                    $("#emf").html("E-mail format is not valid");
+                }
+                if(pas == ""){
+                    // alert("Password cannot be empty ");
+                    $("#passf").html("Password cannot be empty");
+                }
+
+                if(!pas.match(passRegEx)){
+                    // alert("Invalid password format");
+                    $("#cpassf").html("Password format is not valid");
+                }
+                
+                if(!pas.match(cpass)){
+                    // alert("Password is not matching");
+                    $("#cpassf").html("Passwords are not matching");
+                }
+                
+            })
+        })
+
+        //     $("#btn").click(function(){
+        //         // if(first==true && last==true)
+        //         confirm("Are you sure?");
+        //     })
+
+        // })
+    </script>
+</head>
+<body>
+        <form name="register">
+            First Name: <input type="text"  id="fname"><br><br>
+            <div style="color:red" id="fnamef"></div><br>
+            Last Name: <input type="text"  id="lname"><br><br>
+            <div style="color:red" id="lnamef"></div><br>
+            E-mail: <input type="email"  id="em"><br><br>
+            <div style="color:red" id="emf"></div><br>
+            Username: <input type="text"  id="uname"><br><br>
+            <div style="color:red" id="unamef"></div><br>
+            Password: <input type="password"  id="pass"><br><br>
+            <div style="color:red" id="passf"></div><br>
+            Confirm Password: <input type="password"  id="conpass"><br><br>
+            <div style="color:red" id="cpassf"></div><br>
+            <input type="submit" id="btn" value="Register">
+        </form>
+</body>
+</html>

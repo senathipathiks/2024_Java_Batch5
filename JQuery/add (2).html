@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#add").click(function()
+            {
+                var x=parseInt($("#n1").val());
+                var y=parseInt($("#n2").val());
+                var res=x+y;
+                $("#sum").val(res);
+            })
+        })
+    </script>
+</head>
+<body>
+    Enter 1st number: <input type="text" id="n1"> <br>
+    Enter 2nd number: <input type="text" id="n2"> <br>
+    <input type="submit" value="Add" id="add"> <br>
+    Result: <input type="text" id="sum">
+</body>
+</html>

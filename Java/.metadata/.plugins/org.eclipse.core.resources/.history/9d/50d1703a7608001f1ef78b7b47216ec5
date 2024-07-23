@@ -1,0 +1,12 @@
+package com.day2;
+
+public class SumAvg {
+
+	public static void main(String[] args) {
+		int arr[] = new int[10];
+		
+		Scanner sc
+
+	}
+
+}

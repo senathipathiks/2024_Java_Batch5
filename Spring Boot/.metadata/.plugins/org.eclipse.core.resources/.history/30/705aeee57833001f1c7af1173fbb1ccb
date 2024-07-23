@@ -1,0 +1,50 @@
+package com.sturestapi.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.sturestapi.model.Student;
+import com.sturestapi.repo.StudentRepo;
+
+@Service
+public class StuServiceImpl implements StuService {
+
+	public StuServiceImpl(StudentRepo repo) {
+		super();
+		this.repo = repo;
+	}
+
+	StudentRepo repo;
+	
+	@Override
+	public void addStudent(Student stud) {
+		repo.save(stud);
+	}
+
+	@Override
+	public Student getStudent(int id) {
+		return repo.findById(id).get();		
+	}
+
+	@Override
+	public List<Student> getAllStudents() {
+		List<Student> stulist = repo.findAll();
+		return stulist;
+	}
+
+	public void updateStu(Student stud) {
+		repo.save(stud);
+	}
+
+	@Override
+	public void delStu(int id) {
+		repo.deleteById(id);
+	}
+
+//	@Override
+//	public void delStuByName(String name) {
+//		repo.deleteByName(name);
+//	}
+	
+}

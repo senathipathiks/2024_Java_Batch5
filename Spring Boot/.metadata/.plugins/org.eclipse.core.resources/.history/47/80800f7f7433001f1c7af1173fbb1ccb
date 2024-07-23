@@ -1,0 +1,15 @@
+package com.sonarqube.eg;
+
+import jdk.internal.org.jline.utils.Log;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Log.debug("Hello World!" );
+    }
+}

@@ -1,0 +1,37 @@
+HTML5:
+
+HyperText - A text is linked with another text.
+Markup Language - The languages which uses the tags to define the elements. The tags should be in a human readable form.
+Static webpage can be created.
+Webpage - Document in written in HTML and interpreted by the browser.
+
+HTML5 Tags:
+Font size of tags h1 to h6 are 34px, 30px, 24px, 20, 18px, 16px.
+
+Span is an inline element-specifically for designing.
+Div is a block level element.
+
+CSS:
+Syntax:
+
+Selector {property : value}
+
+Types of selector:
+
+for id selector - use #id{...}
+for class selector - use .classname{...}
+for elements selector - use directly the element. Eg: h1{...}, body{...}
+for universal selector - All the tags will be applied common style - use *{...}
+
+
+Eg:Combined same style
+h1,p,div{...}
+
+Difference b/w id and class:
+A Class name can be used by multiple HTML elements, while an ID name must only be used by one HTML element within the page.
+idname should be unique.
+
+Types of css:
+    * inline css - used within a tag.
+    * internal or Embedded css - placed under head tag
+    * External CSS - placed under head tag`
