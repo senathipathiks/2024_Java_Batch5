@@ -1,0 +1,11 @@
+$font-color:red;
+$font_size:24px;
+$bfg-color:lightblue;
+$border:2px solid black;
+
+h1{
+    background-color: $bfg-color;
+    font-size: $font_size;
+    color: $font-color;
+    border: $border;
+}
