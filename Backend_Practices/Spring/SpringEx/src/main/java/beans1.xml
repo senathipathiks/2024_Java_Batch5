@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+    
+ 
+    <bean class ="com.nandha.Scope.Student" name ="stu1" scope="singleton" > <!-- scope="prototype" -->
+    <property name="stuId" value="123"></property>
+    <property name="stuName" value="Nandhakumaran"></property>
+    </bean>
+    
+    <bean class ="com.nandha.Scope.Student" name ="stu2" scope="singleton">
+    <property name="stuId" value="456"></property>
+    <property name="stuName" value="Vashanth"></property>
+    </bean>
+    
+    <!-- <bean class = "com.nandha.Lifecycle.BeanLifeCycle" name="bean" init-method="init" destroy-method="destroy"></bean>
+    
+    <bean class="com.nandha.dependency.Student" name="stud">
+    <property name="stuId" value="123"></property>
+    <property name="stuName" value="Nandhakumaran"></property>
+    <property name="address" >
+    
+    <map > <entry></entry></map><list> <value>85</value> <value>Madurai</value></list>
+    
+    
+    </property>
+    
+    </bean> -->
+    </beans>

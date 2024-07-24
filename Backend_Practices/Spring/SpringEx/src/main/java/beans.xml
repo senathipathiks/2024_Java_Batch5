@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+ 
+    
+ 
+    <bean class ="com.nandha.SpringEx.Student" name ="stu">
+    <property name="studid" value="123"></property>
+    <property name="studName" value="Nandha"></property>
+    </bean>
+    
+    <bean class ="com.nandha.SpringEx.Student" name ="stu1">
+    <property name="studid" value="321"></property>
+    <property name="studName" value="Kumaran"></property>
+    </bean>
+    
+    <bean class ="com.nandha.SpringEx.Employee" name ="emp">
+    <property name="empId" value="111"></property>
+    <property name="empName" value="Nandhakumaran"></property>
+    <property name="empEmail" value="nkumaran431@gmail.com"></property>
+    <property name="empPassword" value="nnnn@123"></property>
+    <constructor-arg ></constructor-arg>
+    
+    </bean>
+    
+</beans>

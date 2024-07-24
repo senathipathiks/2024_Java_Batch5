@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <context:annotation-config/>
+    
+    <bean class="com.nandha.dependency.Address" name="add1">
+    
+   <!--  <property name="doorNo" value="85"></property>
+    <property name="street" value="Byepassroad main"></property>
+    <property name="area" value="Palanganatham"></property>
+    <property name="city" value="Madurai"></property>
+    <property name="pinCode" value="625003"></property> -->
+    
+     <constructor-arg name="doorNo" value="85"></constructor-arg>
+    <constructor-arg name="street" value="Byepassroad main"></constructor-arg>
+    <constructor-arg name="area" value="Palanganatham"></constructor-arg>
+    <constructor-arg name="city" value="Madurai"></constructor-arg>
+    <constructor-arg name="pinCode" value="625003"></constructor-arg>
+    
+    </bean>
+    
+    
+    
+    <!-- <bean class="com.nandha.dependency.Address" name="add2">
+    
+    <property name="doorNo" value="17"></property>
+    <property name="street" value="Gurusamy Street"></property>
+    <property name="area" value="Palanganatham"></property>
+    <property name="city" value="Madurai"></property>
+    <property name="pinCode" value="625003"></property>
+    
+    </bean> -->
+    
+    <bean class="com.nandha.dependency.Subject" name="sub1">
+    
+  <property name="s1" value="Tamil"></property>
+    <property name="s2" value="English"></property>
+    <property name="s3" value="Mathematics"></property>
+    <property name="s4" value="Physics"></property>
+    <property name="s5" value="Chemistry"></property>   
+        <property name="s6" value="Computer Science"></property>   
+    
+    
+    </bean>
+    
+    
+    <bean class="com.nandha.dependency.Student" name="stud">
+    
+    <property name="stuId" value="123"></property>
+    <property name="stuName" value="Nandhakumaran"></property>
+    
+    <!-- <property name="subjects">
+    <list><ref bean="sub1"/></list>
+    </property>
+    
+    <property name="address" >
+    
+    <map > <entry></entry></map>
+   <list> 
+   <value>85</value> 
+   <value>Byepassroad main</value>
+   <value>Palanganatham</value>
+   <value>Madurai</value>
+   <value>625003</value>
+   
+  
+   
+   <ref bean="add1"/>
+   
+   <ref bean="add2"/>
+   
+   </list>
+    </property> -->
+    
+    </bean></beans> 
