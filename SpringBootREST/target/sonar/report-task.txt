@@ -1,0 +1,6 @@
+projectKey=React_SpringTest
+serverUrl=http://localhost:9000
+serverVersion=9.9.4.87374
+dashboardUrl=http://localhost:9000/dashboard?id=React_SpringTest
+ceTaskId=AZBjskXQktELaZnMx_ts
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AZBjskXQktELaZnMx_ts
