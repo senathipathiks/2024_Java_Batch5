@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+h1{
+color:rgb(255, 4, 4);
+}
+body{
+background-image:url(emp1.jpg);
+background-size:cover;
+}
+input{
+width:250px;
+height:30px;
+}
+input[type="submit"]{
+background-color: rgb(69, 117, 249);
+width:100px;
+height :30px;
+border: none;
+color: white;
+font-weight: bold;
+font-size: 15px;
+}
+table{
+border-color:rgb(251, 103, 12);
+}
+td{
+color:rgb(251, 103, 12);
+font-weight:bold;
+}
