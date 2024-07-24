@@ -1,0 +1,61 @@
+div #app2{
+    margin-top: 40px;
+    text-align: center;
+   
+
+}
+table{
+    border-radius: 10px;
+}
+
+
+div #add2{
+    background: url('https://images.pexels.com/photos/7130478/pexels-photo-7130478.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background:cover no-repeat fixed center;
+    background-size: 100% 100%;
+
+}
+div #body{
+    /* background: url('https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?auto=compress&cs=tinysrgb&w=600'); */
+    background:cover no-repeat fixed center;
+    background-size: 100% 100%;
+
+}
+div #edit2{
+
+    background: url('https://images.pexels.com/photos/7130478/pexels-photo-7130478.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background:cover no-repeat fixed center;
+    background-size: 100% 100%;
+}
+
+div #add{
+    background: url('https://images.pexels.com/photos/7130478/pexels-photo-7130478.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background:cover no-repeat fixed center;
+    background-size: 100% 100%;
+
+}
+
+div #edit{
+
+    background: url('https://images.pexels.com/photos/7130478/pexels-photo-7130478.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background:cover no-repeat fixed center;
+    background-size: 100% 100%;
+}
+div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+#selectId{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#check{
+    border-radius: 10px;
+}
+
+#back{
+    margin-left: 10%;
+}
