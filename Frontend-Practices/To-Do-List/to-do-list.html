@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=My+Soul&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&family=Italianno&family=My+Soul&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="to-do-list.css" />
+  </head>
+
+  <body>
+    <h2>TO DO LIST</h2>
+    <p>Simple App to manage your daily to-dos</p>
+    <div class="container">
+      <div class="main">
+        <input
+          type="text"
+          name="write"
+          id="write"
+          placeholder="Write new to-do"
+        />
+        <button id="but" onclick="Add()">+</button>
+      </div>
+      <div class="todos">
+        <div class="div1">
+          Buy Some Fruit <button><i class="fa fa-trash-o"></i></button>
+          <button><i class="fa fa-pencil"></i></button>
+        </div>
+        <div class="div1">
+          Read a Book <button><i class="fa fa-trash-o"></i></button
+          ><button><i class="fa fa-pencil"></i></button>
+        </div>
+        <div class="div1">
+          Listen to a Podcast <button><i class="fa fa-trash-o"></i></button
+          ><button><i class="fa fa-pencil"></i></button>
+        </div>
+        <div class="div1">
+          Go out for walk <button><i class="fa fa-trash-o"></i></button>
+          <button><i class="fa fa-pencil"></i></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

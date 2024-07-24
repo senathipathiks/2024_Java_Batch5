@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h2 {
+  font-family: "Italianno", cursive;
+  font-weight: 1000;
+  font-style:normal;
+  font-size: xx-large;
+  text-align: center;
+  color: rgb(2, 186, 223);
+}
+p {
+  font-family: "Edu SA Beginner", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: large;
+  text-align: center;
+  color: #fbb6ce;
+}
+input{
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    border: 2px solid gainsboro;
+    padding-left: 10px;
+}
+#but{
+    border: none;
+    width: 30px;
+    height: 40px;
+    background-color: #fbb6ce;
+    border-radius: 6px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+.container{
+    background-color: #edfdfd;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px;
+}
+input:focus{
+    border: 3px solid #040000;
+
+}
+.div1{
+    width: 400px;
+    height: 40px;
+    background-color: #c4f1f9;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 50px;
+    padding-top: 20px;
+    color: rgb(3, 163, 195);
+    box-shadow: 0 1px 5px;
+}
+.todos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.div1 button{
+    border: none;
+    background-color: transparent;
+    color: #f14380;
+    float: right;
+    margin-right: 15px;
+} 
