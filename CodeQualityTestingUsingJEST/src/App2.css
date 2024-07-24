@@ -1,0 +1,197 @@
+div #app2{
+    margin-top: 40px;
+    text-align: center;
+    font-size:xx-large;
+    width: 100%;
+}
+div #feature{
+
+    margin-top: 10%;
+    
+}
+table{
+    border-radius: 10px;
+}
+body{
+    background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%) ;
+}
+div #add2{
+    /* background: url('https://pearlsol.com/img/breadcrumb/hd%20blog%20pic.jpg'); */
+    background:cover;
+    background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%) ;
+}
+div #edit2{
+
+    /* background: url('https://pearlsol.com/img/breadcrumb/hd%20blog%20pic.jpg'); */
+    background:cover;
+    background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%) ;
+
+}
+div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.nav{
+    text-decoration: none;
+    padding: 20px;
+    color: #ffff;
+    
+}
+
+.nav :hover{
+    color: cyan;
+}
+#form{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 50%;
+    height: 100%;
+    margin-left: 20%;
+    box-shadow: 5px 5px 5px rgba(67, 67, 67, 0.942) ;
+
+}
+#form input {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 5%;
+    margin-left: 35%;
+    height: 40px;
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(78, 78, 78, 0.477);
+    color: rgb(255, 255, 255);
+
+
+}
+#navbar :hover{
+
+     color: hsl(177, 100%, 50%);
+     transform: scale(1.1);
+
+}
+
+#form button{
+    justify-content: center;
+    justify-items: center;
+    margin-top: 5%;
+    margin-left: 45%;
+    height: 40px;
+    border: none;
+    background-color: rgb(49, 171, 35);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    font-weight: bold;
+
+}
+
+#form h2{
+    text-align: center;
+}
+
+h2{
+    color: white;
+}
+#Box{
+    padding: 20px;
+    gap: 30px;
+     justify-content:flex-end;
+    align-items: end;
+    float: right;
+    align-content: end;
+    color: #ffff;
+}
+#Box :hover{
+    color: aqua;
+}
+
+
+#form1{
+    background: linear-gradient(rgb(255, 247, 187),rgb(255, 178, 223));
+    border-radius: 20px;
+}
+
+#form2{
+    background: linear-gradient(rgb(116, 183, 254),rgb(106, 252, 203));
+    border-radius: 20px;
+}
+Link #butt1 :hover{
+    background-color: rgb(1, 254, 13);
+    color: rgb(255, 255, 255);
+}
+#logo{
+    /* background-image:url('./logo.png'); */
+    width: 200px; 
+    height: 100px;
+     background-size: contain;
+    background-repeat:no-repeat; 
+    margin-left:-100px;
+
+}
+#Menus{
+    
+    background: linear-gradient(152.92deg, rgba(252, 210, 132, 0.2) 4.54%, rgba(166, 246, 204, 0.17) 34.2%, rgba(119, 119, 247, 0.1) 77.55%) ;
+}
+#login{
+    height: 100%;
+    background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%) ;
+}
+
+
+#body1{
+ background:linear-gradient(152.92deg, rgba(252, 210, 132, 0.2) 4.54%, rgba(121, 170, 249, 0.17) 34.2%, rgba(146, 221, 176, 0.1) 77.55%) ;
+  /* background: url('https://getwallpapers.com/wallpaper/full/7/b/1/808242-pink-background-images-1920x1080-ios.jpg'); */
+  /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRek_FpHx7AfqpNFhSuXqsp8ZYAHkkMDL4AwA&s') ; */
+  align-items: center;
+  background-repeat:  no-repeat ;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  
+}
+section{
+
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 60%;
+    margin: 0;
+    z-index: -1;
+  
+}
+#banner{
+    position: absolute;
+    justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: x-large;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:black;
+}
+#banner h1{
+    margin-top: -50%;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    /* font-size: xx-large; */
+    margin-left: 40%;
+}
+#body{
+    background: url('https://cdn.vectorstock.com/i/500p/52/69/electricity-bill-payment-online-tiny-people-check-vector-51615269.jpg');
+    
+}
+.cards{
+    
+}
