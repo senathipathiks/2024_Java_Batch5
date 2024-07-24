@@ -1,0 +1,56 @@
+#body {
+   
+    padding: 20px;
+   
+  }
+  
+  body{
+ 
+    background-image: url('gym2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: ani 1s ease-in forwards;
+   margin: 0 auto;
+}
+  
+  .table-striped {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+  
+  .table-dark {
+    background-color: #e0e9f2;
+    color: #fff;
+  }
+  
+  .table-dark th,
+  .table-dark td {
+    border-color: #454d55;
+    padding-left: 50px;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #454d55;
+    color: #fff;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #fff;
+    margin-left: 0;
+    
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+  }
+  .table-container{
+    margin: 0 auto;
+    margin-left: 200px;
+  }
+  #app2{
+    font-size: 55px;
+  }
