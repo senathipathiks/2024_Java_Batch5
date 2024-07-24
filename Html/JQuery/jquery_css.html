@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Css</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .style1{
+            color: red;
+        }
+        .style2{
+            color: blue;
+        }
+        .style3{
+            color: rgb(0, 255, 191);
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                $("#para1").addClass("style1");
+            })
+            $("#remove").click(function(){
+                $("#para1").removeClass("style1 style2 style3");
+            })
+            $("#toggle").click(function(){
+                $("#para1").toggleClass("style3 style2");
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="para1">This is my Paragraph</p>
+    <input type="submit" name="" id="add" value="Add class">
+    <input type="submit" name="" id="remove" value="Remove class">
+    <input type="submit" name="" id="toggle" value="Toggle class">
+</body>
+</html>

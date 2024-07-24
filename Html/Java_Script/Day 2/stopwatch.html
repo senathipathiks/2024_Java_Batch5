@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+
+    <script>
+        var timer = true;
+        var sec = 0;
+        var min = 0;
+        var hrs = 0;
+        var startbutton = false;
+
+        function start(){
+            if(timer){
+                startbutton = true;
+
+                sec = sec + 1;
+
+
+                if(sec < 10){
+                    document.getElementById("s").innerHTML = "0"+sec;
+                }
+                else{
+                    document.getElementById("s").innerHTML = sec;
+                }           
+                
+                if(sec == 60){
+                    sec = 0;
+                    min = min + 1;
+                    document.getElementById("s").innerHTML = "0"+sec;
+                    if(min < 10){
+                        document.getElementById("m").innerHTML = "0"+min;
+                    }
+
+                    else 
+                        document.getElementById("m").innerHTML = min;
+                }
+                if(min == 60){
+                    min = 0;
+                    hrs = hrs + 1;
+                    document.getElementById("m").innerHTML = "0"+min;
+                    if(hrs < 10){
+                        document.getElementById("h").innerHTML = "0"+hrs;
+                    }
+                    else 
+                        document.getElementById("h").innerHTML = hrs;
+                }
+
+                setTimeout(start, 1000);
+            }
+            else {
+                timer = true;
+            }
+        }
+        function stop(){
+            if(startbutton){
+                if(timer){
+                    timer = false;
+                }
+                else {
+                    timer = true;
+                }
+            }
+        }
+        function reset(){
+            startbutton = false;
+            timer = false;
+            sec = 1;
+            min = 0;
+            hrs = 0;
+            document.getElementById("s").innerHTML = "00";
+            document.getElementById("m").innerHTML = "00";
+            document.getElementById("h").innerHTML = "00";
+        }
+    </script>
+
+</head>
+<body>
+    <center>
+        <div style="display: flex; justify-content: center;">
+            <h1 id="h">00</h1>
+            <h1>:</h1>
+            <h1 id="m">00</h1>
+            <h1>:</h1>
+            <h1 id="s">00</h1>
+        </div>
+        <br>
+        <input type="button" value="Start" id="" onclick="start()">
+        <input type="button" value="Stop" onclick="stop()">
+        <input type="button" value="Reset" id="" onclick="reset()">
+    </center>
+</body>
+</html>

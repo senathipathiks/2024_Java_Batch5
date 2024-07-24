@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+    <style>
+        body{
+            margin: 0;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: aqua;
+        }
+        .in {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #0d3828;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .container {
+            padding: 5px 20px;
+            row-gap: 5px;
+            box-shadow: 3px 3px 4px 3px rgba(42, 42, 42, 0.607);
+            border-radius: 12px;
+            background-color: white;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .optional{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+    <script>
+
+        function mailvalidate(){
+            var email = document.getElementById("uname").value;
+            if(email == ""){
+                    alert("Email Should not be empty !!");
+                    return false;
+                }
+                else{
+                }
+        }
+
+        function passwordvalidate(){
+            var password = document.getElementById("psw").value;
+            if(password == ""){
+                    alert("Password Should not be empty !!");
+                    return false;
+                }
+                else{
+                }
+        }
+
+        function validate(){
+            var name = document.getElementById("uname").value;
+            var password = document.getElementById("psw").value;
+            var regex = /^[a-zA-Z]$/;
+
+            if(name == ""){
+                alert("Please enter your Email");
+                document.getElementById("uname").focus();
+                return false;
+            }
+            else if(password == ""){
+                alert("Please enter your password");
+                document.getElementById("psw").focus();
+                return false;
+            }
+            if(name == "karthi@gmail.com"){
+                if(password == "123"){
+                    alert("success");
+                    location.href = "home.html";
+                    return true;
+                }
+                else {
+                    alert("Username and Password mismatch");
+                    return false;
+                }
+            }
+            else {
+                alert("Username and Password mismatch");
+                return false;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+            <h1>Login</h1>
+            Email
+            <input type="text" placeholder="Enter Username" id="uname" class="in" autofocus onblur="mailvalidate()">
+
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" id="psw" class="in" onblur="passwordvalidate()">
+
+            <button type="submit" onclick="validate()">Login</button>
+            <div class="optional">
+            <div style="display: flex;justify-content: center; align-items: center;" onclick="l"><input type="checkbox" checked="checked" name="remember"> Remember me</div>
+                <a href="#">Forget Password?</a>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 10px;
+            transform: translate(-50%, -50%);
+            background-color: aqua;
+        }
+
+        .name{
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid ;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        button{
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+            color: #caf0f8;
+            background-color: #00b4d8;
+        }
+        button:hover{
+            opacity: 1;
+            color: black;
+        }
+
+        .container{
+            padding: 5px 20px;
+            row-gap: 5px;
+            box-shadow: 3px 3px 4px 3px rgba(42, 42, 42, 0.607);
+            border-radius: 12px;
+            background-color: white;
+        }
+
+        .in{
+            color: #0077b6;
+        }
+        .in1{
+            color: #03045e;
+        }
+
+        .out{
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        $("#name").blur(function(){
+            var name = $("#name").val();
+            if(name == ""){
+                $("#namecrt").html("Name Should not be empty !!");
+                return false;
+            }
+            else{
+                $("#namecrt").html("");
+            }
+        })
+
+        $("#email").blur(function(){
+            var email = $("#email").val();
+            if(email == ""){
+                $("#emailcrt").html("Email Should not be empty !!");
+                // alert("Email Should not be empty !!");
+                return false;
+            }
+            else{
+                $("#emailcrt").html("");
+            }
+        })
+
+        $("#phnno").blur(function(){
+            var phone = $("#phnno").val();
+            if(phone == ""){
+                $("#phncrt").html("Phone Number Should not be empty !!");
+                return false;
+            }
+            else{
+                $("#phncrt").html("");
+            }
+        })
+
+        $("#psw").blur(function(){
+            var password = $("#psw").val();
+            if(password == ""){
+                $("#pswcrt").html("password Should not be empty !!");
+                return false;
+            }
+            else{
+                $("#pswcrt").html("");
+            }
+        })
+
+        $("#conpsw").blur(function(){
+            var conpassword = $("#conpsw").val();
+            if(conpassword == ""){
+                $("#conpswcrt").html("confirm password Should not be empty !!");
+                return false;
+            }
+            else{
+                $("#conpswcrt").html("");
+            }
+        })
+
+        $("#submit").click(function(){
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var phone = $("#phnno").val();
+            var password = $("#psw").val();
+            var confirmpassword = $("#conpsw").val();
+
+            var nameRegEx = '^[a-zA-Z]';
+            var emailRegEx = '^[a-z0-9]+@[a-z]+.[a-z]{2,3}$';
+            var phoneRegEx = '^[0-9]{10}';
+            var passwordRegEx = '^[a-zA-Z0-9!@#$%^&*]{6,16}$';
+
+            if(name == ""){
+                $("#namecrt").html("Name Should not be empty !!");
+                // alert("Email Should not be empty !!");
+                return false;
+            }
+            if(email == ""){
+                $("#emailcrt").html("Email Should not be empty !!");
+                // alert("Email Should not be empty !!");
+                return false;
+            }
+            if(phone == ""){
+                $("#phncrt").html("Phone Number Should not be empty !!");
+                // alert("Email Should not be empty !!");
+                return false;
+            }
+            if(password == ""){
+                $("#pswcrt").html("password Should not be empty !!");
+                return false;
+            }
+
+            if(!name.match(nameRegEx)){
+                $("#namecrt").html("Name is invalid");
+                document.getElementById("name").focus();
+                return false;
+            }
+            if(!email.match(emailRegEx)){
+                $("#emailcrt").html("email is invalid");
+                document.getElementById("email").focus();
+                return false;
+            }
+            if(!phone.match(phoneRegEx)){
+                $("#phncrt").html("Phone Number is invalid");
+                document.getElementById("phnno").focus();
+                return false;
+            }
+            if(!password.match(passwordRegEx)){
+                $("#pswcrt").html("password is invalid");
+                document.getElementById("psw").focus();
+                return false;
+            }
+
+            if(!(password == confirmpassword)){
+                $("#conpswcrt").html("confirm password should be match");
+                document.getElementById("conpsw").focus();
+                return false;
+            }
+
+            else{
+                $("#emailcrt").html("");
+                $("#pswcrt").html("");
+                $("#conpswcrt").html("");
+                $("#success").html("Login Successful");
+                window.location.href = "home.html";
+            }
+        })
+    })
+    
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <h2 class="in1">Register Yourself!</h2></center>
+        <div class="in">Name</div>
+        <input type="text" name="text" id="name" class="name" placeholder="Name">
+        <label id="namecrt" style="color: red;"></label><br>
+
+        <div class="in">Email ID:</div>
+        <input type="text" name="text" id="email" class="name" placeholder="Email ID">
+        <label id="emailcrt" style="color: red;"></label><br>
+        
+        <div class="in">Phone Number:</div>
+        <input type="text" id="phnno" class="name" placeholder="phone number">
+        <label id="phncrt" style="color: red;"></label><br>
+
+        <div class="in">Password:</div>
+        <input type="password" class="name" id="psw" placeholder="Password">
+        <label id="pswcrt" style="color: red;"></label><br>
+
+        <div class="in">Confirm Password:</div>
+        <input type="password" id="conpsw" class="name" placeholder="Enter Password again">
+        <label id="conpswcrt" style="color: red;"></label>
+
+        <button id="submit"> Register</button>
+        <a href="login.html" class="in"><center>Already have an Account?</center></a>
+    </div>
+</body>
+</html>

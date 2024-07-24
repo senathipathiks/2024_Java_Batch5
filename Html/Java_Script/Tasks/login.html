@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin: 0;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .in {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #0d3828;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .container {
+            padding: 20%;
+            /* border: 3px solid red; */
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .optional{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+    <script>
+        function validate(){
+            var name = document.getElementById("uname").value;
+            var password = document.getElementById("psw").value;
+            var regex = /^[a-zA-Z]$/;
+
+            if (!regex.test(name)) {
+                alert("done");
+                return true;
+            }
+            if(name == ""){
+                // alert("Please enter your Username");
+                document.getElementById("uname").focus();
+                return false;
+            }
+            else if(password == ""){
+                alert("Please enter your password");
+                document.getElementById("psw").focus();
+                return false;
+            }
+            console.log(name);
+            console.log(password);
+            if(name == "Karthi"){
+                if(password == "karthi@123"){
+                    alert("Login Successfull");
+                    return true;
+                }
+                else {
+                    alert("Username and Password mismatch");
+                    return false;
+                }
+            }
+            else {
+                alert("Username and Password mismatch");
+                return false;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- <form action="#" method=""> -->
+            <h1>Login</h1>
+            Username
+            <input type="text" placeholder="Enter Username" id="uname" class="in" autofocus>
+
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" id="psw" class="in">
+
+            <button type="submit" onclick="validate()">Login</button>
+            <div class="optional">
+            <div style="display: flex;justify-content: center; align-items: center;"><input type="checkbox" checked="checked" name="remember"> Remember me</div>
+                <a href="#">Forget Password?</a>
+            </div>
+        <!-- </form> -->
+    </div>
+</body>
+</html>

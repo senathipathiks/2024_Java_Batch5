@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <style>
+        #todo{
+            margin: 20px;
+            width: 40%;
+            justify-content: center;
+            align-items: center;
+        }
+        .in{
+            height: 40px;
+            display: flex;
+            border-radius: 99px;
+        }
+        input[type="text"]{
+            width: 90%;
+        }
+        input[type="button"]{
+            width: 10%;
+        }
+        #tasks{
+            width: 100%;
+        }
+        .task{
+            display: flex;
+            border: 2px solid;
+            margin-top: 20px;
+            border-radius: 8px;
+            word-break: break-all;
+        }
+        .list{
+            padding: 4px;
+            width: 95%;
+        }
+        .taskactc{
+            padding: 10px;
+            width: 5%;
+            border: none;
+            border-radius: 5px;
+        }
+        .taskactc:hover{
+            background-color: red; 
+        }
+        .list:active{
+            text-decoration: line-through;
+        }
+        
+    </style>
+</head>
+<body>
+        <div id="todo">
+            <div class="in">
+                <input type="text">
+                <input type="button" value="Add">
+            </div><br>
+            <div id="tasks">
+                <div class="task">
+                    <div class="list">karthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthikarthi</div>
+                    <button class="taskactc">X</button>
+                </div>
+                <div class="task">
+                    <div class="list">karthi</div>
+                    <button class="taskactc">X</button>
+                </div>
+                <div class="task">
+                    <div class="list">karthi</div>
+                    <button class="taskactc">X</button>
+                </div>
+                <div class="task">
+                    <div class="list">karthi</div>
+                    <button class="taskactc">X</button>
+                </div>
+
+            </div>
+            
+        </div>
+        <div id="tasks">
+            
+        </div>
+    
+</body>
+</html>

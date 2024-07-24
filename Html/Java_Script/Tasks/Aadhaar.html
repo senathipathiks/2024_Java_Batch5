@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        body{
+            margin: 0;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            padding: 15px;
+            transform: translate(-50%, -50%);
+        }
+        .container{
+            padding: 10px 30%;
+            row-gap: 10px;
+        }
+        .input{
+            width: 200%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid ;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        button{
+
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 200%;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function msg(){
+            var user = document.getElementById("uname").value;
+            if(user==""){
+                document.getElementById("nameval").innerHTML="Enter your name as per Aadhaar";
+                document.getElementById("nameval").style.color="red";
+            }
+        }
+
+        function msg1(){
+            var Phone = document.getElementById("ph").value;
+            if(Phone==""){
+                document.getElementById("phno").innerHTML="Enter your phone number";
+                document.getElementById("phno").style.color="red";
+            }
+        }
+
+        function msg2(){
+            var name = document.getElementById("adharr").value;
+            var exp = /^([0-9]{4}[0-9]{4}[0-9]{4}$)|([0-9]{4}\s[0-9]{4}\s[0-9]{4}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
+            if(name==""){
+                document.getElementById("ad").innerHTML="Enter your adhar number";
+                document.getElementById("ad").style.color="red";
+            }
+            else if(name.match(exp)){
+                document.getElementById("ad").innerHTML="Aadhaar is valid";
+                document.getElementById("ad").style.color="red";
+            }
+            else{
+                document.getElementById("ad").innerHTML="Aadhaar is not valid";
+                document.getElementById("ad").style.color="red";
+            }
+        }
+
+        function confirmate(){
+             var text = confirm("Do you want to submit");
+             if(text==true){
+                document.getElementById("result").innerHTML="Successfully Submitted";
+                document.getElementById("result").style.color="red";
+             }
+             else{
+                document.getElementById("result").innerHTML="Successfully Not Submitted";
+                document.getElementById("result").style.color="red";
+             }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Adhar Validation</h1>
+            <div class = "up">Username</div>
+            <input type="text" class="input" placeholder="Username" required id="uname" onblur="msg()">
+            <div id = "nameval"></div>
+            <div class="up">Phone Number</div>
+            <input type="text" class="input" placeholder="Phone Number" required id="ph" onblur="msg1()">
+            <div id="phno"></div>
+            <div class="up">Adhar Number</div>
+            <input type="text" class="input" placeholder="Adhar Number" required id="adharr" onblur="msg2()">
+            <div id="ad"></div>
+            <button id="re" onclick="confirmate()">Submit</button>
+            <div id="result"></div>
+        </div>
+    </div>
+</body>
+</html>

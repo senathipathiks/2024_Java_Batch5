@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Calculator</title>
+
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #calc{
+                border: 2px solid rgb(80, 62, 62);
+                border-radius: 10px;
+            }
+            button{
+                width: 100%;;
+                
+                border-radius: 10px;
+                font-size: 25px;
+                border: none;
+                padding: 20px 40px;
+            }
+            input[type="text"]{
+                font-size: 25px;
+                border-radius: 10px;
+                padding: 20px 30px;
+                width: 100%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <table align="center" id="calc">
+            <tr>
+                <td colspan="4"><input type="text"></td>
+            </tr>
+            <tr align="center">
+                <td><button>C</button></td>
+                <td><button>/</button></td>
+                <td><button>*</button></td>
+                <td><button>-</button></td>
+            </tr>
+            <tr align="center">
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+                <td rowspan="2"><button style="height: 140px;">+</button></td>
+            </tr>
+            <tr align="center">
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+            </tr>
+            <tr align="center">
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td rowspan="2"><button style="height: 140px;">=</button></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><button>0</button></td>
+                <td><button>.</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
