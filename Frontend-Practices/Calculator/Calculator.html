@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="div1">
+        <input type="text" name="output" id="output" value="0" />
+      </div>
+      <div id="div2">
+        <div class="cont">
+          <input type="button" value="%" class="but" onclick="Display('%')" />
+          <input type="button" value="RM" class="but" />
+          <input type="button" value="M+" class="but" />
+          <input type="button" value="M-" class="but" />
+          <input type="button" value="/" class="but" onclick="Display('/')" />
+        </div>
+        <div class="cont">
+          <input type="button" value="+/-" class="but" />
+          <input type="button" value="7" class="but" onclick="Display('7')" />
+          <input type="button" value="8" class="but" onclick="Display('8')" />
+          <input type="button" value="9" class="but" onclick="Display('9')" />
+          <input type="button" value="x" class="but" onclick="Display('*')" />
+        </div>
+        <div class="cont">
+          <input type="button" value="C" class="but" onclick="Clear()" />
+          <input type="button" value="4" class="but" onclick="Display('4')" />
+          <input type="button" value="5" class="but" onclick="Display('5')" />
+          <input type="button" value="6" class="but" onclick="Display('6')" />
+          <input type="button" value="-" class="but" onclick="Display('-')" />
+        </div>
+
+        <div class="cont">
+          <input type="button" value="CA" class="but" onclick="Clear()" />
+          <input type="button" value="1" class="but" onclick="Display('1')" />
+          <input type="button" value="2" class="but" onclick="Display('2')" />
+          <input type="button" value="3" class="but" onclick="Display('3')" />
+          <input type="button" value="+" class="but" onclick="Display('+')" />
+        </div>
+        <div class="cont">
+          <input type="button" value="0" class="but" onclick="Display('0')" />
+          <input type="button" value="00" class="but" onclick="Display('00')" />
+          <input type="button" value="." class="but" onclick="Display('.')" />
+          <input type="button" value="=" class="but" onclick="Calculate()" />
+          <input type="button" value="()" class="but" onclick="Display('()')" />
+        </div>
+      </div>
+    </div>
+
+    <script src="Calculator.js"></script>
+  </body>
+</html>
