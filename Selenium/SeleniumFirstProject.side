@@ -1,0 +1,48 @@
+{
+  "id": "b43ccc2d-6433-4ccf-944c-b0ad112cfbc5",
+  "version": "2.0",
+  "name": "SeleniumFirstProject",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "bfb9fd72-397d-4507-b630-10c20dca2d1f",
+    "name": "Selenium Introduction",
+    "commands": [{
+      "id": "038492da-77e1-40f4-8d22-1703cb27e5e2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "259399b8-1852-48ca-a857-92fd2e3761df",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c246c10-f1b4-4cff-803b-3d30a51eb58a",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "selenium introduction"
+    }]
+  }],
+  "suites": [{
+    "id": "4d2a2411-df08-48a4-8b58-57280506c461",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bfb9fd72-397d-4507-b630-10c20dca2d1f"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
