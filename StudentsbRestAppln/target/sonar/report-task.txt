@@ -1,0 +1,6 @@
+projectKey=SonarCodeSample2
+serverUrl=http://localhost:9000
+serverVersion=10.4.0.87286
+dashboardUrl=http://localhost:9000/dashboard?id=SonarCodeSample2
+ceTaskId=30b2293f-6cb7-40ad-b22f-513e27808b09
+ceTaskUrl=http://localhost:9000/api/ce/task?id=30b2293f-6cb7-40ad-b22f-513e27808b09
