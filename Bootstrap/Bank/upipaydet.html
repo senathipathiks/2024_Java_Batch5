@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Details</title>
+    <link rel="stylesheet" href="upipaydet.css">
+    <STYle>
+        body {
+            background-image: url("mainbg.png");
+            background-position: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </STYle>
+</head>
+<script>
+    function success(){
+        confirm("Are you sure to transfer?");
+        alert("Transferred Successfully!!!");
+    }
+
+</script>
+<body>
+    <table align="center">
+        <thead>
+            <th>UPI Transaction</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center">Enter Amount</td>
+            </tr>
+            <tr>
+                <td align="center"><input type="text" id="upino"></td>
+            </tr>
+
+            <tr>
+                <td align="center">Comments</td>
+            </tr>
+
+            <tr>
+                <td align="center"><input type="text" id="upino"></td>
+            </tr>
+
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><a href="upipaydet.html"><input type="button" value="Transfer" id="submit" onclick="success()"></a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

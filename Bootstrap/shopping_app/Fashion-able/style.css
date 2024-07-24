@@ -1,0 +1,276 @@
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.navbarlinks{
+    display: flex;
+    column-gap: 20px;
+}
+.navbarlinks a{
+    text-decoration: none;
+    color:#1D232C;
+}
+.navbarlinks a:hover{
+    text-decoration: underline;
+    color: #1D232C;
+}
+
+.navbarmenutoggle{
+    display: none;
+}
+
+.sidenavbar{
+    background-color: #1D232C;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -35%;
+    padding: 20px;
+    color: white;
+    transition: 2s;
+}
+
+.sidenavbarlink{
+    margin-bottom: 30px;
+}
+
+.sidenavbarlink a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidenavbarlink a:hover{
+    text-decoration: underline;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.headerbutton{
+    background-color: #1D232C;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.service{
+    padding: 20px;
+}
+
+.servicecontainer1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.servicecontainer2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.servicecontainer2 div{
+    background-color: #F2F4F7;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.newarrival{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.newarrivalcontainer{
+    position: relative;
+    flex-basis: 20%;
+}
+
+.newarrival button{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 10px;
+    color: #1D232C;
+    position: absolute;
+    top: 50%;
+    left:18%;
+    border-radius: 10px;
+    border: none;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news input{
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: 3px solid black;
+}
+
+.news button{
+    margin-top: 10px;
+    color: #F2F4F7;
+    background-color: #1D232C;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.footer{
+    padding: 40px;
+    margin-top: 20px;
+    background-color: #1D232C;
+    color: #F2F4F7;
+
+}
+
+.productsection{
+    margin-top: 20px;
+}
+
+.productsearch{
+    width: 80%;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.productsearch input{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.productsearch input:focus{
+    outline: none;
+}
+
+.products{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productbox{
+    text-align: center;
+    flex-basis: 20%;
+}
+
+.productbox img{
+    border-radius: 10px;
+}
+.contactsection{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.contactcontainer{
+    background-color: #1D232C;
+    border-radius: 10px;
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.text-center{
+    text-align: center;
+}
+.mb-3{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.form-label{
+    font-weight: bold;
+}
+
+.form-control{
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#exampleFormControlTextarea1{
+    height: 90px;
+}
+
+.btn-primary{
+    margin-left: 70px;
+    background-color: #0D6FED;
+    border-radius: 8px;
+    border: none;
+    width: 80px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+}
+.btn-primary:hover{
+    background-color: #085fd1 ;
+}
+
+.division{
+    margin-left: 70px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:700px){
+    .navbarmenutoggle{
+        display: block;
+    }
+    .navbarlinks{
+        display:none;
+    }
+    .headerimage{
+        display: none;
+    }
+    .servicecontainer1{
+        display: none;
+    }
+    .servicecontainer2{
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width:900px){
+    .contactcontainer{
+        width: 100%;
+    }
+}
