@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function display(){
+              var para=document.querySelectorAll("p");
+              document.querySelector("#para").innerHTML=para[1].innerHTML;
+            }
+        </script>
+    </head>
+    <body>
+        <p>This is my para1</p>
+        <p>This is my para2</p>
+        <input type="submit" id="show" onclick="display()">
+        <div id="para"></div>
+    </body>
+</html>

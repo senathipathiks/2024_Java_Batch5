@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("p").css({"color":"blue","background-color":"yellow"});
+            })
+            $(document).ready(function(){
+               $("#show").click(function(){
+                $("p").show();
+               })
+            })
+            $(document).ready(function(){
+               $("#hide").click(function(){
+                $("p").hide();
+               })
+            })
+
+        </script>
+    </head>
+    <body>
+        <p  style="display: none;">This is my paragraph</p>
+        <input type="submit" id="show" value="Show">
+        <br><br><br>
+
+        <p >This is my paragraph</p>
+        <input type="submit" id="hide" value="Hide">
+    </body>
+</html>

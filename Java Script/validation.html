@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function nameValidate(){
+               var name=document.getElementById("name").value
+               if(name==""){
+                  document.getElementById("namecon").innerHTML="Name Should not be empty"
+                  document.getElementById("namecon").style.color="red";
+                 document.getElementById("name").focus();
+               }
+    
+            }
+            var emailRg=" /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+            function emailValidate(){
+                var email=document.getElementById("email").value;
+                if(!email.match(emailRg)){
+                    document.getElementById("emailcon").innerHTML="Enter Valid Email"
+                    document.getElementById("emailcon").style.color="red";
+                    document.getElementById("email").value=""
+                    document.getElementById("email").focus()
+                }
+
+            }
+            function confirmation(){
+                alert("Are you sure you want to submit!!!");
+                document.getElementById("con").innerHTML="Successfully registered"
+                document.getElementById("con").style.color="blue"
+            }
+
+        </script>
+    </head>
+    <body>
+      Enter Your Name : <input type="text" id="name" onblur="nameValidate()"> <br>
+      <div id="namecon"></div>
+      Enter Your Email : <input type="text" id="email" onblur="emailValidate()"> <br>
+      <div id="emailcon"></div>
+       <input type="submit" id="submit" onclick="confirmation()">
+       <div id="con"></div>
+
+
+    </body>
+</html>

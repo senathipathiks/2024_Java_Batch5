@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(187, 237, 220);
+}
+input[type="text"]{
+    width: 300px;
+    height: 40px;
+}
+input[type="email"]{
+    width: 300px;
+    height: 40px;
+}
+input[type="password"]{
+    width: 300px;
+    height: 40px;
+}
+input[type="number"]{
+    width: 300px;
+    height: 40px;
+}
+input[type="date"]{
+    width: 300px;
+    height: 40px;
+}
+input[type=radio]{
+    width: 30px;
+}
+input[type="submit"]{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(80, 179, 244);
+    font-size: large;
+    color: whitesmoke;
+}
+input[type="submit"]:hover{
+    background-color:rgb(134, 176, 176);
+}
+td{
+    font-size: larger;
+}
+select{
+    width: 300px;
+    height: 40px;
+} 

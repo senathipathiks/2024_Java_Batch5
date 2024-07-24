@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+          *{
+            margin: 0;
+            }
+            body{
+                background-image:url(home.jpg);
+            }
+            td{
+                font-size: larger;
+                color: white;  
+            }
+            input{
+                width: 300px;
+                height:35px;
+                border-radius: 100px;
+                border: none;
+            }
+            input[type="submit"]{
+                width:100px;
+                background-color: rgb(128, 243, 128);
+                margin-left: 140%;
+            }
+            input[type="submit"]:hover{
+                background-color:rgb(60, 240, 60);
+            }
+            h2{
+                color: rgb(255, 255, 255);
+                margin-bottom: 30px;
+            }
+            .con{
+                width:40%;
+                height: 35%;
+                background-image: linear-gradient(rgb(89, 130, 243),rgb(109, 186, 203));
+                opacity: .9;
+                padding: 20px;
+                font-family: "Young Serif", serif;
+                font-weight: 400;
+                font-style: normal;
+                box-shadow: 0 5px 10px; 
+                border-radius: 15px;
+                margin-top: 5%;
+            }
+            
+            
+</style>
+</head>
+
+<body>
+<center>
+<div class="con">
+<h2> Credit Card Verification </h2>
+<table>
+<tr>
+    <td>CC Number :</td>
+    <td><input type='text' name='text1'/></td>
+</tr>
+<tr>
+    <td><br>
+        <input type="submit" name="submit" value="Submit" onclick="cardnumber(document.form1.text1)"/>
+    </td>
+</tr>
+</table>
+</div>
+    <div class="con">
+        <h2> UPI Verification </h2>
+        <table>
+        <tr>
+            <td>UPI ID :</td>
+            <td><input type='text' name='text1'/></td>
+        </tr>
+        <tr>
+            <td><br>
+                <input type="submit" name="submit" value="Submit" onclick="cardnumber(document.form1.text1)"/>
+            </td>
+        </tr>
+        </table>
+        </div>
+</center>
+<script >
+    function cardnumber(inputtxt){
+    var cardno = /^(?:3[47][0-9]{13})$/;
+    if(inputtxt.value.match(cardno))
+        {
+        alert("verified Successfully")
+        }
+      else
+        {
+        alert("Not a valid credit card number!");
+        }
+}
+</script>
+</body>
+</html>

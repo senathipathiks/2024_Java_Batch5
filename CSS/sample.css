@@ -1,0 +1,18 @@
+
+
+#p1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: black;
+    font-style: normal;
+    font-size:medium;
+}
+img{
+    width: 300px;
+}
+body{
+    background-image: url(car.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+           $(document).ready(function(){
+            $("#submit").click(function(){
+                var b=$("#email").val();
+                var c=$("#password").val();
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(b==""){
+                 alert("Email Should not be empty")
+                }
+                else if(!b.match(mailformat)){
+                    alert("Enter the valid email ")
+                }
+                else if(c==""){
+                    alert("Password is must")
+                }
+                else if(c.length < 8) {
+                    alert("Password must be at least 8 character")
+                }
+                else if(c.search(/[a-z]/) < 0) { 
+                    alert("Password must contain at least one lowercase letter" )   
+                } 
+                else if(c.search(/[A-Z]/) < 0) { 
+                    alert("Password must contain at least one Uppercase letter" )
+               } 
+               else if(c.search(/[0-9]/) < 0) { 
+                alert("Password must contain at least one Number" )
+               } 
+               else if(c.search(/[*.!@#$%^&]/) < 0){
+                alert("Password must contain at least one special character" )
+               }
+               else{
+                    alert("Registered Successfully")
+               }
+            })   
+           })
+
+        </script>
+    </head>
+    <body>
+      Enter Name : <input type="text" id="name" > <br>
+      Enter Email : <input type="text" id="email" > <br>
+      Enter Password :<input type="password" id="password"> <br>
+     <input type="submit" id="submit">
+    </body>
+</html>

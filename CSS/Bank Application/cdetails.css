@@ -1,0 +1,16 @@
+body{
+    background-image: linear-gradient(to top right,cyan,black);
+    height: 435px;
+}
+
+.cdet{
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 50px;
+    width: 800px;
+    height: 220px;
+    background-color: whitesmoke;
+    margin-top: 150px;
+    margin-left: 210px;
+    font-family: cursive;
+}

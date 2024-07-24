@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("#show1").click(function(){
+                $("#c1").fadeOut(3000)
+               });
+            })
+            $(document).ready(function(){
+               $("#show2").click(function(){
+                $("#c2").fadeIn(3000)
+               });
+            })
+            $(document).ready(function(){
+               $("#show3").click(function(){
+                $("#c3").fadeToggle(3000)
+               });
+            })
+        </script>
+    </head>
+    <body>
+       <img id="c1" src="car.png" alt="car" width="50%"> 
+       <input type="submit" id="show1" value="Fadeout">
+       <br><br>
+       <img id="c2" src="car.png" alt="car" width="50%" style="display: none;"> 
+       <input type="submit" id="show2" value="Fadein">
+       <br><br>
+       <img id="c3" src="car.png" alt="car" width="50%" > 
+       <input type="submit" id="show3" value="Fadetoggle">
+    </body>
+</html>
