@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iplbuzz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    *{
+      margin: 0;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar sticky-top navbar-expand-lg bg-white" id="home">
+    <div class="container-fluid bg-danger">
+        <a navbar-brand href="home.html"><img src="logo.png" alt="logo" width="60px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav nav-tabs  navbar-expand-sm me-auto mb-2 mb-lg-0 ">
+                <li class="nav-items mx-3 fs-5 p-2">
+                    <a class="nav-link  text-light " href="home.html">Home</a>
+                </li>
+                <li class="nav-items mx-3 p-2 fs-5">
+                    <a class="nav-link text-light" href="#aboutpage">About</a>
+                </li>
+                <li class="nav-items mx-3 p-2 fs-5">
+                    <a class="nav-link text-light" href="login.html">Login</a>
+                </li>
+                <li class="nav-items mx-3 p-2 fs-5">
+                    <a class="nav-link text-light" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-items mx-3 p-2 fs-5">
+                    <a class="nav-link text-light" href="players.html">Players</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" id="sea" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary"  type="submit"><i class='bx bx-search'></i></button>
+              </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Carousel -->
+<div class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide w-100" data-bs-ride="carousel" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner carousel-sm" style="height: auto;">
+        <div class="carousel-item active">
+          <img src="kohli.webp" height="auto" width="100%" class="d-block" alt="...">
+          <div class="carousel-caption d-none d-md-block ">
+            <h5>Virat Kohli</h5>
+            <p>The King of India who is famous for cover drive</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="rohit.jpg" height="auto" width="100%" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block fw-bold">
+            <h5>Rohit Sharma</h5>
+            <p>The Hitman of India who is famous for pull Shot</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="MS-Dhoni.jpg" height="auto" width="100%" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block fw-bold">
+            <h5>MS Dhoni</h5>
+            <p>The Captian Cool of India who is famous for helicopter shot</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+            <img src="klrahul.avif" height="auto" width="100%" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block ">
+              <h5>KL Rahul</h5>
+              <p>klassy Batsman of India who is famous for flick shot</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="sky.webp" height="auto" width="100%" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block fw-bold">
+              <h5>Surya Kumar Yadav</h5>
+              <p>Mr.360 degree of India Who is famous for Ramp shot</p>
+            </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+<hr>
+
+<!-- heading -->
+<div class="container" id="matchs">
+    <div class="row">
+      <h2 class=" d-flex justify-content-center">UPCOMING &nbsp; <span class="text-danger">MATCHS</span></h2>
+    </div>
+  </div> <br>
+
+<!-- Cards -->
+<div class="container container-center justify-content-space-evenly">
+    <!-- Cards row 1 -->
+    <div class="row">
+      <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem">
+        <img src="rcb vs kkr.png"  class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">RCB vs KKR</h5>
+          <p class="card-text">The match starts from today 7:30 Pm  at Chinnaswamy stadium</p>
+          <a href="" class="btn btn-outline-primary">View more</a>
+        </div>
+      </div>
+      </div>
+      
+    <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 23rem">
+          <img src="csk vs mi.jpeg"  class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">CSK vs MI</h5>
+            <p class="card-text">The match starts from tomorow 7:30 pm at Wankhede stadium</p>
+            <a href="" class="btn btn-outline-primary">View more </a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem">
+          <img src="lsg vs gt.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">LSG vs GT</h5>
+            <p class="card-text">The match starts at Tue, 2 Apr 3:30 pm at Narendra Modi stadium </p>
+            <a href="" class="btn btn-outline-primary">View more</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- Cards row 2 -->
+    <div class="row my-5">
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card" style="width: 23rem">
+            <img src="rr vs dc.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">RR vs DC</h5>
+              <p class="card-text">The match starts at Tue, 2 Apr 7:30 pm at Arun Jaitley stadium</p>
+              <a href="" class="btn btn-outline-primary">View more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card" style="width: 23rem">
+            <img src="csk vs gt.jpg"  class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">CSK vs GT</h5>
+              <p class="card-text">The match starts at Wed, 3 Apr 7:30 pm at M.A. Chidambaram stadium</p>
+              <a href="" class="btn btn-outline-primary">View more</a>
+            </div>
+          </div>
+          </div>
+      
+        <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 23rem">
+            <img src="KKR-vs-SRH.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">KKR vs SRH</h5>
+              <p class="card-text">The match starts at Thr, 4 Apr 7:30 pm at Eden gardens</p>
+              <a href="" class="btn btn-outline-primary">View more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards row-3 -->
+      <div class="row my-5">
+        <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width:23rem">
+          <img src="rcb vs csk.jpg"  class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">RCB vs CSK</h5>
+            <p class="card-text">The match starts at Fri, 5 Apr 7:30 pm at Chinnaswamy stadium</p>
+            <a href="" class="btn btn-outline-primary">View more</a>
+          </div>
+        </div>
+        </div>
+        
+      <div class="col-md-4 d-flex justify-content-center">
+          <div class="card" style="width:23rem">
+            <img src="pbks vs dc.avif" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">PBKS vs DC</h5>
+              <p class="card-text">The match starts at Sat, 6 Apr 3:30 pm at Dharamshala</p>
+              <a href="" class="btn btn-outline-primary">View more</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width:23rem">
+            <img src="rcb vs mi.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">RCB vs MI</h5>
+              <p class="card-text">The match starts at Sat, 6 Apr 7:30 pm at Wankhede stadium</p>
+              <a href="" class="btn btn-outline-primary">View more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- About -->
+      <div class="container aboutmsg" id="aboutpage">
+        <div class="row-md fs-6">
+            <h2>About <span class="text-danger">us</span></h2>
+            <p>Welcome to the search IPL (Indian Premier League) website!</p>
+            <p>At IPL, we are passionate about cricket and dedicated to bringing you the most thrilling and exciting cricketing experience. As the premier T20 cricket league in the world, IPL has captured the hearts of millions of fans globally, showcasing the best talent in the game.</p>
+            <p>Our website serves as your one-stop destination for everything IPL. Whether you’re a die-hard cricket enthusiast or a casual fan, we have a wealth of information, features, and resources to keep you engaged and informed throughout the season.</p>
+            <div class="col-md-8 mx-auto">
+            <img class="rounded-circle img-thumbnail mx-auto" src="about.webp" alt=""><br> <br>
+            </div>
+            <p> <b>Team <span class="text-danger">Profiles :</span></b> Get to know your favorite IPL teams inside out. Explore detailed team profiles, including player statistics, team rosters, and past performance records.</p>
+            <p> <b>Player <span class="text-danger">Profiles :</span></b> Dive into the world of IPL’s star players. Discover comprehensive player profiles, career statistics, and personal achievements. Learn about their journey, playing styles, and contributions to their respective teams.</p>
+            <p> <b>Match Schedule  <span class="text-danger">and Results :</span></b> Plan your cricket-watching calendar with our detailed match schedule. Find out when and where your favorite teams are playing, and check past match results to relive the excitement.</p>
+            <p> <b>News and <span class="text-danger">Updates :</span></b> Stay informed with the latest IPL news, player transfers, team strategies, and tournament developments. Our news section ensures you never miss a beat in the dynamic world of IPL.</p>
+            <p> <b>Fantasy  <span class="text-danger"> League :</span></b>Test your skills and create your own dream team with our IPL Fantasy League. Compete with fellow fans and prove your cricket knowledge by making strategic player selections and earning points based on their performance.</p>
+            <p> <b>Fan  <span class="text-danger"> Engagement :</span></b> IPL is all about the fans, and we strive to make your experience interactive and enjoyable. Participate in polls, quizzes, contests, and social media discussions to connect with fellow fans and show your support for your favorite teams.</p>
+          </div>
+        </div>
+        <br>
+        <br>
+       
+        
+        <div class="container-fluid">
+          <!-- Footer -->
+          <footer class="text-center text-white bg-secondary">
+            <!-- Grid container -->
+            <div class="container">
+              <!-- Section: Links -->
+              <section class="mt-5">
+                <!-- Grid row-->
+                <div class="row text-center d-flex justify-content-center pt-5">
+                  <!-- Grid column -->
+                  <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                      <a href="#aboutpage" class="text-white">About us</a>
+                    </h6>
+                  </div>
+                  <!-- Grid column -->
+        
+                  <!-- Grid column -->
+                  <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                      <a href="players.html" class="text-white">Players</a>
+                    </h6>
+                  </div>
+                  <!-- Grid column -->
+        
+                  <!-- Grid column -->
+                  <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                      <a href="#matchs" class="text-white">Matchs</a>
+                    </h6>
+                  </div>
+                  <!-- Grid column -->
+        
+                  <!-- Grid column -->
+                  <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                      <a href="#!" class="text-white">Help</a>
+                    </h6>
+                  </div>
+                  <!-- Grid column -->
+        
+                  <!-- Grid column -->
+                  <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                      <a href="#!" class="text-white">Contact</a>
+                    </h6>
+                  </div>
+                  <!-- Grid column -->
+                </div>
+                <!-- Grid row-->
+              </section>
+              <!-- Section: Links -->
+        
+              <hr class="my-5" />
+        
+              <!-- Section: Text -->
+              <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-8">
+                    <p>
+                      The official IPL website provides comprehensive information about the league. You can explore details about the teams, players, match schedules, and more. The mission behind IPL is to promote and celebrate cricket as a premier sport.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- Section: Text -->
+        
+              <!-- Section: Social -->
+              <section class="text-center mb-5 fs-4">
+                <button class="btn btn-outline-dark rounded-circle me-4">
+                  <a href="" class="text-white">
+                    <i class='bx bxl-facebook'></i>
+                  </a>
+                </button>
+                <button class="btn btn-outline-dark rounded-circle me-4">
+                <a href="" class="text-white">
+                  <i class='bx bxl-twitter' ></i>
+                </a>
+                </button>
+                <button class="btn btn-outline-dark rounded-circle me-4">
+                <a href="" class="text-white">
+                  <i class='bx bxl-google' ></i>
+                </a>
+              </button>
+                <button class="btn btn-outline-dark rounded-circle me-4">
+                <a href="" class="text-white">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </button>
+                <button class="btn btn-outline-dark rounded-circle me-4">
+                <a href="" class="text-white">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+              </button>
+                <button class="btn btn-outline-dark rounded-circle me-4">
+                <a href="" class="text-white">
+                  <i class="bx bxl-github"></i>
+                </a>
+              </button>
+              </section>
+              <!-- Section: Social -->
+            </div>
+            <!-- Grid container -->
+        
+            <!-- Copyright -->
+            <div
+                 class="text-center p-3"
+                 style="background-color: rgba(0, 0, 0, 0.2)"
+                 >
+              © 2024 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/"
+                 >IplBuzz.com</a
+                >
+            </div>
+            <!-- Copyright -->
+          </footer>
+          <!-- Footer -->
+        </div>
+      
+
+</body>
+</html>
