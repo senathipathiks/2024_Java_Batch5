@@ -1,0 +1,6 @@
+com\velan\restapp\SpringBootRestApplication.class
+com\velan\restapp\model\Student.class
+com\velan\restapp\repository\StudentRepo.class
+com\velan\restapp\controller\StudentController.class
+com\velan\restapp\service\StudentService.class
+com\velan\restapp\serviceimp\StudentServiceImp.class
