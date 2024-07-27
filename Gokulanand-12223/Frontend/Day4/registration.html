@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title> Registration </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            #text1,#text2
+            {
+                border-radius: 20px;
+                width: 250px;
+                height: 30px;
+                outline: none;
+                border: none;          
+            }
+            #button1
+            {
+                border-radius: 20px;
+                width: 250px;
+                height: 35px;
+                margin-top: 30px;
+                background-color: greenyellow;
+                font-size: large;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                outline: none;
+                border: none;
+                margin-left: 100px;
+            }
+            body
+            {
+                font-size: xx-large; 
+                background-image: url("2.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 100px;
+                margin-left: 100px;
+            }
+            td,th {
+                font-family: "Josefin Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: x-large;
+                padding: 10px;
+            }
+            h3
+            {
+                margin-left: 140px;
+            }
+           span 
+            {
+                margin-top: 20px;
+                text-decoration: none;
+            }
+            #button1:hover
+            {
+                transform: scale(1.1);
+            }
+            #gen2
+            {
+                margin-left: -150px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3> SIGN UP </h3>
+        <table>
+            <tr>
+                <td id="name1"> First Name </td>
+                <td> <input type="text" id="text1"></td>
+            </tr>
+            <tr>
+                <td id="name1"> Last Name </td>
+                <td> <input type="text" id="text1"></td>
+            </tr>
+            <tr>
+                <td id="name1"> Email </td>
+                <td> <input type="email" id="text1"></td>
+            </tr>
+            <tr>
+                <td> Gender </td>
+                <td> <input type="radio" name="gender" id="gen1"> Male </td>
+                <td> <input type="radio" name="gender" id="gen2"> Female </td>
+            </tr>
+            <tr> 
+                <td> Phone Number </td>
+                <td> <input type="text" name="" id="text1"></td>
+            </tr>
+            <tr>
+                <td id="name2"> Password </td>
+                <td> <input type="password" id="text2"></td>
+            </tr>
+            <tr>
+                <td id="name2"> Confirm Password </td>
+                <td> <input type="password" id="text2"></td>
+            </tr>
+        </table>
+        <input type="button" value="Register" id="button1">
+
+    </body>
+</html> 

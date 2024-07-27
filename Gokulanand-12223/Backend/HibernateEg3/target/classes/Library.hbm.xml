@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+   <class name = "Hibernate.HibernateEg3.Library" table ="lib_tbl">
+      
+           
+      <id name = "bookid" type = "int" column = "bookid">
+         <generator class="assigned"/>
+      </id>
+      
+      <property name = "receiverid" column = "receiverid" type = "string"/>
+      <property name = "bookname" column = "bookname" type = "string"/>
+      <property name = "receivername" column = "receivername" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

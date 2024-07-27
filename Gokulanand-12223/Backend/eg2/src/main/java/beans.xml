@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+    
+
+    <bean class ="Spring.eg2.Student" name ="stu" scope="singleton">
+    <property name="Rno" value="12223"></property>
+    <property name="Name" value="Gokul Anand"></property>
+    <property name="Mark1" value="90"></property>
+    <property name="Mark2" value="92"></property>
+    <property name="Mark3" value="94"></property>
+    </bean>
+    
+    
+</beans>

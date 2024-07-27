@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title> Registration Page </title>
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+            
+            $(document).ready(function()
+            {
+                $("#btn").click(function()
+                {
+                       
+                    var emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                    var passwordRegEx ='/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/';
+                    var fname = $("#name1").val();
+                    var lname = $("#name2").val();
+                    var email = $("#email").val();
+                    var password = $("#pass").val();
+
+                    if(fname==""){
+                        alert("First name can't be empty");
+                    }                
+                    if(lname=="")
+                        {
+                            alert("Last name can't be empty");
+                        }                      
+                            if(email=="")
+                           {
+                               alert("Email can't be empty");
+                           }
+                               if(!email.match(emailRegEx))
+                               {
+                                   alert("Email is not matching");
+                               }
+                                   if(!pass.match(passwordRegEx))
+                                   {
+                                       alert("Password is not strong !");
+                                   }   
+                } ) 
+
+                alert("Successfully Submitted");
+
+                // $("#btn").click(function()
+                // {
+                //     confirm("Are you sure to submit?")
+                // }) 
+                                 
+            })
+        </script>
+
+        <style>
+            body{
+                margin-top: 200px;
+                background-color: lightcyan;
+                
+            }
+        </style>
+
+    </head>
+    <body align="center">
+        <form>
+        First Name : <input type="text"  id="name1"> <br><br>
+        Last Name : <input type="text" id="name2"> <br><br>
+        Email : <input type="email" id="email"> <br><br>
+        Password : <input type="password" id="pass"> <br><br>
+        <button id="btn"> Submit </button>
+    </form>
+    </body>
+</html>

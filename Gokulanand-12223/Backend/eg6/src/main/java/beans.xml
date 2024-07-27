@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+ 
+ 	    
+    <bean class="Spring.eg6.Subject" name="add">
+    <property name="English" value="90"></property>
+    <property name="Tamil" value="92"></property>
+    <property name="Maths" value="94"></property>
+    <property name="Science" value="96"></property>
+    <property name="SocialScience" value="100"></property>
+    </bean>
+	
+	
+    <bean class ="Spring.eg6.Student" name ="stu">
+	<property name="rollno" value="202008"></property>
+	<property name="name" value="TMGA"></property>
+	<property name="standard" value="XII"></property>
+	<property name="Subject">
+		<list>
+			<ref bean="add" />
+		</list>
+	</property>
+    </bean>
+
+
+	<bean class="Spring.eg6.Subject" name="add2">
+    <property name="English" value="80"></property>
+    <property name="Tamil" value="82"></property>
+    <property name="Maths" value="84"></property>
+    <property name="Science" value="86"></property>
+    <property name="SocialScience" value="90"></property>
+    </bean>
+    
+    <bean class ="Spring.eg6.Student" name ="stu2">
+	<property name="rollno" value="202013"></property>
+	<property name="name" value="Jonita Gandhi"></property>
+	<property name="standard" value="XII"></property>
+	<property name="Subject">
+		<list>
+			<ref bean="add" />
+		</list>
+	</property>
+    </bean>
+    
+    
+</beans>

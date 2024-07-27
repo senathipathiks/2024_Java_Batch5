@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+
+    
+
+    <bean class ="Spring.eg4.Employee" name ="emp">
+	<property name="Empid" value="12223"></property>
+	<property name="Empname" value="Gokul Anand"></property>
+	<property name="address">
+		<list>
+			<value>M342, </value>
+			<value>Ellis Nagar, </value>
+			<value>Madurai.</value>
+		</list>
+	</property>
+    </bean>
+    
+
+</beans>

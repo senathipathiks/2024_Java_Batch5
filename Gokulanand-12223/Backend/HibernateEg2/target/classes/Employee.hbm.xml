@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+   <class name = "Hibernate.HibernateEg2.Employee">
+      
+           
+      <id name = "empid" type = "int" column = "EmpId">
+         <generator class="assigned"/>
+      </id>
+      
+      <property name = "empname" column = "EmpName" type = "string"/>
+      <property name = "empdesig" column = "Designation" type = "string"/>
+      <property name = "empdept" column = "Department" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

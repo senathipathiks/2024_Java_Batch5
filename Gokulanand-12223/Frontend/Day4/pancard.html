@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Pan Card Page </title>
+
+        <script>
+            function validatePancard()
+            {
+                var expr = "^[A-Z]{5}[0-9]{4}[A-Z]{1}";
+                var pancardnumber = document.getElementById("pan").value;
+                if(pancardnumber.match(expr))
+                {
+                    alert("Your Pan card number is correct !");
+                }
+                else
+                {
+                    alert("Your number is wrong");
+                }
+            }
+        </script>
+
+        <style>
+            body
+            {
+                margin-top: 200px;
+                background-image: linear-gradient(yellowgreen, beige);
+            }
+            #pan
+            {
+                border-radius: 10px;
+                height: 30px;
+            }
+            #btn
+            {
+                height: 30px;
+                width: 100px;
+                border-radius: 10px;
+                background-color: lightcyan;
+            }
+        </style>
+    </head>
+    <body align="center">
+        <b>Pan Card Number : </b><input type="text" id="pan"> <br><br>
+
+        <input type="submit" value="Verify" id="btn" onclick="validatePancard()">
+    </body>
+</html>

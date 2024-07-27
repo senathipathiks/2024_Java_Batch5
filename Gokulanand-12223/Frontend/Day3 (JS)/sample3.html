@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> Registration Page </title>
+        <script>
+            function submit()
+            {
+                var name=document.getElementsByName("name");
+                alert("Hello "+ name[0].value);
+            }
+        </script>
+        <style>
+            table{
+                padding: 50px 50px 50px 50px;
+                outline: auto;
+                backdrop-filter: blur(10px);
+                margin-top: 250px;
+                border-radius: 20px;
+                box-shadow: 100px;
+            }
+            #button{
+                margin-top: 20px;
+                margin-left: 675px;
+                font-size: larger;
+                border-radius: 10px;
+                width:120px;
+                height:30px;
+                background-color: rgb(0, 250, 0);
+                border-color: rgb(0, 251, 0);
+                font-style: italic;
+            }
+            body{
+                background-image: url("1.jpg");                
+            }
+            tr{
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <table align="center">
+            <tr>
+                <td> First Name </td>
+                <td> <input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td> Last Name </td>
+                <td> <input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td> Email </td>
+                <td> <input type="email"></td>
+            </tr>
+            <tr>
+                <td> Address </td>
+                <td> <input type="text"></td>
+            </tr>
+            <tr>
+                <td> Sportsman</td>
+                <td> <input type="radio"> Yes </td>
+                <td> <input type="radio"> No </td>
+            </tr>            
+        </table>
+        <td> <input type="button" value="Submit" id="button" onclick="submit()"> </td>
+    </body>
+</html>
