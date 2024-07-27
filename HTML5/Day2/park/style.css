@@ -1,0 +1,43 @@
+body{
+    background-image: url('jolly.jpg');
+    background-repeat: no-repeat;
+    background-size:cover; 
+    backdrop-filter: blur(px);
+    /* width: 1200px;
+    height: 600px; */
+}
+
+@font-face {
+    font-family: Disney;
+    src: url(DisneyPark.ttf);
+}
+
+.contain{
+    text-align: center;
+    padding-top: 50px;
+    font-family: Disney;
+    font-weight: bolder;
+    margin-top: 40px;
+    color:rgb(187, 8, 8);
+    text-shadow: 1px 1px 10px white;
+    font-size: 25px;
+}
+
+#index{
+    font-family: Disney;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+    color: sandybrown;
+    text-shadow: 1px 1px 10px purple; 
+    animation: text 5s 2s 0s 5 reverse forwards;
+}
+
+/* @keyframes text {
+    from:
+} */
+
+#enter{
+    background-color: transparent;
+    border: none;
+}

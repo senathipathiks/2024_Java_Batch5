@@ -1,0 +1,14 @@
+package com.stu.bean;
+
+public class Student {
+	String sid;
+	String sname;
+	String scity;
+	
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+}

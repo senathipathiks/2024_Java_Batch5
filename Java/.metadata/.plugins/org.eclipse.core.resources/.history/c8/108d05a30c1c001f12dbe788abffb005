@@ -1,0 +1,10 @@
+package com.spring.SpringEx;
+
+public class Student {
+	private int rno;
+	private String sname;
+	private int m1;
+	private int m1;
+	private int m1;
+	
+}

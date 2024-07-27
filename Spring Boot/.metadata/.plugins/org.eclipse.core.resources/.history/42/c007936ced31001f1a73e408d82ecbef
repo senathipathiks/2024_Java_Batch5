@@ -1,0 +1,38 @@
+package com.hospital.service;
+
+import java.util.List;
+
+import com.hospital.model.Doctor;
+
+public class DSerimpl implements DService{
+
+	@Override
+	public void addDoc(Doctor doc) {
+		
+	}
+
+	@Override
+	public void delDoc(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void upDoc(Doctor doc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Doctor> viewAllDoc() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Doctor getDoc(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

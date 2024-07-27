@@ -1,0 +1,9 @@
+$font-color: yellow;
+$font-size:50px;
+$bfg-color: lightblue;
+
+h1{
+    background-color: $bfg-color;
+    font-size: $font-size;
+    color:$font-color;
+}

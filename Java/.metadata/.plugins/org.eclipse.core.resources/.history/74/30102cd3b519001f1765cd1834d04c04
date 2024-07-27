@@ -1,0 +1,10 @@
+package com.cms.bean;
+
+public class User {
+	int uid;
+	String uname;
+	int cid;
+	String uadd;
+	String desti;
+	String rec_name;
+}

@@ -1,0 +1,7 @@
+package com.cms.bean;
+
+public class User {
+	uid int;
+	uname String;
+	
+}

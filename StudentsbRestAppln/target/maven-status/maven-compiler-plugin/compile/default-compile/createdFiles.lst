@@ -1,6 +1,0 @@
-com\supraja\restapp\controller\StudentController.class
-com\supraja\restapp\repository\StudentRepo.class
-com\supraja\restapp\serviceimpl\StudentServiceImpl.class
-com\supraja\restapp\model\Student.class
-com\supraja\restapp\service\StudentService.class
-com\supraja\restapp\StudentsbRestApplnApplication.class

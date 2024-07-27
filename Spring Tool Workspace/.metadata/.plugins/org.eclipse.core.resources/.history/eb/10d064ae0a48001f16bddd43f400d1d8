@@ -1,0 +1,24 @@
+package com.automation.SeleniumEg1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	WebDriver driver = new ChromeDriver();
+    	driver.manage().window().maximize();
+    	
+    	driver.get("http://www.google.com");
+    	System.out.println(driver.getCurrentUrl());
+//    	driver.switchTo().alert().accept();
+    	
+    	driver.findElement(By.id("APjFqb")).sendKeys("Selenium");
+    	driver.findElement(By.name("btnK")).submit();
+    	driver.navigate().to("https://www.selenium.dev/");
+    	System.out.println(driver.getCurrentUrl() +" "+ driver.getTitle());
+    	driver.quit();
+    }
+}

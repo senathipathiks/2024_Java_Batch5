@@ -1,0 +1,25 @@
+/* body{
+    background-image: linear-gradient(to right,#904e95,#e964, #904e95);
+    height: 1vh;
+} */
+
+#real{
+    background-size: contain;
+    width:1200px;
+    height: 500px;
+}
+
+#o,#n,#z{
+    animation: late 2s 1s 1 forwards;
+}
+
+@keyframes late {
+        0% {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+}

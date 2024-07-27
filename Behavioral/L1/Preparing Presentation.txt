@@ -1,0 +1,56 @@
+PLANNING:-
+
+	Case Study:
+
+		AGILE SOFTWARE DEVELOPMENT
+		
+	Scenario:
+
+		You are a software developer in a software development company that recently transitioned from a traditional waterfall development model
+	to an agile methodology.You are tasked with presenting a case study on how this transition improved project outcomes. You are given 40 minutes
+	to present.You will be presenting to company executives, project managers, and development team members.
+
+	Using the case study answer the following questions:
+
+	﻿﻿﻿Who are you presenting to?
+	﻿﻿﻿What is the time Allocated?
+	﻿﻿﻿What are you expecting the audience to learn from your presentation?
+
+	------------------------------------------------------------------------------------------------------------------------------------------------	
+
+	a) Who are you presenting to?
+
+			I'm Presenting to Company Executives, Project Managers and development team members.
+			
+	b) What is the time allocated?
+			
+			Total Duration: 40 Minutes.
+			
+				1. Introduction - 2 minutes
+				2. Impediments faced in Waterfall model - 10 minutes
+				3. About Agile methodology - 5 mins
+				4. Benefits of adapting Agile methodology - 10 mins
+				5. How the transition is going to help us - 6 minutes
+				6. Conclusion - 2 minutes
+				7. Queries - 5 mins
+			
+	c) What are you expecting the audience to learn from your presentation?
+			
+			I expect audience to learn about 
+			
+				- The differences between Waterfall model and Agile methodology.
+				- The benefits in adapting to the Agile methodology.
+				- How the transition is happened and how useful it is to our projects.
+PREPARE:-
+
+	a) What will you include in your presentation?
+	
+		I'll include the detailed info about the transition of agile methodology and its benefits with visual aids. 
+		
+	b) How will you engage your audience?
+	
+		Will engage audience by asking easy qns, so that, they will be more interested in the content and also try to do some activities related to the topic.
+		
+	c) What kind of visual aids you use?
+	
+		Will use the images describing the topic and work flow videos for better understanding and animated gifs,videos for seeking the audience's attention.

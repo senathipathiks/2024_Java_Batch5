@@ -1,0 +1,41 @@
+package com.automation.SeleniumExample2;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+class Insert {
+	private WebDriver driver;
+
+	@BeforeEach
+	void setUp() throws Exception {
+		driver = new ChromeDriver();
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		Thread.sleep(1000);
+		driver.quit();
+	}
+
+	@Test
+	void testInsert() throws InterruptedException {
+		driver.get("http://localhost:3000/Docview");
+		driver.findElement(By.id("addDoc")).click();
+		driver.findElement(By.name("dname")).sendKeys("Siraj");
+		driver.findElement(By.name("dexperience")).sendKeys("5");
+		driver.findElement(By.name("dspecial")).sendKeys("Pediatrician");
+		driver.findElement(By.name("hid")).click();
+		driver.findElement(By.xpath("//*[@id=\"viewall\"]/div/form/div[4]/select/option[2]")).click();
+		driver.findElement(By.id("btn")).submit();
+		Thread.sleep(4000);
+		driver.switchTo().alert().accept();
+		
+	}
+
+}

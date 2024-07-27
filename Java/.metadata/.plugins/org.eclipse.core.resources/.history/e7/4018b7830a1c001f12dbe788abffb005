@@ -1,0 +1,16 @@
+package com.spring.SpringEx;
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    
+        Employee e = (Employee)context.getBean("emp");
+        e.display();
+    }
+}

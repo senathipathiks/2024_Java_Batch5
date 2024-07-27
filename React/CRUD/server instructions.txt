@@ -1,0 +1,9 @@
+Creating JSON Server:
+    - create a folder server outside the project folder. [Eg: React/crud] [Eg: React/Server]
+    - inside the server folder, run cmd "npm install json-server"
+    - after installing the server folder will have node_modules folder
+    - create a file named db.json and copy the contents in the file
+    - after that inside the server folder run the cmd "npm init -y"
+    - then open the package.json  updated file, search for scripts,under that "tests" and rename it to "start" and its value to "json-server db.json --port 5000"
+    - then run cmd npm start
+    - go to the server and see the db.json contents

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan Card Validation</title>
+    <style>
+        body{
+            background-image: radial-gradient(cyan,black);
+            height: 445px;
+            background-size: cover;
+        }
+
+        .content{
+            margin-left: 400px;
+            margin-top: 150px;
+            padding: 15px;
+            width: 450px;
+            height: 250px;
+            color: white;
+            /* background-color: black; */
+        }
+
+        #tit{
+            margin-left: 40px;
+        }
+        #btn{
+            margin-left: 200px;
+        }
+        #pan{
+            margin-left: 100px;
+            width: 250px;
+            height: 25px;
+        }
+        #msg{
+            color:red;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function validate(){
+            var num = document.getElementById("pan").value;
+            var format= "[A-Z]{5}[0-9]{4}[A-Z]{1}";
+
+            if(num==""){
+                document.getElementById("msg").innerHTML="Field should not be empty";
+            }
+
+            if(num.match(format)){
+                document.getElementById("msg").innerHTML="Vola!!!! It's a valid Pan card number!!!";
+            }
+
+            if(!num.match(format)){
+                document.getElementById("msg").innerHTML="Invalid Pan card";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1 id="tit">PAN CARD VALIDATION</h1><br>
+        <input type="text" id="pan"><br><br>
+        <p id="msg"></p>
+        <input type="submit" name="submit" id="btn" onclick="validate()" value="Submit">
+        <p align="center">Format: "CBLPN1442H"</p>
+    </div>
+</body>
+</html>

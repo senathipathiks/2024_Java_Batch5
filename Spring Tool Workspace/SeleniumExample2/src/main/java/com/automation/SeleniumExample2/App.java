@@ -1,0 +1,20 @@
+package com.automation.SeleniumExample2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        final WebDriver driver;
+        driver = new ChromeDriver();
+        driver.get("https://www.google.com/");
+		driver.findElement(By.name("q")).sendKeys("Hi");
+    }
+}

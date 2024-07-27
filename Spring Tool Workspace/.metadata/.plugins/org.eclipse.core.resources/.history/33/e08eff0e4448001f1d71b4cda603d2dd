@@ -1,0 +1,19 @@
+package com.hospital;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class HospitalApplicationTests {
+	private WebDriver driver;
+	
+	@BeforeEach
+	Webdriver driver1 = new Chrom
+
+	@Test
+	void contextLoads() {
+	}
+
+}

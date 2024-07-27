@@ -1,0 +1,26 @@
+Automation Testing
+
+Benefits:
+	Tools:
+		Quick Testing
+		Rational Robot
+		Selenium
+		Jmeter
+		Loadrunner
+		
+Selenium:
+	Open source automated testing framework
+	Support multiple languages
+	JS Test Runner
+	4 Components - Selenium IDE, Selenium RC(Remote Control) now it is depreciated, Selenium Grid, Selenium WebDriver
+	
+Selenium IDE:
+	Record / Playback tool
+	Selenium commands are known as 'Selenese'
+	Actions, Accessors and Assertions
+	
+Selenium Web Driver:
+	Intro
+	Browser Commands
+	Navigation Commands
+	Web Element Commands

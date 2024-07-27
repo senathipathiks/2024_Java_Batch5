@@ -1,0 +1,17 @@
+package com.ems.bean;
+
+public class Employee {
+
+	int eid;
+	String ename;
+	String blood;
+	String city;
+	
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+}

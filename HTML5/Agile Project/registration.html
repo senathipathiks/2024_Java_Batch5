@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Edu+SA+Beginner:wght@400..700&family=Italianno&family=Madimi+One&family=My+Soul&family=Patua+One&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url("mainbg.png");
+        background-position: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      h1 {
+        font-size: x-large;
+      }
+      #navbar {
+        width: 204%;
+        height: 40px;
+        background-color: transparent;
+        box-shadow: 0 5px 10px black;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        backdrop-filter: blur(7px);
+        border-radius: 10px;
+        margin-left: -375px;
+        margin-top: -50px;
+      }
+      #navbar a {
+        text-decoration: none;
+        color: white;
+      }
+      #a1,
+      #a2,
+      #a3,
+      #a4 {
+        float: right;
+        margin-right: 30px;
+      }
+
+      #bank {
+        margin-left: 50px;
+        color: white;
+        font-size: 25px;
+      }
+      #a3 {
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 20px;
+      }
+      #a3:hover{
+        transform: scale(1.2);
+      }
+      #a1,
+      #a2,
+      #a4 {
+        margin-top: 10px;
+      }
+      #ab {
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 700px;
+        margin-top: 100px;
+      }
+     
+     
+     
+      #fname,#lname,#email,#contact,#pword,#repeatpword,#custnum,#accnum{
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+        width: 250px;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+      .name,.details,.pass,.number{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
+      }
+      
+      
+      #submit{
+        height: 40px;
+        width: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: darkblue;
+        color: white;
+        box-shadow: 0 5px 10px;
+        cursor: pointer;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: small;
+      }
+
+      #already{
+        font-size: medium;
+      }
+      #already a{
+        text-decoration: none;
+        color: white;
+      }
+       a{
+        text-decoration: none;
+        color: white;
+      }
+      p,h1{
+        color: white;
+      }
+      #submit:hover{
+        transform: scale(1.1);
+      }
+      #already a:hover{
+        color: rgb(0, 229, 255);
+      }
+      
+     
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+        <span id="bank">BANK OF RELEVANTO</span>
+  
+        <a href="mainpage.html" id="a4" target="_parent">LOGIN</a>
+        <a href="registration.html" id="a3" target="_parent">REGISTRATION</a>
+  
+        <a href="services.html" id="a2" target="_parent">SERVICES</a>
+        <a href="fundtransfer.html" id="a1" target="_parent">FUND TRANSFER AND CARD DETAILS</a>
+      </div>
+    <div id="ab">
+      <h1>SIGN UP</h1>
+      <div class="name">
+        <input type="text" name="fname" id="fname" placeholder="YOUR AADHAR FULL NAME" required>
+        <input type="text" name="lname" id="lname" placeholder="USER NAME" required>
+      </div>
+      <div class="details">
+        <input type="email" name="email" id="email" placeholder="EMAIL ID" required>
+        <input type="text" name="contact" id="contact" placeholder="ENTER MOBILE NUMBER" required>
+      </div>
+      <div class="number">
+        <input type="text" name="custnum" id="custnum" placeholder="CUSTOMER NUMBER" required>
+        <input type="text" name="accnum" id="accnum" placeholder="BANK ACCOUNT NUMBER" required>
+      </div>
+      <div class="pass">
+        <input type="password" name="pword" id="pword" placeholder="ENTER PASSWORD" required>
+        <input type="password" name="repeatpword" id="repeatpword" placeholder="REPEAT PASSWORD" required>
+      </div>
+      <p id="already">ALREADY HAVE AN ACCOUNT? <a href="mainpage.html">LOGIN</a> </p> 
+      <hr>
+      <button id="submit"><a href="services.html">SIGN UP</a></button>
+    </div>
+  </body>
+</html>

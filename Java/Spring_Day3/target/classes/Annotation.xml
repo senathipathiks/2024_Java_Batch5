@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- Setter Injections -->
+     
+    <bean class="com.day2.DependancyInjection.Address" name="add1">
+    <property name="doorno" value="102"></property>
+    <property name="street" value="Munichalai Road"></property>
+    <property name="city" value="Madurai"></property>
+    <property name="pincode" value="625009"></property>
+    </bean>
+    
+    <!-- 
+    <bean class="com.day2.DependancyInjection.Address" name="add2">
+    <property name="doorno" value="23"></property>
+    <property name="street" value="Kamaraj College"></property>
+    <property name="city" value="Virudhunagar"></property>
+    <property name="pincode" value="625216"></property>
+    </bean> -->
+    
+    <!-- Setter Injections -->
+    
+    
+    <!-- Constructor Injections -->
+    <bean class="com.day3.Annotations.Address" name="add1">
+    <constructor-arg name="doorno" value="100"></constructor-arg>
+    <constructor-arg name="street" value="Munichalai Road"></constructor-arg>
+    <constructor-arg name="city" value="Madurai"></constructor-arg>
+    <constructor-arg name="pincode" value="625009"></constructor-arg>
+    </bean>
+    
+   <!--  <bean class="com.day3.Annotations.Address" name="add2">
+    <constructor-arg name="doorno" value="98"></constructor-arg>
+    <constructor-arg name="street" value="Munichalai Road"></constructor-arg>
+    <constructor-arg name="city" value="Chennai"></constructor-arg>
+    <constructor-arg name="pincode" value="625009"></constructor-arg>
+    </bean> -->
+    <!-- Constructor Injections -->
+    
+    
+    <context:annotation-config></context:annotation-config>
+    
+    <bean class="com.day3.Annotations.Student" name="stu">
+    <property name="id" value="123"></property>
+    <property name="name" value="Nagarjun"></property>
+    </bean>
+    </beans>
