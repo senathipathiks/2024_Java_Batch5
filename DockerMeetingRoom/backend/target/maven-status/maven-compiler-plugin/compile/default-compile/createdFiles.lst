@@ -1,0 +1,6 @@
+com\srienath\restapp\serviceimpl\StudentServiceImpl.class
+com\srienath\restapp\service\StudentService.class
+com\srienath\restapp\StudentRestApiApplication.class
+com\srienath\restapp\controller\StudentController.class
+com\srienath\restapp\model\Student.class
+com\srienath\restapp\repository\StudentRepo.class
