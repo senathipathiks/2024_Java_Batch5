@@ -1,0 +1,142 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  height: 100vh;
+}
+
+#home-content {
+  /* background: #000 !important; */
+  background-image: url(https://wallpapercave.com/wp/wp6078897.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navid {
+  color: aqua !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.about-waves {
+  /* overflow-x: hidden; */
+  position: absolute;
+  bottom: -688px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-waves svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 158px;
+}
+
+.about-waves .shape-fill {
+  fill: gray;
+}
+
+#view-emp {
+  background-image: url('https://sprout24.com/wp-content/uploads/2021/06/lms-.png');
+  background-size: cover;
+  background-position: fixed;
+}
+
+#view-card {
+  background-color: black;
+}
+
+#display-card {
+  background-color: gray;
+}
+
+#display-text {
+  /* writing-mode: vertical-lr; */
+  z-index: 1;
+}
+
+.display-card-waves {
+  /* overflow-x: hidden; */
+  position: absolute;
+  bottom: -1300px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.display-card-waves svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 158px;
+}
+
+.display-card-waves .shape-fill {
+  fill: #ffffff;
+}
+
+
+.card {
+  z-index: 10;
+}
+
+.card:hover {
+  transition: 500ms !important;
+  box-shadow: 1px 10px 15px 10px rgba(0, 255, 255, 0.6) !important;
+}
+
+.view-card-wave {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.view-card-wave svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 67px;
+}
+
+.view-card-wave .shape-fill {
+  fill: #FFFFFF;
+}
+
+#user-add {
+  background-image: url('https://sprout24.com/wp-content/uploads/2021/06/lms-.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#add3 {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  margin: 30px 20px 0px 20px !important;
+
+}
