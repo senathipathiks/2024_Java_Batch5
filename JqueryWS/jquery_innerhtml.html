@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Inner Html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#append").click(function(){
+                $("#para1").append(" Karthi");
+            })
+            $("#prepend").click(function(){
+                $("#para1").prepend("R K ");
+            })
+            $("#remove").click(function(){
+                $("#para1").remove();
+            })
+        });
+    </script>
+</head>
+<body>
+    <p id="para1">This is my Paragraph</p>
+    <input type="submit" name="" id="append" value="Append Text">
+    <input type="submit" name="" id="prepend" value="Prepend Text">
+    <input type="submit" name="" id="remove" value="Remove Text">
+</body>
+</html>

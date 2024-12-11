@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                var x = parseInt($("#num1").val());
+                var y = parseInt($("#num2").val());
+                var z = x+y;
+                $("#ans").show();
+                document.getElementById("ans").innerHTML = z;
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="num1"><br>
+    <input type="text" name="" id="num2"><br>
+    <div id="ans" style="display: none;"></div>
+    <!-- <input type="text" name="" id="ans" style="display: none;"> -->
+    <input type="submit" name="" id="add">
+</body>
+</html>

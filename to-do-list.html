@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List .com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Elsie+Swash+Caps:wght@400;900&family=Yellowtail&display=swap" rel="stylesheet">
+
+<style>
+ h1{
+    font-family: "Elsie Swash Caps", serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  color: rgb(2, 191, 205);
+ }
+p{
+    font-family: "Bellefair", serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: rgb(246, 21, 133);
+}
+input{
+    margin-top: 30px;
+    margin-left: 120px;
+    width: 350px;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.main{
+    width: 700px;
+    background-color: #d3fcfc;
+    
+    border-radius: 10px;
+   height: 500px;
+   box-shadow: 4px  5px 5px 5px rgba(65, 68, 69, 0.34) ;
+    
+}
+.todos{
+    margin-left: 75px;
+    padding: 15px;
+    border: 2px rgb(160, 233, 239) none ;
+    border-radius: 5px;
+    background-color: rgba(91, 248, 235, 0.573);
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    height: 30px;
+     color: rgb(3, 175, 254);
+     font-weight: 900;
+     box-shadow: 2px 2px 10px  ;
+     
+   
+}
+#one{
+    margin-top: 40px;
+    border-radius: 15px;
+    
+}
+
+#two{
+    margin-top: 40px;
+    border-radius: 15px;
+   
+}
+
+
+#three{
+    margin-top: 40px;
+    border-radius: 15px;
+  
+
+}
+
+#four{
+    margin-top: 40px;
+    border-radius: 15px;
+    
+
+}
+body{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.todos button{
+    float: right;
+    color: rgb(251, 17, 177);
+    margin-left: 15px;
+    background-color: transparent;
+    border: none;
+}
+</style>
+</head>
+<body>
+    <h1>TO DO LIST</h1>
+    <P> A remainder for your daily to-dos</P>
+    <div class="main">
+        <input type="text" placeholder=" Write a new to-do " style="border: none; height: 40px;">     <span>   <button style="background-color: rgb(254, 148, 244); padding: 7px; border:rgba(248, 189, 209, 0.443) inset; border-radius: 5px; height: 40px; width: 35px;"  ><i class='fa fa-plus'></i></button></span> 
+
+        <div class="todos" id="one">Buy Snacks <button><i class="fa fa-trash-o"></i></button> <button><i class='fa fa-pencil'></i></button></div> 
+        <div class="todos" id="two">Mark Timesheet <button><i class="fa fa-trash-o"></i></button><button><i class='fa fa-pencil'></i></button></div> 
+        <div class="todos" id="three">Listen to Songs<button><i class="fa fa-trash-o"></i></button><button><i class='fa fa-pencil'></i></button></div> 
+        <div class="todos" id="four">Go for Workout <button><i class="fa fa-trash-o"></i></button><button><i class='fa fa-pencil'></i></button></div> 
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

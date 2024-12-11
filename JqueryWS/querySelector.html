@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+    <script>
+        function display(){
+            var para = document.querySelectorAll("p");
+            document.querySelector("#para1").innerHTML = para[0].innerHTML;
+        }
+        
+    </script>
+</head>
+<body>
+    <p>This is para 1</p>
+    <p>This is para 2</p>
+    <input type="submit" name="" id="" onclick="display()">
+    <div id="para1"></div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+   <class name = "com.spring.hybernate.Subject" table ="SUBJ_DETAILS">
+      
+           
+      <id name = "sid" type = "int" column = "sid">
+         <generator class="assigned"/>
+      </id>
+      
+      <property name = "sname" column = "sname" type = "string"/>
+      <property name = "marks" column = "marks" type = "int"/>
+      
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+div #simp{
+    border: 2px solid rgb(177, 162, 77) ;
+    padding: 10px;
+    background-color:rgb(9, 250, 254);
+    font-weight:700;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

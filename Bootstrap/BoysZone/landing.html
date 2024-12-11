@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #search {
+        width: 400px;
+      }
+      #nav {
+        padding-bottom: 10px;
+      }
+      
+
+      #invbt,
+      #invsrc {
+        display: none;
+      }
+
+      #sec3{
+      }
+      @media screen and (max-width: 700px) {
+        #search {
+          display: none;
+        }
+        #srchbtn {
+          display: none;
+        }
+        #invbt,
+        #invsrc {
+          display: block;
+        }
+        #sec3 {
+          flex-direction: column;
+        }
+      }
+      #innerform{
+        width: fit-content;
+      }
+      /* @media screen and (max-width: 500px) {
+        #sec3 {
+          flex-direction: column;
+        }
+      } */
+
+      #signform {
+        /* margin: 20px; */
+      }
+
+      #abt{
+        /* margin: 20px; */
+
+      }
+      #sec3 {
+        display: flex;
+        /* flex-direction: row; */
+      }
+
+      #abt p {
+        text-align: justify;
+      }
+
+      #log{
+        margin-left: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top ">
+      <div class="container-fluid shadow-lg mb-2 rounded" id="nav">
+        <a class="navbar-brand" href="#" style="padding-top: 5px">Boys'Zone </a>
+        <form class="d-flex mt-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="search"
+          />
+          <button class="btn btn-success" type="submit" id="srchbtn">
+            Search
+          </button>
+        </form>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Boys'Zone
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#signform">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#abt">About US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Collections
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark ">
+                  <li><a class="dropdown-item text-warning" href="#">Casuals</a></li>
+                  <li><a class="dropdown-item" href="#">Formals</a></li>
+                  <li><a class="dropdown-item" href="#">T-Shirts</a></li>
+
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search" id="srcbar">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id="invsrc"
+              />
+              <button class="btn btn-success" type="submit" id="invbt">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+      <form class="needs-validation">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">LOGIN</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                        <label for="exampleFormControlInput1">Email address</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="inputPassword6" placeholder="Password" aria-describedby="passwordHelpInline" required>
+                        <label for="inputPassword6">Password</label>
+                      </div>
+                </div>
+                
+                <div class="col-auto mt-4 " id="log" >
+                  <button type="submit" class="btn btn-primary mb-3">Login</button>
+                </div>
+                
+              </div>
+            </div>
+      </form>
+    </div>
+
+    <!-- <div id="carouselExampleCaptions Autoplaying" class="carousel slide mt-4">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="men.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mens Formals</h5>
+              <p>Suits - Shirts - Pants  -Leather shoes</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="casuals.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mens Casuals</h5>
+              <p>Checked - Printed - Semi Casuals - Jeans - Denim </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="kids.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="font-weight:bolder; color: rgb(252, 252, 254); "> T-Shirts </h5>
+              <p style="color: rgb(255, 255, 255) ; font-weight: bold;">Hoodies - Tees - Sleeves - Tracks - 3/4th</p>
+            </div>
+          </div>
+        </div> -->
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> -->
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide mt-3">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="casuals.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: white">Mens Casuals</h5>
+            <p style="color: white">
+              Checked - Printed - Semi Casuals - Jeans - Denim
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="men.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: white">Mens Formals</h5>
+            <p style="color: white">Suits - Shirts - Pants -Leather shoes</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="kids.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-weight: bolder; color: rgb(252, 252, 254)">
+              T-Shirts
+            </h5>
+            <p style="color: rgb(255, 255, 255); font-weight: bold">
+              Hoodies - Tees - Sleeves - Tracks - 3/4th
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="tracks.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: white">Mens tracks and sleeves</h5>
+            <p style="color: white">Trousers - Boxers - sports wear</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="row m-4 p-4" id="Cards">
+      <div class="card m-4" style="width: 18rem">
+        <img src="images.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Sale Of the Day</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem">
+        <img src="top.png" class="card-img-top" alt="..." height="60%" />
+        <div class="card-body">
+          <h5 class="card-title">Top Deals</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem">
+        <img src="Today.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Today Trending</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem">
+        <img src="combo.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Combo Offers</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem">
+        <img src="festiv.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Festival Sale</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem">
+        <img src="flat.png" class="card-img-top" alt="..." height="60%" />
+        <div class="card-body">
+          <h5 class="card-title">Flat offers on Formals</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem">
+        <img src="spl.png" class="card-img-top" alt="..." height="60%" />
+        <div class="card-body">
+          <h5 class="card-title">Special Discount</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem">
+        <img src="flashsale.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Flash Sale</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="sec3">
+      <div
+        id="signform"
+        class="col-md-6 "
+        style="background-color: rgba(85, 152, 246, 0.79)"
+      >
+        <div class="container-fluid" id="innerform">
+          <h3 style="padding-bottom: 10px;margin-top: 10px;">SIGN UP</h3>
+          <form class="needs-validation" novalidate="">
+            <div class="form-row ">
+              <div class="col-md-5 mt-2 w-100">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First name"
+                />
+              </div>
+              <div class="col-md-5 mt-2 w-100">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last name"
+                />
+              </div>
+             
+              <div class="form-group col-md-5 w-100">
+                <br /><label for="inputEmail4 ">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail4"
+                  placeholder="Email"
+                  required/>
+                  <div class="invalid-feedback"> Please enter a valid email address . </div>
+
+              </div>
+              <div class="invalid-feedback"> Please enter a valid email address . </div>
+              <div class="form-group col-md-5 w-100">
+                <br /><label for="inputPassword4">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword4"
+                  placeholder="Password"
+                  aria-describedby="passwordHelpInline"
+                  required />
+                  <div class="invalid-feedback"> Please enter a valid password. </div>
+              </div>
+            </div>
+            <!-- <div class="form-group col-md-4">
+             <br><label for="inputAddress">Address</label>
+             <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+           </div> -->
+            <!-- <div class="form-group">
+             <label for="inputAddress2">Address 2</label>
+             <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+           </div> -->
+            <!-- <div class="form-row">
+               <div class="form-group col-md-4">
+               <br><label for="inputCity">City</label>
+               <input type="text" class="form-control" id="inputCity">
+             </div>
+             <div class="form-group col-md-4">
+               <br><label for="inputState">State</label>
+               <select id="inputState" class="form-control">
+                 <option selected>Choose...</option>
+                 <option>...</option>
+               </select>
+             </div>
+             <div class="form-group col-md-4">
+               <br><label for="inputZip">Zip</label>
+               <input type="text" class="form-control" id="inputZip">
+             </div> 
+            </div> -->
+            <div class="form-group">
+              <div class="form-check">
+                <br /><input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck2"
+                  required
+                />
+                <label class="form-check-label" for="invalidCheck2">
+                  Agree to terms and conditions
+                </label>
+              </div>
+            </div>
+            <br />
+            <button class="btn btn-primary" type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- </div> -->
+
+      <div
+        id="abt"
+        style="background-color: bisque"
+        class="col-md-6 p-3 justify-content-end float-end"
+      >
+        <h3 style="text-align: center">ABOUT US</h3>
+        <div class="container-fluid col-md-6">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a
+            consequuntur, tempore ea nemo corporis assumenda quibusdam facere
+            commodi harum repudiandae asperiores! Vel, magnam sequi.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            voluptate, impedit odio dolores adipisci quis voluptas. Libero
+            voluptas vel totam sapiente ea aliquid facilis corporis iure at
+            nisi, fugit distinctio veniam eius molestiae animi ipsam placeat!
+            Iure dicta cumque nostrum impedit facere quidem quos corrupti,
+            cupiditate, dignissimos quas aspernatur tempore.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-0.5 pt-5 pb-5 text-muted text-center text-small " style="background-color: rgba(8, 4, 4, 0.669);">
+      <p class="mb-1" style="color: white;">© 2017-2019 Boys'Zone</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"style="text-decoration:none ; color:white;">Privacy</a></li>
+          <li class="list-inline-item"><a href="#"style="text-decoration:none ; color:white;">Terms</a></li>
+          <li class="list-inline-item"><a href="#"style="text-decoration:none ; color:white;">Support</a></li>
+      </ul>
+  </footer>
+    <!-- <div class="container-fluid m-5" id="foot">
+           <h3>SIGN UP</h3>
+          <form>
+            <div class="form-row p-2" >
+              <div class="col-md-4 mt-2 ">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col-md-4 mt-2 ">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            
+
+            <div class="form-group col-md-4">
+              <br><label for="inputEmail4 ">Email</label>
+              <input type="email" class="form-control " id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-4">
+              <br><label for="inputPassword4">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <br><label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <!-- <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div> -->
+    <!-- <div class="form-row">
+            <div class="form-group col-md-4">
+              <br><label for="inputCity">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-4">
+              <br><label for="inputState">State</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <br><label for="inputZip">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <br><input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+              </label>
+            </div>
+          </div>
+         <br> <button class="btn btn-primary" type="submit">Register</button>
+        </div>
+
+       </form>
+        </div>
+        <div class="container-fluid col-md-5">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima esse dicta eius eligendi omnis repellendus sed officia, repudiandae, ducimus ipsa odit porro quibusdam quis sit facilis natus aperiam nesciunt. Adipisci.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a consequuntur, tempore ea nemo corporis assumenda quibusdam facere commodi harum repudiandae asperiores! Vel, magnam sequi.
+</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptate, impedit odio dolores adipisci quis voluptas. Libero voluptas vel totam sapiente ea aliquid facilis corporis iure at nisi, fugit distinctio veniam eius molestiae animi ipsam placeat! Iure dicta cumque nostrum impedit facere quidem quos corrupti, cupiditate, dignissimos quas aspernatur tempore.</p>
+
+
+
+
+        </div> -->
+
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      (function () {
+  'use strict'
+
+  window.addEventListener('load', function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  }, false)
+}())
+    </script>
+  </body>
+</html>

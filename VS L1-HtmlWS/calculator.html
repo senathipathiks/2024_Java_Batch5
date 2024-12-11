@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       #maindiv{
+        
+    
+
+        margin-top : 5%;
+
+        padding: 10px;
+       width: 500px;
+       height: 505px;
+        background-color: #538426;
+        border-radius: 10px;
+        
+       }
+       #screen{
+        
+        margin-bottom: 35px;
+        margin-top: 10px;
+        width: 450px;
+        height: 60px;
+        font-size:xx-large;
+        background-color: rgba(124, 124, 124, 0.993);
+        border: 6px inset;
+        
+       }
+       #buttons{
+        background-color: #90ed47;
+       height: 370px;
+      
+       border-bottom-left-radius: 10px;
+       border-bottom-right-radius: 10px;
+        padding: 10px;
+        padding-top: 25px;
+        margin-top: -20px;
+        justify-content:space-around;
+        display: flex;
+        flex-direction: column;
+        
+
+       }
+       .nums{
+        width: 60px;
+        height: 40px;
+        margin-bottom: 20px;
+        border: 2px black solid;
+        margin-left: 20px;
+        border-radius: 5px;
+
+        
+       }
+       .nums:hover{
+        background-color: #538426;
+        color: azure;
+        transform: scale(1.2);
+       }
+       .innercalc{
+        margin-left: -20px;
+       }
+    </style>
+
+    <script>
+     function Disp(val){
+      document.getElementById("screen").value += val;
+     }
+    function Clear(){
+        document.getElementById("screen").value =" ";
+    }
+
+    function Calc(){
+         var ip = document.getElementById("screen").value;
+         var res = eval(ip);
+         document.getElementById("screen").value = res;
+    }
+
+
+
+
+    </script>
+</head>
+<body>
+    <center>
+        <div id="container">
+        <div id="maindiv" style="border: 2px green solid; border-radius:15px;">
+         <input type="text" id="screen" >
+            
+       
+        <div id="buttons">
+           <div  class ="innercalc">
+            <input type="button" value="%" class ="nums" onclick="Disp('%')">
+            <input type="button" value="Rm" class ="nums"onclick="Disp(' ')">
+            <input type="button" value="M+" class ="nums"onclick="Disp(' ')">
+            <input type="button" value="M-" class ="nums"onclick="Disp('%')">
+            <input type="button" value="/"  class ="nums"onclick="Disp('/')">
+        </div>
+        <div class ="innercalc">
+           <input type="button" value="+/-"class ="nums"onclick ="Disp('')">
+            <input type="button" value="7" class ="nums"onclick ="Disp('7')">
+            <input type="button" value="8" class ="nums"onclick ="Disp('8')">
+            <input type="button" value="9" class ="nums"onclick ="Disp('9')">
+            <input type="button" value="x" class ="nums"onclick ="Disp('*')">
+        </div>
+
+           <div class ="innercalc"> 
+            <input type="button" value="Cl" class ="nums" onclick="Clear()" >
+            <input type="button" value="4" class ="nums" onclick="Disp('4')">
+            <input type="button" value="5" class ="nums" onclick="Disp('5')">
+            <input type="button" value="6" class ="nums" onclick="Disp('6')">
+            <input type="button" value="-" class ="nums" onclick="Disp('-')">
+           </div>
+           <div class ="innercalc"> 
+            <input type="button" value="CA" class ="nums" onclick="Clear()">
+            <input type="button" value="1" class ="nums"  onclick="Disp('1')">
+            <input type="button" value="2" class ="nums"  onclick="Disp('2')">
+            <input type="button" value="3" class ="nums"  onclick="Disp('3')">
+            <input type="button" value="+" class ="nums"  onclick="Disp('+')">
+        </div>
+        <div class ="innercalc">
+            <input type = "button" value="0" class ="nums" onclick="Disp('0')">
+            <input type="button" value="00" class ="nums"  onclick="Disp('00')">
+            <input type="button" value="." class ="nums"   onclick="Disp('.')">
+            <input type="button" value="=" class ="nums"   onclick="Calc()">
+            <input type="button" value="()" class ="nums"  onclick="Disp('()')">
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    </div>
+ 
+</div>   </center>
+</body>
+</html>

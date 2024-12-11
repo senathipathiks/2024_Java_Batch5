@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    <bean class ="com.spring.project.Subject" name ="subj">
+      <property name="eng" value="English"></property>
+     <property name="engmark" value="85"></property>
+      <property name="tam" value="Thamizh"></property>
+     <property name="tammark" value="80"></property>
+     <property name="mat" value="Mathematics"></property>
+     <property name="matmark" value="95"></property>
+     <property name="sci" value="Science"></property>
+     <property name="scimark" value="98"></property>
+     <property name="soc" value="Social"></property>
+     <property name="socmark" value="100"></property>
+     </bean>
+    
+    
+    
+     <bean class ="com.spring.project.Student" name ="stud">
+      <constructor-arg name="id" value="1011"></constructor-arg>
+     <constructor-arg name="name" value="Nandhakumaran"></constructor-arg>
+     <constructor-arg name="subj">
+     
+   <list>
+   
+   <ref bean="subj"></ref>
+      
+   
+   </list>  
+     </constructor-arg>
+    </bean>
+</beans>

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "Name": "Prasanth",
+      "Mobile": "2435",
+      "City": "chennai",
+      "Disease": "Corona"
+    },
+    {
+      "id": "2",
+      "Name": "Segara",
+      "Mobile": "32343242",
+      "City": "Coimbatore",
+      "Disease": "Alzeimer"
+    },
+    {
+      "id": "3",
+      "Name": "Kumar",
+      "Mobile": "2323232",
+      "City": "Erode",
+      "Disease": "Rickets"
+    }
+  ]
+}
